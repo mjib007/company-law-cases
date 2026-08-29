@@ -60,6 +60,8 @@ company-law-cases/
 
 📖 這套設計不是憑空想像，背後參考了案例教學法、GitHub 協作教學工具、AI 輔助評分等國際實證研究，整理在[總覽頁的「教學方法參考」分頁籤](https://mjib007.github.io/company-law-cases/#methods)，附上每個方法的原始出處連結，建議評估是否採用前先看一下。
 
+📄 如果你不是法律教育、想把這套「PR + AI 自動審查」機制套用到自己的領域，可以先看 [`PR-AI-REVIEW-METHODOLOGY.md`](./PR-AI-REVIEW-METHODOLOGY.md)，裡面整理了通用架構、新手最常踩的坑（附真實測試紀錄），以及自動化排程的可行方案比較。
+
 ### 使用方法：Claude Skills 版（推薦 Claude.ai 用戶使用）
 
 **步驟：**
