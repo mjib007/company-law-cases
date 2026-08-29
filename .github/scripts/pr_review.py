@@ -380,47 +380,63 @@ def build_score_table(prs) -> str:
     header = "| 學號 | 姓名 | " + " | ".join(n for n, _, _ in RUBRIC) + " | 總分 | PR狀態 | 連結 |\n"
     header += "|---|---|" + "---|" * len(RUBRIC) + "---|---|---|\n"
 
-    lines = [header]
+    table_lines = [header]
+    detail_lines = []
+
     for r in rows:
         score = r["score"]
+        row_label = f"{r['sid_display']}（{r['name']}）"
+
         if score.get("pending"):
-            line = f"| {r['sid_display']} | {r['name']} | " + "⏳ | " * len(RUBRIC) + f"⏳ | {r['status']} | #{r['pr']} |\n"
-            lines.append(line)
-            lines.append(f"> ⏳ 待評分（此 PR 尚未標記 `{REVIEW_LABEL}`，老師確認後貼上標籤，隔天即會出現 AI 建議分數）\n")
+            table_lines.append(
+                f"| {r['sid_display']} | {r['name']} | " + "⏳ | " * len(RUBRIC) + f"⏳ | {r['status']} | #{r['pr']} |\n"
+            )
+            detail_lines.append(f"### {row_label} - PR #{r['pr']}\n\n")
+            detail_lines.append(f"> ⏳ 待評分（此 PR 尚未標記 `{REVIEW_LABEL}`，老師確認後貼上標籤，隔天即會出現 AI 建議分數）\n")
             if r.get("quote"):
-                lines.append(f"> 📝 提交內容：「{r['quote']}」\n")
+                detail_lines.append(f">\n> 📝 提交內容：「{r['quote']}」\n")
+            detail_lines.append("\n")
             continue
+
         if "error" in score:
-            line = f"| {r['sid_display']} | {r['name']} | " + "無法評分 | " * len(RUBRIC) + f"- | {r['status']} | #{r['pr']} |\n"
-            lines.append(line)
+            table_lines.append(
+                f"| {r['sid_display']} | {r['name']} | " + "無法評分 | " * len(RUBRIC) + f"- | {r['status']} | #{r['pr']} |\n"
+            )
+            detail_lines.append(f"### {row_label} - PR #{r['pr']}\n\n")
             if r.get("truncated"):
-                lines.append(f"> ⚠️ 此 PR 內容過長已被截斷\n")
+                detail_lines.append("> ⚠️ 此 PR 內容過長已被截斷\n>\n")
             if r.get("quote"):
-                lines.append(f"> 📝 提交內容：「{r['quote']}」\n")
-            lines.append(f"> ⚠️ PR #{r['pr']} 評分失敗：{score['error']}\n")
+                detail_lines.append(f"> 📝 提交內容：「{r['quote']}」\n>\n")
+            detail_lines.append(f"> ⚠️ PR #{r['pr']} 評分失敗：{score['error']}\n")
             if "raw" in score:
-                lines.append(f"> 原始回傳（除錯用）：`{score['raw']}`（stop_reason: {score.get('stop_reason')}）\n")
+                detail_lines.append(f"> 原始回傳（除錯用）：`{score['raw']}`（stop_reason: {score.get('stop_reason')}）\n")
+            detail_lines.append("\n")
             continue
+
         breakdown = score.get("breakdown", {})
         cells = " | ".join(str(breakdown.get(n, "-")) for n, _, _ in RUBRIC)
         total = score.get("total", "-")
-        line = f"| {r['sid_display']} | {r['name']} | {cells} | {total} | {r['status']} | #{r['pr']} |\n"
-        lines.append(line)
+        table_lines.append(f"| {r['sid_display']} | {r['name']} | {cells} | {total} | {r['status']} | #{r['pr']} |\n")
+
+        detail_lines.append(f"### {row_label} - PR #{r['pr']}（總分 {total}）\n\n")
         if r.get("truncated"):
-            lines.append(f"> ⚠️ 此 PR 內容過長已被截斷，AI 僅根據部分內容審查／評分，建議人工複核完整版本\n")
+            detail_lines.append("> ⚠️ 此 PR 內容過長已被截斷，AI 僅根據部分內容審查／評分，建議人工複核完整版本\n>\n")
         wc = r.get("word_count") or 0
         if wc > WORD_LIMIT_WARNING:
-            lines.append(f"> ⚠️ 提交內容約 {wc} 字，超過建議上限 {WORD_LIMIT_WARNING} 字（CONTRIBUTING.md 規定超過部分學生自行負責）\n")
+            detail_lines.append(f"> ⚠️ 提交內容約 {wc} 字，超過建議上限 {WORD_LIMIT_WARNING} 字（CONTRIBUTING.md 規定超過部分學生自行負責）\n>\n")
         if r.get("quote"):
-            lines.append(f"> 📝 提交內容：「{r['quote']}」\n")
+            detail_lines.append(f"> 📝 提交內容：「{r['quote']}」\n>\n")
         reason_points = score.get("reason_points") or []
         if reason_points:
             for point in reason_points:
-                lines.append(f"> - {point}\n")
+                detail_lines.append(f"> - {point}\n")
         elif score.get("reason"):  # 相容舊格式
-            lines.append(f"> {score['reason']}\n")
+            detail_lines.append(f"> {score['reason']}\n")
+        detail_lines.append("\n")
 
-    return "".join(lines)
+    table_md = "".join(table_lines)
+    detail_md = "".join(detail_lines)
+    return table_md, detail_md
 
 
 def find_existing_report_issue(title: str):
@@ -523,12 +539,17 @@ def main():
         + unlabeled_note
     )
 
-    score_table = build_score_table(all_prs) if all_prs else "目前沒有任何 PR，無法產生分數表。\n"
+    if all_prs:
+        score_table, score_detail = build_score_table(all_prs)
+    else:
+        score_table, score_detail = "目前沒有任何 PR，無法產生分數表。\n", ""
+
     score_part = (
         f"## 二、學生建議分數總表（依學號排序，涵蓋所有 PR、不限是否已合併）\n\n"
         f"以下分數為 AI 依評分規則產生的**建議分數**，僅供參考，最終分數請老師人工複核後決定。"
         f"未貼上 `{REVIEW_LABEL}` 標籤的 PR 會列在表中但標記為「待評分」，不會呼叫 API。\n\n"
         + score_table
+        + ("\n### 各筆詳細意見\n\n" + score_detail if score_detail else "")
     )
 
     report_body = (
