@@ -193,6 +193,18 @@ def scan_sensitive_prs(all_prs):
     return warnings
 
 
+def extract_added_lines_only(diff_summary_raw: str) -> str:
+    """從 diff 摘要中，只保留真正「新增」的那幾行（開頭是單一 + 的行，排除 +++ 檔案標頭），
+    不含前後周圍未改動的背景內容，避免把別人已存在的舊內容誤判成這次提交的內容。"""
+    added = []
+    for line in diff_summary_raw.splitlines():
+        if line.startswith("+++"):
+            continue
+        if line.startswith("+"):
+            added.append(line[1:])
+    return "\n".join(added)
+
+
 def extract_students(text: str):
     """從文字中找出所有「（姓名，學號）」，回傳去重後的 (姓名, 學號) list（未遮蔽版本）。"""
     seen = []
@@ -396,7 +408,8 @@ def build_score_table(prs, cache: dict):
 
         files = get_pr_files(number)
         diff_summary_raw, truncated = build_diff_summary(files)
-        students = extract_students(diff_summary_raw) or extract_students(pr.get("body") or "")
+        added_only = extract_added_lines_only(diff_summary_raw)
+        students = extract_students(added_only) or extract_students(pr.get("body") or "")
 
         if not has_review_label(pr):
             score = {"pending": True}  # 未貼標籤，不呼叫 API，避免浪費額度
@@ -416,7 +429,7 @@ def build_score_table(prs, cache: dict):
             })
         else:
             for name, sid in students:
-                quote_raw = extract_submission_quote(diff_summary_raw, name, sid)
+                quote_raw = extract_submission_quote(added_only, name, sid)
                 quote_masked = mask_names_in_text(quote_raw) if quote_raw else None
                 word_count = len(quote_raw) if quote_raw else 0
                 rows.append({
