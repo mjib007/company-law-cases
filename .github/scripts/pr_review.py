@@ -11,6 +11,7 @@
 import os
 import re
 import json
+import base64
 import datetime
 import requests
 
@@ -47,6 +48,42 @@ RUBRIC = [
 ]
 
 REVIEW_LABEL = "ready-for-review"  # 只有貼上這個標籤的 PR 才會被抓去自動審查／評分，避免垃圾 PR 洗 API 額度
+CACHE_PATH = ".github/pr-review-cache.json"  # 記錄每個PR上次評分時的commit SHA與分數，避免同一版本內容重複評分導致分數浮動
+
+
+def load_score_cache():
+    resp = requests.get(
+        f"{GH_API}/repos/{REPO}/contents/{CACHE_PATH}",
+        headers=GH_HEADERS,
+        timeout=30,
+    )
+    if resp.status_code != 200:
+        return {}, None  # 快取檔不存在，回傳空快取
+    data = resp.json()
+    try:
+        content = base64.b64decode(data["content"]).decode("utf-8")
+        cache = json.loads(content)
+    except Exception:
+        cache = {}
+    return cache, data.get("sha")
+
+
+def save_score_cache(cache: dict, prev_sha):
+    content_b64 = base64.b64encode(json.dumps(cache, ensure_ascii=False, indent=2).encode("utf-8")).decode("utf-8")
+    payload = {
+        "message": "更新 PR 評分快取（避免同版本內容重複評分導致分數浮動）",
+        "content": content_b64,
+    }
+    if prev_sha:
+        payload["sha"] = prev_sha
+    resp = requests.put(
+        f"{GH_API}/repos/{REPO}/contents/{CACHE_PATH}",
+        headers=GH_HEADERS,
+        json=payload,
+        timeout=30,
+    )
+    if resp.status_code not in (200, 201):
+        print(f"⚠️ 快取寫入失敗：HTTP {resp.status_code} - {resp.text[:200]}")
 SENSITIVE_PATH_PREFIX = ".github/"  # 動到這個路徑的 PR，不論有沒有標籤都要特別警示
 
 # 提示詞注入（Prompt Injection）防制機制：常見企圖操控 AI 給分的關鍵字，出現任一項就在報告中標記警示
@@ -333,14 +370,17 @@ def extract_submission_quote(raw_text: str, name: str, sid: str):
     return re.sub(r"\s+", " ", snippet).strip()[:600]
 
 
-def build_score_table(prs) -> str:
-    """對所有 PR 產生依學號排序的建議分數表。"""
+def build_score_table(prs, cache: dict):
+    """對所有 PR 產生依學號排序的建議分數表。cache 以 'PR編號:headSHA' 為 key，避免同版本內容重複評分。"""
     rows = []  # (學號, 姓名遮蔽, breakdown, total, 狀態, 連結, error)
+    cache_updated = False
 
     for pr in prs:
         number = pr["number"]
         title = pr["title"]
         html_url = pr["html_url"]
+        head_sha = pr.get("head", {}).get("sha", "")
+        cache_key = f"{number}:{head_sha}"
 
         if pr.get("merged_at"):
             status = "Merged"
@@ -353,11 +393,16 @@ def build_score_table(prs) -> str:
         diff_summary_raw, truncated = build_diff_summary(files)
         students = extract_students(diff_summary_raw) or extract_students(pr.get("body") or "")
 
-        if has_review_label(pr):
+        if not has_review_label(pr):
+            score = {"pending": True}  # 未貼標籤，不呼叫 API，避免浪費額度
+        elif cache_key in cache:
+            score = cache[cache_key]  # 這個版本（commit SHA）已經評過分，直接沿用，避免分數每天浮動
+        else:
             diff_summary_masked = mask_names_in_text(diff_summary_raw)
             score = call_claude_score(title, diff_summary_masked)
-        else:
-            score = {"pending": True}  # 未貼標籤，不呼叫 API，避免浪費額度
+            if "error" not in score:
+                cache[cache_key] = score
+                cache_updated = True
 
         if not students:
             rows.append({
@@ -436,7 +481,7 @@ def build_score_table(prs) -> str:
 
     table_md = "".join(table_lines)
     detail_md = "".join(detail_lines)
-    return table_md, detail_md
+    return table_md, detail_md, cache_updated
 
 
 def find_existing_report_issue(title: str):
@@ -539,14 +584,20 @@ def main():
         + unlabeled_note
     )
 
+    score_cache, score_cache_sha = load_score_cache()
+
     if all_prs:
-        score_table, score_detail = build_score_table(all_prs)
+        score_table, score_detail, cache_updated = build_score_table(all_prs, score_cache)
     else:
-        score_table, score_detail = "目前沒有任何 PR，無法產生分數表。\n", ""
+        score_table, score_detail, cache_updated = "目前沒有任何 PR，無法產生分數表。\n", "", False
+
+    if cache_updated:
+        save_score_cache(score_cache, score_cache_sha)
 
     score_part = (
         f"## 二、學生建議分數總表（依學號排序，涵蓋所有 PR、不限是否已合併）\n\n"
         f"以下分數為 AI 依評分規則產生的**建議分數**，僅供參考，最終分數請老師人工複核後決定。"
+        f"同一個 commit 版本只會評分一次，不會每天重新評分導致分數浮動；有新的 commit 才會重新評分。"
         f"未貼上 `{REVIEW_LABEL}` 標籤的 PR 會列在表中但標記為「待評分」，不會呼叫 API。\n\n"
         + score_table
         + ("\n### 各筆詳細意見\n\n" + score_detail if score_detail else "")
