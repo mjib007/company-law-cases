@@ -300,7 +300,7 @@ PR 說明：{pr_body or "（無）"}
 
 
 def call_claude_score(pr_title: str, diff_summary: str) -> dict:
-    """呼叫 Claude 依 RUBRIC 給建議分數，回傳 dict：{breakdown: {...}, total: int, reason_points: [str, ...]}"""
+    """呼叫 Claude 依 RUBRIC 給建議分數，回傳 dict：{change_summary: str, breakdown: {...}, total: int, reason_points: [str, ...]}"""
     if not ANTHROPIC_API_KEY:
         return {"error": "未設定 ANTHROPIC_API_KEY"}
 
@@ -324,9 +324,9 @@ PR 標題：{pr_title}
 {diff_summary}
 
 請只回傳一個 JSON 物件，不要有任何其他文字、不要用 markdown code fence 包起來，格式如下：
-{{"breakdown": {{"具名格式": 分數, "論述完整度與邏輯": 分數, "法規依據": 分數, "查證與來源": 分數, "格式規範遵守": 分數}}, "total": 總分, "reason_points": ["理由1（一句話，說明某一項配分的關鍵）", "理由2", "理由3", "理由4"]}}
+{{"change_summary": "一句話具體描述這次PR實際改了什麼（例如：新增一行XX、把OO改成XX），不要用評分導向的概括描述", "breakdown": {{"具名格式": 分數, "論述完整度與邏輯": 分數, "法規依據": 分數, "查證與來源": 分數, "格式規範遵守": 分數}}, "total": 總分, "reason_points": ["理由1（一句話，說明某一項配分的關鍵）", "理由2", "理由3", "理由4"]}}
 
-reason_points 請拆成 3-5 條，每條只講一件事、一句話，不要把所有理由擠成一大段。"""
+change_summary 要像在描述「這次變更做了什麼動作」，不要像在評分；reason_points 請拆成 3-5 條，每條只講一件事、一句話，不要把所有理由擠成一大段。"""
 
     resp = requests.post(
         "https://api.anthropic.com/v1/messages",
@@ -489,6 +489,9 @@ def build_score_table(prs, cache: dict):
             detail_lines.append(f"> ⚠️ 提交內容約 {wc} 字，超過建議上限 {WORD_LIMIT_WARNING} 字（CONTRIBUTING.md 規定超過部分學生自行負責）\n>\n")
         if r.get("quote"):
             detail_lines.append(f"> 📝 提交內容：「{r['quote']}」\n>\n")
+        change_summary = score.get("change_summary")
+        if change_summary:
+            detail_lines.append(f"> 🔧 這次改了什麼：{change_summary}\n>\n")
         reason_points = score.get("reason_points") or []
         if reason_points:
             for point in reason_points:
