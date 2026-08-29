@@ -49,12 +49,14 @@ RUBRIC = [
 
 REVIEW_LABEL = "ready-for-review"  # 只有貼上這個標籤的 PR 才會被抓去自動審查／評分，避免垃圾 PR 洗 API 額度
 CACHE_PATH = ".github/pr-review-cache.json"  # 記錄每個PR上次評分時的commit SHA與分數，避免同一版本內容重複評分導致分數浮動
+CACHE_BRANCH = "pr-review-cache"  # 快取檔存在這個獨立分支，不受main的branch protection規則限制
 
 
 def load_score_cache():
     resp = requests.get(
         f"{GH_API}/repos/{REPO}/contents/{CACHE_PATH}",
         headers=GH_HEADERS,
+        params={"ref": CACHE_BRANCH},
         timeout=30,
     )
     if resp.status_code != 200:
@@ -73,6 +75,7 @@ def save_score_cache(cache: dict, prev_sha):
     payload = {
         "message": "更新 PR 評分快取（避免同版本內容重複評分導致分數浮動）",
         "content": content_b64,
+        "branch": CACHE_BRANCH,
     }
     if prev_sha:
         payload["sha"] = prev_sha
@@ -84,6 +87,8 @@ def save_score_cache(cache: dict, prev_sha):
     )
     if resp.status_code not in (200, 201):
         print(f"⚠️ 快取寫入失敗：HTTP {resp.status_code} - {resp.text[:200]}")
+
+
 SENSITIVE_PATH_PREFIX = ".github/"  # 動到這個路徑的 PR，不論有沒有標籤都要特別警示
 
 # 提示詞注入（Prompt Injection）防制機制：常見企圖操控 AI 給分的關鍵字，出現任一項就在報告中標記警示
