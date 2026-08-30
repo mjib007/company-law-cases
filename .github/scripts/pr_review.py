@@ -396,6 +396,7 @@ def build_score_table(prs, cache: dict):
         number = pr["number"]
         title = pr["title"]
         html_url = pr["html_url"]
+        github_account = pr.get("user", {}).get("login", "-")
         head_sha = pr.get("head", {}).get("sha", "")
         cache_key = f"{number}:{head_sha}"
 
@@ -426,6 +427,7 @@ def build_score_table(prs, cache: dict):
             rows.append({
                 "sid": "（未標註學號）", "sid_display": "（未標註學號）", "name": "-", "score": score,
                 "status": status, "url": html_url, "pr": number, "quote": None, "truncated": truncated,
+                "github_account": github_account,
             })
         else:
             for name, sid in students:
@@ -436,12 +438,13 @@ def build_score_table(prs, cache: dict):
                     "sid": sid, "sid_display": mask_id(sid), "name": mask_name(name), "score": score,
                     "status": status, "url": html_url, "pr": number, "quote": quote_masked,
                     "truncated": truncated, "word_count": word_count,
+                    "github_account": github_account,
                 })
 
     rows.sort(key=lambda r: r["sid"])
 
-    header = "| 學號 | 姓名 | " + " | ".join(n for n, _, _ in RUBRIC) + " | 總分 | PR狀態 | 連結 |\n"
-    header += "|---|---|" + "---|" * len(RUBRIC) + "---|---|---|\n"
+    header = "| 學號 | 姓名 | GitHub帳號 | " + " | ".join(n for n, _, _ in RUBRIC) + " | 總分 | PR狀態 | 連結 |\n"
+    header += "|---|---|---|" + "---|" * len(RUBRIC) + "---|---|---|\n"
 
     table_lines = [header]
     detail_lines = []
@@ -452,9 +455,9 @@ def build_score_table(prs, cache: dict):
 
         if score.get("pending"):
             table_lines.append(
-                f"| {r['sid_display']} | {r['name']} | " + "⏳ | " * len(RUBRIC) + f"⏳ | {r['status']} | #{r['pr']} |\n"
+                f"| {r['sid_display']} | {r['name']} | {r['github_account']} | " + "⏳ | " * len(RUBRIC) + f"⏳ | {r['status']} | #{r['pr']} |\n"
             )
-            detail_lines.append(f"### {row_label} - PR #{r['pr']}\n\n")
+            detail_lines.append(f"### {row_label} - PR #{r['pr']}（GitHub帳號：{r['github_account']}）\n\n")
             detail_lines.append(f"> ⏳ 待評分（此 PR 尚未標記 `{REVIEW_LABEL}`，老師確認後貼上標籤，隔天即會出現 AI 建議分數）\n")
             if r.get("quote"):
                 detail_lines.append(f">\n> 📝 提交內容：「{r['quote']}」\n")
@@ -463,9 +466,9 @@ def build_score_table(prs, cache: dict):
 
         if "error" in score:
             table_lines.append(
-                f"| {r['sid_display']} | {r['name']} | " + "無法評分 | " * len(RUBRIC) + f"- | {r['status']} | #{r['pr']} |\n"
+                f"| {r['sid_display']} | {r['name']} | {r['github_account']} | " + "無法評分 | " * len(RUBRIC) + f"- | {r['status']} | #{r['pr']} |\n"
             )
-            detail_lines.append(f"### {row_label} - PR #{r['pr']}\n\n")
+            detail_lines.append(f"### {row_label} - PR #{r['pr']}（GitHub帳號：{r['github_account']}）\n\n")
             if r.get("truncated"):
                 detail_lines.append("> ⚠️ 此 PR 內容過長已被截斷\n>\n")
             if r.get("quote"):
@@ -479,9 +482,9 @@ def build_score_table(prs, cache: dict):
         breakdown = score.get("breakdown", {})
         cells = " | ".join(str(breakdown.get(n, "-")) for n, _, _ in RUBRIC)
         total = score.get("total", "-")
-        table_lines.append(f"| {r['sid_display']} | {r['name']} | {cells} | {total} | {r['status']} | #{r['pr']} |\n")
+        table_lines.append(f"| {r['sid_display']} | {r['name']} | {r['github_account']} | {cells} | {total} | {r['status']} | #{r['pr']} |\n")
 
-        detail_lines.append(f"### {row_label} - PR #{r['pr']}（總分 {total}）\n\n")
+        detail_lines.append(f"### {row_label} - PR #{r['pr']}（總分 {total}，GitHub帳號：{r['github_account']}）\n\n")
         if r.get("truncated"):
             detail_lines.append("> ⚠️ 此 PR 內容過長已被截斷，AI 僅根據部分內容審查／評分，建議人工複核完整版本\n>\n")
         wc = r.get("word_count") or 0
