@@ -67,6 +67,10 @@
   details.teacher-answer{ background:rgba(156,43,58,0.05); border:1px solid rgba(156,43,58,0.25); border-radius:8px; padding:1rem 1.2rem; margin-top:1rem; }
   details.teacher-answer summary{ cursor:pointer; font-weight:700; color:var(--seal); font-size:.92rem; }
   details.teacher-answer .answer-body{ margin-top:.9rem; }
+  .data-table{ width:100%; border-collapse:collapse; font-size:.88rem; margin:.8rem 0 1rem; }
+  .data-table th, .data-table td{ border:1px solid var(--line); padding:.5rem .7rem; text-align:left; color:var(--ink-70); }
+  .data-table th{ background:rgba(44,74,118,0.06); color:var(--ink); font-weight:700; }
+  .data-source{ font-size:.82rem; color:var(--ink-45); margin-top:-.4rem; margin-bottom:1rem; }
   .note{ font-size:.8rem; color:var(--ink-45); }
   .disclaimer{ font-size:.78rem; color:var(--ink-45); font-style:italic; border-left:3px solid var(--line); padding-left:.8rem; margin-top:2rem; }
 </style>
@@ -162,6 +166,38 @@
         <p>比較好的課堂討論方式，是請學生具體指出「自己最看重哪一個判斷因素」，並說明為什麼這個因素比其他因素重要，藉此練習把價格數字轉換成有依據的風險判斷，而不是停留在「反正價差很大就抽」的直覺層次。</p>
       </div>
     </details>
+  </section>
+
+  <section id="data-analysis">
+    <h2>延伸分析：從歷史抽籤資料估算漢測的中籤率</h2>
+    <p class="data-source">資料來源：<a class="src" href="https://www.twse.com.tw/zh/announcement/public.html" target="_blank" rel="noopener">臺灣證券交易所－公開申購公告抽籤日程表</a>，彙整2020年至2026年9月共965筆公開申購紀錄，整理後之資料檔：<a class="src" href="https://github.com/mjib007/company-law-cases/blob/main/data/ipo-lottery-history-2020-2026.csv" target="_blank" rel="noopener">ipo-lottery-history-2020-2026.csv</a>。</p>
+
+    <p><strong>發現一：「初次掛牌」比「現金增資」熱門非常多。</strong>把965筆資料依發行市場分類後，「初上櫃」中籤率中位數只有0.39%，「初上市」為0.78%，都遠低於「上櫃增資」（0.98%）與「上市增資」（1.81%）。漢測屬於「初上櫃」類別，光憑這點就可以推測它的熱門程度會高於一般已上市櫃公司的現金增資案。</p>
+
+    <p><strong>發現二：承銷價格高低，跟申購人數幾乎沒有關係。</strong>把「初次掛牌」類別298筆資料的承銷價跟申購人數（總合格件）算相關係數，結果幾乎是0。也就是說，漢測承銷價2,250元創史上最高，不代表它一定比較少人抽或比較多人抽，真正影響熱度的是價差幅度、產業題材、公司知名度，不是承銷價的絕對數字本身。</p>
+
+    <table class="data-table">
+      <tr><th>證券</th><th>承銷價</th><th>申購人數</th><th>中籤率</th></tr>
+      <tr><td>鴻勁</td><td>1,495元</td><td>179,233人</td><td>1.84%</td></tr>
+      <tr><td>力智</td><td>589元</td><td>466,082人</td><td>0.47%</td></tr>
+      <tr><td>達發</td><td>434.84元</td><td>200,985人</td><td>1.75%</td></tr>
+      <tr><td>印能科技</td><td>1,250元</td><td>67,142人</td><td>0.56%</td></tr>
+    </table>
+    <p>以上是歷史上跟漢測情境最接近（高知名度、高承銷價、大幅折價發行）的初次掛牌案例，申購人數落在約7萬至47萬人之間。</p>
+
+    <p><strong>推估漢測中籤率：</strong>用這個歷史區間，對照漢測這次公開申購1,048張，敏感度估算如下：</p>
+    <table class="data-table">
+      <tr><th>假設申購人數</th><th>預估中籤率</th></tr>
+      <tr><td>70,000人</td><td>約1.50%</td></tr>
+      <tr><td>150,000人</td><td>約0.70%</td></tr>
+      <tr><td>250,000人</td><td>約0.42%</td></tr>
+      <tr><td>470,000人</td><td>約0.22%</td></tr>
+    </table>
+
+    <div class="think-box">
+      <p class="think-title">🤔 延伸思考：算得出中籤率，就代表算得出「值不值得抽」嗎？</p>
+      <p class="think-text">就算中籤率抓在0.25%~0.7%之間，這只解決了「抽不抽得到」的問題，掛牌後市價會不會維持在興櫃價附近、會不會拉回甚至跌破承銷價，仍然是未知數。也就是說，中籤率只是「換你當事人」決策中的一個因子，不能單獨拿來當作結論，這也是為什麼歷史上會出現中籤率很低、但掛牌後仍然跌破承銷價的案例。</p>
+    </div>
   </section>
 
   <section class="discussion" id="discussion">
