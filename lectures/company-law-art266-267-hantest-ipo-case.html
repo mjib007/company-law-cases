@@ -72,6 +72,11 @@
   .data-table th{ background:rgba(44,74,118,0.06); color:var(--ink); font-weight:700; }
   .data-source{ font-size:.82rem; color:var(--ink-45); margin-top:-.4rem; margin-bottom:1rem; }
   .note{ font-size:.8rem; color:var(--ink-45); }
+  .anchor-nav{ position:sticky; top:0; z-index:100; display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:1.5rem; padding:.8rem 0 1rem; background:var(--parchment); border-bottom:1px solid var(--line); }
+  .anchor-nav a{ font-size:.78rem; color:var(--indigo); background:rgba(44,74,118,0.08); border-radius:99px; padding:.35rem .8rem; text-decoration:none; white-space:nowrap; transition:background .2s, color .2s; }
+  .anchor-nav a.active{ background:var(--indigo); color:#fff; font-weight:700; }
+  .anchor-nav a:hover{ background:rgba(44,74,118,0.18); }
+  .anchor-nav a.active:hover{ background:var(--indigo); color:#fff; }
   .disclaimer{ font-size:.78rem; color:var(--ink-45); font-style:italic; border-left:3px solid var(--line); padding-left:.8rem; margin-top:2rem; }
 </style>
 </head>
@@ -91,6 +96,17 @@
     <span class="meta-date" id="pageMetaDate">載入中…</span>
     <img src="https://visitor-badge.laobi.icu/badge?page_id=mjib007.company-law-cases.漢測發行新股案" alt="Visitors" style="opacity:0.85;vertical-align:middle;">
   </div>
+
+  <nav class="anchor-nav">
+    <a href="#source">案例來源</a>
+    <a href="#timeline">①時間軸</a>
+    <a href="#articles">②對應條文</a>
+    <a href="#keypoints">③關鍵點</a>
+    <a href="#strategy">④換你當事人</a>
+    <a href="#data-analysis">延伸分析</a>
+    <a href="#guess-game">猜數字遊戲</a>
+    <a href="#discussion">課堂討論</a>
+  </nav>
 
   <section id="source">
     <h2>案例來源</h2>
@@ -299,6 +315,58 @@ async function loadPageMeta(){
   }
 }
 loadPageMeta();
+
+function adjustScrollMargin(){
+  const nav = document.querySelector('.anchor-nav');
+  if (!nav) return;
+  const h = nav.offsetHeight + 16;
+  document.querySelectorAll('section').forEach(s => {
+    s.style.scrollMarginTop = h + 'px';
+  });
+}
+window.addEventListener('load', adjustScrollMargin);
+window.addEventListener('resize', adjustScrollMargin);
+
+function setupActiveNavTracking(){
+  const navLinks = Array.from(document.querySelectorAll('.anchor-nav a'));
+  const sections = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+  function setActive(id){
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+    });
+  }
+
+  function updateActive(){
+    const nav = document.querySelector('.anchor-nav');
+    const offset = (nav ? nav.offsetHeight : 60) + 20;
+    let currentId = sections[0] ? sections[0].id : null;
+    sections.forEach(s => {
+      const rect = s.getBoundingClientRect();
+      if (rect.top - offset <= 0) {
+        currentId = s.id;
+      }
+    });
+    if (currentId) setActive(currentId);
+  }
+
+  let ticking = false;
+  function onScroll(){
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateActive();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  updateActive();
+}
+
+window.addEventListener('load', setupActiveNavTracking);
 </script>
 
 </body>
