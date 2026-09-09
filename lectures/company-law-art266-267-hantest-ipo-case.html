@@ -15,10 +15,24 @@
     --paper-panel: #fffdf8;
     --seal: #9c2b3a;
     --brass: #a9832f;
+    --pos: #2f7d5c;
     --line: #ddd3bf;
     --ink-70: rgba(22,35,59,0.7);
     --ink-45: rgba(22,35,59,0.45);
   }
+  [data-theme="dark"]{
+    --ink: #e8e3d6;
+    --indigo: #7ba3d9;
+    --parchment: #14181f;
+    --paper-panel: #1c2129;
+    --seal: #e0616e;
+    --brass: #d4ac5c;
+    --pos: #5cbf94;
+    --line: #333b47;
+    --ink-70: rgba(232,227,214,0.75);
+    --ink-45: rgba(232,227,214,0.5);
+  }
+  body{ transition: background .25s, color .25s; }
   *{box-sizing:border-box;}
   body{
     margin:0;
@@ -77,10 +91,46 @@
   .anchor-nav a.active{ background:var(--indigo); color:#fff; font-weight:700; }
   .anchor-nav a:hover{ background:rgba(44,74,118,0.18); }
   .anchor-nav a.active:hover{ background:var(--indigo); color:#fff; }
+
+  .theme-toggle-btn{ position:fixed; top:16px; right:18px; z-index:200; width:38px; height:38px;
+    border-radius:50%; border:1px solid var(--line); background:var(--paper-panel); color:var(--ink);
+    cursor:pointer; font-size:16px; display:flex; align-items:center; justify-content:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.12); transition:transform .2s, border-color .2s; }
+  .theme-toggle-btn:hover{ border-color:var(--seal); transform:rotate(15deg); }
+
+  .back-to-top{ position:fixed; bottom:22px; right:20px; width:42px; height:42px; border-radius:50%;
+    background:var(--indigo); color:#fff; border:none; box-shadow:0 4px 14px rgba(0,0,0,.25);
+    cursor:pointer; font-size:18px; display:flex; align-items:center; justify-content:center;
+    opacity:0; visibility:hidden; transition:opacity .25s, visibility .25s, transform .2s; z-index:199; }
+  .back-to-top.show{ opacity:1; visibility:visible; }
+  .back-to-top:hover{ transform:translateY(-3px); background:var(--seal); }
+
+  .think-box.good{ background:rgba(47,125,92,0.08); border-color:rgba(47,125,92,0.28); }
+  .think-box.good .think-title{ color:var(--pos); }
+
+  .formula-display{ background:var(--ink); color:#E2E8F0; border-radius:6px; padding:14px 18px;
+    margin:1rem 0; font-family:"Courier New",monospace; font-size:.85rem; line-height:1.9; overflow-x:auto; }
+  [data-theme="dark"] .formula-display{ background:#0B0E12; border:1px solid var(--line); }
+  .formula-display .ft{ color:#7DD3FC; }
+  .formula-display .fv{ color:#FDE68A; }
+  .formula-display .fr{ color:#86EFAC; font-weight:700; }
+
+  .calc-container{ background:var(--paper-panel); border:2px dashed var(--indigo); border-radius:8px;
+    padding:1.1rem 1.2rem; margin:1.2rem 0; }
+  .calc-title{ font-family:"Noto Serif TC",serif; font-weight:700; font-size:.95rem; color:var(--indigo); margin-bottom:.6rem; }
+  .calc-inputs{ display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:.8rem; margin-bottom:1rem; }
+  .calc-inputs label{ display:block; font-size:.75rem; color:var(--ink-45); margin-bottom:.3rem; }
+  .calc-inputs input{ width:100%; padding:.45rem .6rem; border-radius:5px; border:1px solid var(--line);
+    background:var(--parchment); color:var(--ink); font-size:.9rem; }
+  .calc-result-box{ display:flex; gap:1.5rem; flex-wrap:wrap; background:var(--parchment); border-radius:6px;
+    padding:.9rem 1.1rem; border:1px solid var(--line); }
+  .calc-stat-label{ font-size:.7rem; color:var(--ink-45); text-transform:uppercase; letter-spacing:.06em; }
+  .calc-stat-val{ font-family:"Courier New",monospace; font-size:1.4rem; font-weight:700; color:var(--indigo); }
   .disclaimer{ font-size:.78rem; color:var(--ink-45); font-style:italic; border-left:3px solid var(--line); padding-left:.8rem; margin-top:2rem; }
 </style>
 </head>
 <body>
+<button class="theme-toggle-btn" id="themeBtn" onclick="toggleTheme()" title="切換深色/淺色模式">🌓</button>
 <div class="wrap">
 
   <a class="back" href="../index.html">← 回總覽頁</a>
@@ -188,6 +238,11 @@
     <h2>延伸分析：從歷史抽籤資料估算漢測的中籤率</h2>
     <p class="data-source">資料來源：<a class="src" href="https://www.twse.com.tw/zh/announcement/public.html" target="_blank" rel="noopener">臺灣證券交易所－公開申購公告抽籤日程表</a>，彙整2020年至2026年9月共965筆公開申購紀錄，整理後之資料檔：<a class="src" href="https://github.com/mjib007/company-law-cases/blob/main/data/ipo-lottery-history-2020-2026.csv" target="_blank" rel="noopener">ipo-lottery-history-2020-2026.csv</a>。</p>
 
+    <div class="think-box good">
+      <p class="think-title">✅ 市價資料已通過驗證</p>
+      <p class="think-text">965筆中928筆已補上「申購結束日市價」（資料源：<a class="src" href="https://finmindtrade.com/" target="_blank" rel="noopener">FinMind</a>），涵蓋上市、上櫃、興櫃三個市場，並用5筆已知正確答案（總太、愛山林、尚凡、高端疫苗、漢測本身）逐一核對，全數吻合。完整清洗過程記錄於<a class="src" href="https://github.com/mjib007/company-law-cases/blob/main/data/README.md" target="_blank" rel="noopener">data/README.md</a>。</p>
+    </div>
+
     <p><strong>發現一：「初次掛牌」比「現金增資」熱門非常多。</strong>把965筆資料依發行市場分類後，「初上櫃」中籤率中位數只有0.39%，「初上市」為0.78%，都遠低於「上櫃增資」（0.98%）與「上市增資」（1.81%）。漢測屬於「初上櫃」類別，光憑這點就可以推測它的熱門程度會高於一般已上市櫃公司的現金增資案。</p>
 
     <p><strong>發現二：承銷價格高低，跟申購人數幾乎沒有關係。</strong>把「初次掛牌」類別298筆資料的承銷價跟申購人數（總合格件）算相關係數，結果幾乎是0。也就是說，漢測承銷價2,250元創史上最高，不代表它一定比較少人抽或比較多人抽，真正影響熱度的是價差幅度、產業題材、公司知名度，不是承銷價的絕對數字本身。</p>
@@ -250,6 +305,36 @@
     <div class="think-box">
       <p class="think-title">🤔 延伸思考：資料變多、模型變完整，答案反而離大家的直覺更遠了？</p>
       <p class="think-text">四個方法一路做下來，樣本數從4筆到899筆越來越多、R²也維持在0.8左右看起來很穩，但最後兩個方法算出來的申購人數（50萬、93萬）都遠遠超過歷史上任何一檔股票的實際申購人數（歷史最高是力智的466,082人）。這正好點出模型外插的風險：漢測的承銷價、價差率、話題熱度都創下歷史紀錄，模型抓到的「金額越高、話題性越高，申購人數也跟著往上」這個關係，一旦被推到樣本從沒出現過的極端值，預測結果可能會被線性放大到不合理的程度。這也是為什麼要等9月16日實際結果出來，才能真正檢驗這幾個模型到底哪一個（或哪幾個假設）站得住腳。</p>
+    </div>
+
+    <div class="formula-display">
+<span class="ft">中籤率</span> = <span class="ft">公開申購張數</span> ÷ <span class="ft">申購人數</span><br>
+<span class="ft">期望值</span> = <span class="ft">中籤率</span> × [(<span class="ft">掛牌後市價</span> − <span class="ft">承銷價</span>) × 1,000股]
+    </div>
+
+    <div class="calc-container">
+      <div class="calc-title">🧮 互動試算：換你猜一個申購人數，看看隱含的中籤率與期望值</div>
+      <p style="font-size:.78rem;color:var(--ink-45);margin:0 0 .8rem;">承銷價固定用2,250元、公開申購1,048張計算；掛牌後市價自己假設，數字純粹讓你感受敏感度，不是預測。</p>
+      <div class="calc-inputs">
+        <div>
+          <label>你猜的申購人數</label>
+          <input type="number" id="calcCount" value="125000" step="1000" oninput="runHantestCalc()">
+        </div>
+        <div>
+          <label>假設掛牌後市價（元）</label>
+          <input type="number" id="calcListedPrice" value="4744" step="1" oninput="runHantestCalc()">
+        </div>
+      </div>
+      <div class="calc-result-box">
+        <div>
+          <div class="calc-stat-label">隱含中籤率</div>
+          <div class="calc-stat-val" id="resRate">--</div>
+        </div>
+        <div>
+          <div class="calc-stat-label">單張期望值</div>
+          <div class="calc-stat-val" id="resEv">--</div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -367,7 +452,48 @@ function setupActiveNavTracking(){
 }
 
 window.addEventListener('load', setupActiveNavTracking);
+
+(function(){
+  function updateBtn(t){ var b=document.getElementById('themeBtn'); if(b) b.textContent = t==='dark' ? '☀️' : '🌓'; }
+  var saved = localStorage.getItem('lecture-theme');
+  if (saved) { document.documentElement.setAttribute('data-theme', saved); updateBtn(saved); }
+  else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.setAttribute('data-theme', 'dark'); updateBtn('dark');
+  }
+  window.toggleTheme = function(){
+    var cur = document.documentElement.getAttribute('data-theme');
+    var next = cur === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('lecture-theme', next);
+    updateBtn(next);
+  };
+})();
+
+(function(){
+  var btn = document.getElementById('backToTop');
+  if (!btn) return;
+  window.addEventListener('scroll', function(){
+    if (window.scrollY > 400) btn.classList.add('show');
+    else btn.classList.remove('show');
+  }, { passive: true });
+})();
+
+function runHantestCalc(){
+  var count = parseFloat(document.getElementById('calcCount').value) || 0;
+  var listedPrice = parseFloat(document.getElementById('calcListedPrice').value) || 0;
+  var offerPrice = 2250;
+  var units = 1048;
+
+  var rate = count > 0 ? (units / count * 100) : 0;
+  document.getElementById('resRate').textContent = rate > 0 ? rate.toFixed(2) + '%' : '--';
+
+  var gainPerUnit = (listedPrice - offerPrice) * 1000;
+  var ev = count > 0 ? (rate / 100 * gainPerUnit) : 0;
+  document.getElementById('resEv').textContent = count > 0 ? Math.round(ev).toLocaleString() + ' 元' : '--';
+}
 </script>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到頂部">↑</button>
 
 </body>
 </html>
