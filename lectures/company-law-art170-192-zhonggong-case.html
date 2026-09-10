@@ -246,6 +246,13 @@
     padding-left:.8rem;
     margin-top:2rem;
   }
+  .anchor-nav{ position:sticky; top:0; z-index:100; display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:1.5rem; padding:.8rem 0 1rem; background:var(--parchment); border-bottom:1px solid var(--line); }
+  .anchor-nav a{ font-size:.78rem; color:var(--indigo); background:rgba(44,74,118,0.08); border-radius:99px; padding:.35rem .8rem; text-decoration:none; white-space:nowrap; transition:background .2s, color .2s; }
+  .anchor-nav a.active{ background:var(--indigo); color:#fff; font-weight:700; }
+  .anchor-nav a:hover{ background:rgba(44,74,118,0.18); }
+  .anchor-nav a.active:hover{ background:var(--indigo); color:#fff; }
+  html{ scroll-behavior:smooth; }
+  [id]{ scroll-margin-top:5.5rem; }
 </style>
 </head>
 <body>
@@ -266,13 +273,20 @@
     <img src="https://visitor-badge.laobi.icu/badge?page_id=mjib007.company-law-cases.中工經營權爭奪案" alt="Visitors" style="opacity:0.85;vertical-align:middle;">
   </div>
 
+  <nav class="anchor-nav">
+    <a href="#source">案例來源</a>
+    <a href="#timeline">事件時間軸</a>
+    <a href="#discussion">引導討論</a>
+    <a href="#more-discussion">其他討論</a>
+  </nav>
+
   <section>
-    <h2>案例來源</h2>
+    <h2 id="source">案例來源</h2>
     <p><a class="src" href="https://tw.stock.yahoo.com/quote/2515.TW/profile" target="_blank" rel="noopener">中華工程股份有限公司（股票代號 2515，下稱「中工」）</a>2026年董監事改選經營權爭奪案，由市場派寶佳機構與公司派威京集團對決。事件發生於2026年4月至5月，媒體報導完整，適合作為觀察經營權爭奪實務操作的案例。</p>
   </section>
 
   <section>
-    <h2>事件時間軸</h2>
+    <h2 id="timeline">事件時間軸</h2>
     <ul class="timeline">
       <li><span class="date">2025/04/08–11/04</span><p class="desc">寶佳集團旗下堡新投資、<a class="src" href="https://tw.stock.yahoo.com/quote/2530.TW/profile" target="_blank" rel="noopener">大華建設</a>（2530）等15家投資公司及自然人，在公開市場陸續買進中工股票，累計取得約18.3萬張（181,316,000股），耗資約23億元。</p></li>
       <li><span class="date">2025/11/03</span><p class="desc">中工發出聲明，指控堡新投資以「禿鷹掠奪」方式，在4個交易日內耗資逾20億元大量買進中工股票。
@@ -327,7 +341,7 @@
   </section>
 
   <section>
-    <h2>引導討論</h2>
+    <h2 id="discussion">引導討論</h2>
     <div class="qa">
       <div class="q">1. 董事會是否有權將股東合法提名的董事候選人從名單中刪除？</div>
       <p class="a">依<a class="law" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=192-1" target="_blank" rel="noopener">公司法§192-1</a>，持股一定比例以上的股東有權提出董事候選人名單。<a class="src" href="https://lis.ly.gov.tw/lglawc/lawsingle?016B393512E9000000000000000001400000000400FFFFFD00^04517107070600^00000000000" target="_blank" rel="noopener">107年修法理由</a>明確指出，該條刪除了「對董事被提名人應予審查」之文字，董事會或其他召集權人不再對被提名人有審查權，僅得依同條第5項列舉事由（如逾期提出、持股不足、提名人數超額、未敘明學經歷）進行形式認定。本案中工刪除寶佳提名候選人的正當性，即為假處分程序中的核心爭點。</p>
@@ -360,7 +374,7 @@
   </section>
 
   <section class="discussion">
-    <h2>其他討論</h2>
+    <h2 id="more-discussion">其他討論</h2>
     <ol>
       <li>比較本案與2020年<a class="src" href="https://plainlaw.me/article/datong" target="_blank" rel="noopener">大同公司經營權之爭</a>，兩案在董事提名爭議上的操作手法有何異同？</li>
     </ol>
@@ -406,6 +420,46 @@ async function loadPageMeta(){
   }
 }
 loadPageMeta();
+
+function setupActiveNavTracking(){
+  const navLinks = Array.from(document.querySelectorAll('.anchor-nav a'));
+  const targets = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+  function setActive(id){
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+    });
+  }
+
+  function updateActive(){
+    const nav = document.querySelector('.anchor-nav');
+    const offset = (nav ? nav.offsetHeight : 60) + 20;
+    let currentId = targets[0] ? targets[0].id : null;
+    targets.forEach(t => {
+      const rect = t.getBoundingClientRect();
+      if (rect.top - offset <= 0) {
+        currentId = t.id;
+      }
+    });
+    if (currentId) setActive(currentId);
+  }
+
+  let ticking = false;
+  function onScroll(){
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateActive();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  updateActive();
+}
+window.addEventListener('load', setupActiveNavTracking);
 </script>
 
 </body>
