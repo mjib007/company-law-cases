@@ -188,7 +188,7 @@
     padding:1rem 1.2rem;
     margin-top:1rem;
   }
-  ol.process{ counter-reset:step; list-style:none; padding-left:0; margin:1.2rem 0 0; }
+  ol.process{ counter-reset:step -1; list-style:none; padding-left:0; margin:1.2rem 0 0; }
   ol.process > li{ counter-increment:step; position:relative; padding:1rem 1.2rem 1rem 3.2rem; margin-bottom:.9rem; background:rgba(44,74,118,0.04); border:1px solid var(--line); border-radius:8px; }
   ol.process > li::before{ content:counter(step); position:absolute; left:1rem; top:1.05rem; width:1.7rem; height:1.7rem; border-radius:50%; background:var(--indigo); color:#fff; font-size:.85rem; font-weight:700; display:flex; align-items:center; justify-content:center; }
   .step-title{ font-weight:700; font-size:.97rem; margin:0 0 .35rem; color:var(--ink); }
@@ -314,6 +314,13 @@
 
     <ol class="process">
       <li>
+        <p class="step-title">起點　任期屆滿：三年一次的機會窗口</p>
+        <p class="step-basis">依據：<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=195" target="_blank" rel="noopener">公司法§195</a></p>
+        <p class="step-desc">董事任期不得逾三年，但得連選連任。任期屆滿而不及改選時，延長其執行職務至改選董事就任時為止；主管機關並得依職權限期令公司改選，屆期仍不改選者，自限期屆滿時當然解任。</p>
+        <p class="step-battle">攻防點：這是整場戰役的時鐘。董事席次不是隨時可以搶的，原則上要等三年一次的全面改選。市場派若錯過這一屆，下次機會就在三年後——這解釋了為什麼雙方都願意在單一年度投入數十億元資金與大量法律資源。</p>
+      </li>
+
+      <li>
         <p class="step-title">關卡一　停止股票過戶日前：公司公告受理提名</p>
         <p class="step-basis">依據：<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=192-1" target="_blank" rel="noopener">公司法§192-1</a>第2項</p>
         <p class="step-desc">公司應於停止過戶日前，公告受理董事候選人提名的期間、應選名額、受理處所等事項，受理期間不得少於10日。</p>
@@ -321,10 +328,11 @@
       </li>
 
       <li>
-        <p class="step-title">關卡二　停止過戶日：確認誰有提名資格</p>
-        <p class="step-basis">依據：<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=192-1" target="_blank" rel="noopener">公司法§192-1</a>第3項、第5項第2款；<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=165" target="_blank" rel="noopener">公司法§165</a></p>
-        <p class="step-desc">持有已發行股份總數1%以上的股東，才有權提名；持股是否達標，以停止過戶時的股東名簿為準。</p>
-        <p class="step-battle">攻防點：市場派必須在停止過戶日之前把股權買到位，晚一天都不算。這解釋了為什麼收購方要提前數月布局，而不是等股東會前才動作。</p>
+        <p class="step-title">關卡二　停止過戶日：股東名簿凍結，確認誰有提名資格</p>
+        <p class="step-basis">依據：<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=192-1" target="_blank" rel="noopener">公司法§192-1</a>第3項、第5項第2款；<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=165" target="_blank" rel="noopener">公司法§165</a>第2項、第3項</p>
+        <p class="step-desc">股份轉讓須記載於股東名簿，才能對抗公司。而股東名簿的記載變更有一段法定凍結期：<strong>公開發行公司於股東常會開會前60日內、股東臨時會開會前30日內，不得辦理過戶</strong>（非公開發行公司則為常會30日內、臨時會15日內）。這段期間即俗稱的「停止過戶期間」，期間起算自開會日往前推。<br>
+        換句話說，名簿在此時被凍結，誰是股東、各持有多少股，就以這個時點的記載為準。持有已發行股份總數1%以上者才有提名權，是否達標同樣看這份凍結後的名簿。</p>
+        <p class="step-battle">攻防點：這是整場爭奪戰的「投票資格截止日」。市場派必須在停止過戶日之前把股權買到位並完成過戶，晚一天買到的股票，這一屆完全用不上。這解釋了為什麼收購方要提前數月甚至一年布局，而不是等股東會前才動作。</p>
       </li>
 
       <li>
@@ -369,8 +377,8 @@
 
     <div class="plain-box">
       <p class="plain-title">💡 用這張流程圖回看本案</p>
-      <p class="plain-text">寶佳陣營從2025年4月就開始買股，到11月公告持股11.8%——這是在趕<strong>關卡二</strong>的停止過戶日；公司派2026年4月以「超額提名」刪除候選人，動作發生在<strong>關卡四</strong>；寶佳聲請假處分，走的是<strong>關卡六</strong>；最終5月21日股東會改選，決勝在<strong>關卡七</strong>。</p>
-      <p class="plain-text">整場爭奪戰打了一年多，但真正的決戰點只有這幾關。看懂流程，才看得懂為什麼雙方要在那些特定時間點做那些事。</p>
+      <p class="plain-text">中工於2026年5月21日股東常會進行第28屆董事全面改選，依§195董事任期不得逾三年，這種全面改選的機會窗口就是<strong>起點</strong>的時鐘；寶佳陣營從2025年4月就開始買股，到11月公告持股11.8%，是在趕<strong>關卡二</strong>的停止過戶日（上市公司依§165為股東常會開會前60日內停止過戶，以5月21日往前推算，約落在3月下旬，實際日期以公司公告為準）；公司派2026年4月以「超額提名」刪除候選人，動作發生在<strong>關卡四</strong>；寶佳聲請假處分，走的是<strong>關卡六</strong>；最終5月21日股東會改選，決勝在<strong>關卡七</strong>。</p>
+      <p class="plain-text">整場爭奪戰打了一年多，但真正的決戰點只有這幾關。看懂流程，才看得懂為什麼雙方要在那些特定時間點做那些事——也才看得懂，為什麼錯過了就要再等三年。</p>
     </div>
   </section>
 
