@@ -191,6 +191,8 @@
   ol.process{ counter-reset:step -1; list-style:none; padding-left:0; margin:1.2rem 0 0; }
   ol.process > li{ counter-increment:step; position:relative; padding:1rem 1.2rem 1rem 3.2rem; margin-bottom:.9rem; background:rgba(44,74,118,0.04); border:1px solid var(--line); border-radius:8px; }
   ol.process > li::before{ content:counter(step); position:absolute; left:1rem; top:1.05rem; width:1.7rem; height:1.7rem; border-radius:50%; background:var(--indigo); color:#fff; font-size:.85rem; font-weight:700; display:flex; align-items:center; justify-content:center; }
+  ol.process > li.alt{ counter-increment:none; background:rgba(156,43,58,0.04); border-color:rgba(156,43,58,0.25); }
+  ol.process > li.alt::before{ content:"⤷"; background:var(--seal); font-size:.95rem; }
   .step-title{ font-weight:700; font-size:.97rem; margin:0 0 .35rem; color:var(--ink); }
   .step-basis{ font-size:.82rem; color:var(--ink-45); margin:0 0 .45rem; }
   .step-desc{ font-size:.9rem; color:var(--ink-70); margin:0 0 .5rem; }
@@ -317,7 +319,20 @@
         <p class="step-title">起點　任期屆滿：三年一次的機會窗口</p>
         <p class="step-basis">依據：<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=195" target="_blank" rel="noopener">公司法§195</a></p>
         <p class="step-desc">董事任期不得逾三年，但得連選連任。任期屆滿而不及改選時，延長其執行職務至改選董事就任時為止；主管機關並得依職權限期令公司改選，屆期仍不改選者，自限期屆滿時當然解任。</p>
-        <p class="step-battle">攻防點：這是整場戰役的時鐘。董事席次不是隨時可以搶的，原則上要等三年一次的全面改選。市場派若錯過這一屆，下次機會就在三年後——這解釋了為什麼雙方都願意在單一年度投入數十億元資金與大量法律資源。</p>
+        <p class="step-battle">攻防點：這是整場戰役的時鐘。董事席次原則上要等三年一次的全面改選，錯過這一屆，下次機會就在三年後——這解釋了為什麼雙方都願意在單一年度投入數十億元資金與大量法律資源。<strong>但三年不是唯一的路：若能召開股東臨時會提前改選，就不必空等（見下方補充）。</strong></p>
+      </li>
+
+      <li class="alt">
+        <p class="step-title">起點（另一條路）　召開股東臨時會：不等三年的提前改選</p>
+        <p class="step-basis">依據：<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=173" target="_blank" rel="noopener">公司法§173</a>、<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=173-1" target="_blank" rel="noopener">§173-1</a>、<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=199" target="_blank" rel="noopener">§199</a>、<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=199-1" target="_blank" rel="noopener">§199-1</a>；<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=43-5" target="_blank" rel="noopener">證交法§43-5</a>第4項</p>
+        <p class="step-desc"><strong>怎麼把會開成：</strong><br>
+        ・繼續一年以上持有已發行股份總數3%以上之股東，得以書面記明提議事項及理由，請求董事會召集股東臨時會；請求提出後15日內董事會不為召集通知時，得報經主管機關許可自行召集（§173第1項、第2項）。<br>
+        ・繼續三個月以上持有已發行股份總數<strong>過半數</strong>之股東，得<strong>逕行自行召集</strong>，毋庸先請求董事會或報經許可（§173-1，因大同案增訂，實務上俗稱「大同條款」）。<br>
+        ・公開收購人與其關係人於公開收購後持股超過50%者，得請求董事會召集股東臨時會，不受§173第1項限制（證交法§43-5第4項）。<br>
+        <strong>開成之後怎麼換人：</strong><br>
+        ・解任個別董事：須經股東會特別決議（§199）。<br>
+        ・改選全體董事：於董事任期未屆滿前經決議改選全體董事，如未決議董事於任期屆滿始為解任者，視為提前解任（§199-1）。</p>
+        <p class="step-battle">攻防點：這條路把「等三年」變成「等資格」。門檻高低決定了難易——3%只能「請求」董事會召集（董事會多半不理，還要再走主管機關許可這一關，曠日廢時）；持股過半才能直接自己開會。反過來說，公司派的防守重點就是讓對手永遠達不到門檻，這也是庫藏股、增資稀釋等工具的意義所在。本案寶佳陣營持股約16.6%，離過半甚遠，因此並未走這條路，而是等2026年的全面改選。</p>
       </li>
 
       <li>
