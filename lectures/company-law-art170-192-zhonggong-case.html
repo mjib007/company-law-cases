@@ -188,6 +188,21 @@
     padding:1rem 1.2rem;
     margin-top:1rem;
   }
+  .toolbox-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.2rem; margin-top:1rem; }
+  .toolbox{ border-radius:8px; padding:1.1rem 1.3rem; }
+  .toolbox.attack{ background:rgba(156,43,58,0.06); border:1px solid rgba(156,43,58,0.25); }
+  .toolbox.defend{ background:rgba(44,74,118,0.06); border:1px solid rgba(44,74,118,0.25); }
+  .toolbox h3{ font-size:1rem; margin:0 0 .3rem; }
+  .toolbox.attack h3{ color:var(--seal); }
+  .toolbox.defend h3{ color:var(--indigo); }
+  .toolbox .side-note{ font-size:.82rem; color:var(--ink-45); margin:0 0 .9rem; font-style:italic; }
+  .tool-item{ border-top:1px solid var(--line); padding:.7rem 0; }
+  .tool-item:first-of-type{ border-top:none; }
+  .tool-name{ font-weight:700; font-size:.92rem; margin:0 0 .25rem; color:var(--ink); }
+  .tool-basis{ font-size:.82rem; color:var(--ink-45); margin:0 0 .3rem; }
+  .tool-desc{ font-size:.88rem; color:var(--ink-70); margin:0 0 .3rem; }
+  .tool-cost{ font-size:.84rem; color:var(--brass); margin:0; }
+  .tool-cost::before{ content:"代價／風險："; font-weight:700; }
   .plain-title{
     font-weight:700;
     color:var(--brass);
@@ -278,6 +293,7 @@
     <a href="#timeline">事件時間軸</a>
     <a href="#discussion">引導討論</a>
     <a href="#more-discussion">其他討論</a>
+    <a href="#toolbox">經營權攻防</a>
   </nav>
 
   <section>
@@ -378,6 +394,101 @@
     <ol>
       <li>比較本案與2020年<a class="src" href="https://plainlaw.me/article/datong" target="_blank" rel="noopener">大同公司經營權之爭</a>，兩案在董事提名爭議上的操作手法有何異同？</li>
     </ol>
+  </section>
+
+  <section>
+    <h2 id="toolbox">經營權攻防：雙方的工具箱</h2>
+    <p class="note">經營權爭奪不是單一行為，而是一連串攻防手段的組合。以下整理雙方在法律上可動用的主要工具，以及每項工具的代價。這是一份「工具清單」，不是「標準答案」，實際該用哪一項，取決於持股結構、時間點、資金實力與董事會席次分布。</p>
+
+    <div class="toolbox-grid">
+
+      <div class="toolbox attack">
+        <h3>進攻方（市場派）</h3>
+        <p class="side-note">目標：取得足夠股權與董事席次，改組董事會</p>
+
+        <div class="tool-item">
+          <p class="tool-name">公開市場收購</p>
+          <p class="tool-basis">依據：<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=163" target="_blank" rel="noopener">公司法§163</a>股份自由轉讓原則；持股達一定比例須依<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=43-1" target="_blank" rel="noopener">證交法§43-1</a>申報</p>
+          <p class="tool-desc">直接在集中市場買進股票累積持股。本案寶佳陣營即以此為主要手段，動用15家投資公司及自然人名義分散買進。</p>
+          <p class="tool-cost">資金需求龐大；買進過程推升股價、成本遞增；達申報門檻後行蹤曝光，對手得以預作防備。</p>
+        </div>
+
+        <div class="tool-item">
+          <p class="tool-name">公開收購</p>
+          <p class="tool-basis">依據：證交法<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=43-2" target="_blank" rel="noopener">§43-2</a>、<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=43-3" target="_blank" rel="noopener">§43-3</a>、<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=43-4" target="_blank" rel="noopener">§43-4</a>、<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=43-5" target="_blank" rel="noopener">§43-5</a></p>
+          <p class="tool-desc">公告特定價格與期間，向全體股東招買股份。相較於在市場零星買進，可在短期內取得大量股權，且程序公開透明。</p>
+          <p class="tool-cost">須公告收購條件，對手有充分時間反制；收購價通常須高於市價才有吸引力；應賣股數不足預定數量時，收購可能失敗。</p>
+        </div>
+
+        <div class="tool-item">
+          <p class="tool-name">委託書徵求</p>
+          <p class="tool-basis">依據：<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=177" target="_blank" rel="noopener">公司法§177</a>；證交法授權訂定之公開發行公司出席股東會使用委託書規則</p>
+          <p class="tool-desc">不必真正持有股份，而是蒐集其他股東的表決權，在股東會上「借票投票」。持股不足時的重要補充手段。</p>
+          <p class="tool-cost">徵求資格與方式受法規限制；成本不低；委託書效力易生爭議，事後可能遭訴訟挑戰。</p>
+        </div>
+
+        <div class="tool-item">
+          <p class="tool-name">提名董事候選人</p>
+          <p class="tool-basis">依據：<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=192-1" target="_blank" rel="noopener">公司法§192-1</a>候選人提名制度</p>
+          <p class="tool-desc">持股達1%以上股東得提出董事候選人名單。有了股權，還要有人選進得了名單，才能真正轉換成董事席次。</p>
+          <p class="tool-cost">須符合持股門檻與期限；名單須經董事會審查後公告，實務上常成為公司派設卡的節點（本案即發生刪除候選人爭議）。</p>
+        </div>
+
+        <div class="tool-item">
+          <p class="tool-name">法律訴追與假處分</p>
+          <p class="tool-basis">依據：<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=538" target="_blank" rel="noopener">民事訴訟法§538</a>定暫時狀態假處分</p>
+          <p class="tool-desc">提名遭不當剔除時，向法院聲請假處分，要求在本案訴訟確定前先回復候選人資格，避免股東會先開完造成既成事實。</p>
+          <p class="tool-cost">須提供擔保金；法院審理有時間壓力，須趕在股東會前裁定；即使勝訴，也只是回到起跑線，不保證選得上。</p>
+        </div>
+      </div>
+
+      <div class="toolbox defend">
+        <h3>防守方（公司派）</h3>
+        <p class="side-note">目標：稀釋對手股權、阻卻其進入董事會、拖延時間</p>
+
+        <div class="tool-item">
+          <p class="tool-name">買回庫藏股</p>
+          <p class="tool-basis">依據：<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=28-2" target="_blank" rel="noopener">證交法§28-2</a></p>
+          <p class="tool-desc">公司動用自有資金買回自家股票，減少流通在外股數，相對提高公司派持股比例，同時推升股價墊高對手收購成本。</p>
+          <p class="tool-cost">須符合法定事由與程序；消耗公司資金，可能損及財務結構；庫藏股無表決權，稀釋效果有限。</p>
+        </div>
+
+        <div class="tool-item">
+          <p class="tool-name">現金增資引進友好股東</p>
+          <p class="tool-basis">依據：<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=266" target="_blank" rel="noopener">公司法§266</a>、<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=267" target="_blank" rel="noopener">§267</a>新股發行與員工、股東優先認購</p>
+          <p class="tool-desc">發行新股使總股數增加，對手持股比例被稀釋；若能安排由友好方認購，等於同時增加己方票源。</p>
+          <p class="tool-cost">§267原股東有優先認購權，對手亦可依比例認購而維持持股比例；若刻意排除原股東，易遭質疑增資目的不當而生訴訟。</p>
+        </div>
+
+        <div class="tool-item">
+          <p class="tool-name">尋找白衣騎士</p>
+          <p class="tool-basis">實務操作，無單一條文依據</p>
+          <p class="tool-desc">引進友好的第三方大股東，共同對抗敵意收購方，或由其接手部分股權。</p>
+          <p class="tool-cost">等於引狼入室的風險：今日的盟友可能是明日的收購者；談判籌碼往往要以董事席次或經營權分享換取。</p>
+        </div>
+
+        <div class="tool-item">
+          <p class="tool-name">以形式要件剔除候選人</p>
+          <p class="tool-basis">依據：<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=192-1" target="_blank" rel="noopener">公司法§192-1</a>董事會審查權限</p>
+          <p class="tool-desc">以提名超額、文件不備、資格不符等形式事由，將對手提名的候選人排除於名單之外。本案公司派即以「超額提名」為由刪除寶佳陣營名單。</p>
+          <p class="tool-cost">審查權限範圍本身即為爭點（詳見上方引導討論Q1）；遭對手聲請假處分時，法院可能裁定回復，反而賠上正當性與時間。</p>
+        </div>
+
+        <div class="tool-item">
+          <p class="tool-name">法律訴追（內線交易、操縱股價）</p>
+          <p class="tool-basis">依據：<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=157-1" target="_blank" rel="noopener">證交法§157-1</a>、<a class="src" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=155" target="_blank" rel="noopener">§155</a></p>
+          <p class="tool-desc">針對對手收購過程中的違法情事提出告發，訴諸主管機關與司法調查，同時在輿論上取得道德高地。</p>
+          <p class="tool-cost">舉證困難，刑事程序曠日廢時，通常趕不上股東會時程；若最終不起訴，反而削弱公司派公信力。</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="plain-box">
+      <p class="plain-title">💡 思考角度：工具有沒有用，要看時間點</p>
+      <p class="plain-text">同一項工具在不同時間點的效果天差地別。以本案為例，公司派若在2025年4月就察覺異常持股並啟動庫藏股或增資，稀釋效果遠大於2026年4月對手已握有16.6%股權之後才動作；而到了股東會前夕，能用的工具實際上只剩下候選人資格的形式審查與訴訟拖延。</p>
+      <p class="plain-text">這也是為什麼經營權攻防的核心不只是「有哪些手段」，而是<strong>在資訊不完整、時間壓力下，判斷現在該動用哪一項</strong>。</p>
+    </div>
   </section>
 
   <p class="note">相關報導亦可參考：<a class="src" href="https://udn.com/news/story/7241/9516489" target="_blank" rel="noopener">聯合新聞網</a>、<a class="src" href="https://udn.com/news/story/7241/9516409" target="_blank" rel="noopener">經濟日報</a>、<a class="src" href="https://today.line.me/tw/v3/article/7N1DnZP" target="_blank" rel="noopener">MoneyDJ理財網</a>；延伸閱讀可參考<a class="src" href="https://vocus.cc/article/6a8ee84bfd89780001353ec0" target="_blank" rel="noopener">〈中工經營權爭奪案〉</a>一文的完整分析。</p>
