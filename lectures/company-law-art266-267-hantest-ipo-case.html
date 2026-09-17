@@ -176,6 +176,7 @@
     <a href="#strategy">④換你當事人</a>
     <a href="#data-analysis">延伸分析</a>
     <a href="#guess-game">猜數字遊戲</a>
+    <a href="#review">分析檢討</a>
     <a href="#discussion">課堂討論</a>
   </nav>
 
@@ -358,6 +359,26 @@
     </div>
 
     <p class="note">想參加的同學，透過 Pull Request 直接編輯這個表格新增一列即可，具名規則跟其他提交一樣，請依 <a class="src" href="https://github.com/mjib007/company-law-cases/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">CONTRIBUTING.md</a> 的規則使用「遮蔽版」姓名學號（例如：陳○明，******456），不要留完整真實姓名。</p>
+  </section>
+
+  <section id="review">
+    <h2>這次分析的檢討：預測方法可以怎麼修正</h2>
+    <p>所有猜測跟模型全部低估了真實結果，這個失敗本身比任何一個數字都值得研究。以下是兩個最具體、也最容易在下次實作的修正方向。</p>
+
+    <div class="think-box">
+      <p class="think-title">修正一：別再猜單一數字，改成給「區間」並事後檢驗校準度</p>
+      <p class="think-text">我們整場都在猜一個確切數字（16萬、21.8萬、93萬），但真實情況是誰都不知道答案會落在哪裡。比較誠實的做法是給一個<span class="stat">80%信賴區間</span>，例如「我認為有80%的機率落在15萬到50萬之間」。這樣一來，評分標準會從「誰猜得最接近」變成「誰的區間校準得好」：如果一個人每次都給很窄的區間卻常常落空，代表他過度自信；反過來，區間開得很寬雖然容易命中，但資訊量太低，等於沒說什麼。這是專業預測領域慣用的自我檢驗方式，也很適合當成課堂練習。</p>
+    </div>
+
+    <div class="think-box good">
+      <p class="think-title">修正二：拿到新資訊就立刻修正，不要死守事前的猜測</p>
+      <p class="think-text">這是這次最可惜、也最實用的一招。9月10日申購首日就公布了<span class="stat">143,285筆</span>這個數字，如果當下立刻拿歷史上「首日筆數佔總量的比例」去回推（初次掛牌案例通常首日大約佔三到四成），馬上就能推算出總量會落在<span class="stat">35萬到48萬之間</span>，而實際結果384,717筆正好落在這個範圍內，遠比我們事前用歷史資料算出來的任何一個數字都準。這種「先有一個粗略的事前猜測，一拿到新資訊就馬上更新」的思路，在統計上稱為貝氏更新（Bayesian updating）。這次我們卻在首日數據出來之後，還繼續守著事前的16萬、21.8萬不動，白白浪費了一個能大幅提升準確度的資訊。</p>
+    </div>
+
+    <div class="think-box">
+      <p class="think-title">🤔 延伸思考：算得準，跟做對決定，是兩回事</p>
+      <p class="think-text">就算我們把中籤率算到0.27%這麼精準，它也回答不了「到底該不該抽」這個問題，因為那還牽涉到掛牌後的價格會怎麼走，那是另一層完全不同的不確定性。與其追求把申購人數算到小數點後幾位，更值得練習的是反過來問自己：<span class="stat">在中籤率0.1%到1%這個範圍內，我的決定會不會改變？</span>如果答案是不會，那把中籤率算得再精確，對決策其實沒有任何幫助。這也呼應了前面「換你當事人」的核心：決策的品質，不等於預測的精度。</p>
+    </div>
   </section>
 
   <section class="discussion" id="discussion">
