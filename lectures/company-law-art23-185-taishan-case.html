@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>泰山經營權之爭——控制股東資產處分與改選後假處分 | company-law-cases</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #16233b;
+    --indigo: #2c4a76;
+    --parchment: #f3ede0;
+    --paper-panel: #fffdf8;
+    --seal: #9c2b3a;
+    --brass: #a9832f;
+    --line: #ddd3bf;
+    --ink-70: rgba(22,35,59,0.7);
+    --ink-45: rgba(22,35,59,0.45);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:"Noto Sans TC",sans-serif;
+    background:var(--parchment);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.8;
+  }
+  strong { font-weight: 700; color: var(--ink); }
+  .wrap{ max-width:760px; margin:0 auto; padding:2.5rem 1.5rem 4rem; }
+  .back{ display:inline-block; font-size:.85rem; color:var(--indigo); text-decoration:none; margin-bottom:1.5rem; }
+  .back:hover{ color:var(--seal); }
+  .eyebrow{ font-size:.74rem; letter-spacing:.2em; color:var(--brass); font-weight:700; margin-bottom:.8rem; }
+  h1{ font-family:"Noto Serif TC",serif; font-weight:900; font-size:1.7rem; line-height:1.4; margin:0 0 .6rem; }
+  .meta-bar{ display:flex; flex-wrap:wrap; gap:.6rem; margin-bottom:2rem; font-size:.8rem; }
+  .tag{ background:var(--paper-panel); border:1px solid var(--line); color:var(--brass); padding:.2rem .7rem; border-radius:999px; }
+  .author-badge{ background:rgba(44,74,118,0.12); color:var(--indigo); padding:.2rem .7rem; border-radius:999px; font-weight:700; }
+  .page-meta{ display:flex; align-items:center; gap:10px; margin-bottom:1.8rem; font-size:.78rem; }
+  .page-meta .ver-badge{ font-family:"Noto Serif TC",serif; font-weight:700; color:var(--seal); border:1px solid var(--seal); border-radius:20px; padding:2px 10px; }
+  .page-meta .meta-date{ color:var(--ink-45); }
+  section{ background:var(--paper-panel); border:1px solid var(--line); border-radius:10px; padding:1.4rem 1.6rem; margin-bottom:1.3rem; }
+  h2{ font-family:"Noto Serif TC",serif; font-size:1.05rem; font-weight:700; color:var(--ink); margin:0 0 .8rem; padding-bottom:.5rem; border-bottom:1px solid var(--line); }
+  p{ font-size:.95rem; color:var(--ink-70); margin:0 0 1rem; }
+  p:last-child{ margin-bottom:0; }
+  a.src{ color:var(--indigo); text-decoration:underline; text-decoration-color:var(--line); text-underline-offset:3px; font-weight:500; }
+  a.src:hover{ color:var(--seal); text-decoration-color:var(--seal); }
+  a.law{ color:var(--brass); font-weight:700; text-decoration:none; border-bottom:1px dashed var(--brass); }
+  a.law:hover{ color:var(--seal); border-bottom-color:var(--seal); }
+  .timeline{ list-style:none; margin:0; padding:0; }
+  .timeline li{ display:flex; gap:1rem; margin-bottom:1rem; align-items:baseline; }
+  .timeline .date{ flex:0 0 auto; font-weight:700; color:var(--seal); font-size:.85rem; white-space:nowrap; }
+  .timeline .desc{ font-size:.92rem; color:var(--ink-70); margin:0; }
+  .qa{ margin-bottom:1.1rem; }
+  .qa .q{ font-weight:700; margin-bottom:.3rem; font-size:.95rem; }
+  .qa .a{ font-size:.92rem; color:var(--ink-70); margin:0; }
+  .discussion ol{ padding-left:1.3rem; font-size:.92rem; color:var(--ink-70); margin:0; }
+  .discussion li{ margin-bottom:.7rem; }
+  .plain-box{ background:rgba(169,131,47,0.07); border:1px solid rgba(169,131,47,0.25); border-radius:8px; padding:1rem 1.2rem; margin-top:1rem; }
+  .plain-title{ font-weight:700; color:var(--brass); font-size:.92rem; margin:0 0 .6rem; }
+  .plain-text{ font-size:.9rem; color:var(--ink-70); margin:0 0 .7rem; line-height:1.8; }
+  .plain-text:last-child{ margin-bottom:0; }
+  .think-box{ background:rgba(44,74,118,0.06); border:1px solid rgba(44,74,118,0.22); border-radius:8px; padding:1rem 1.2rem; margin:1rem 0; }
+  .think-title{ font-weight:700; color:var(--indigo); font-size:.92rem; margin:0 0 .6rem; }
+  .think-text{ font-size:.9rem; color:var(--ink-70); margin:0; line-height:1.8; }
+  .todo-box{ background:rgba(156,43,58,0.05); border:1px dashed rgba(156,43,58,0.4); border-radius:8px; padding:1rem 1.2rem; margin:1rem 0; }
+  .todo-title{ font-weight:700; color:var(--seal); font-size:.88rem; margin:0 0 .4rem; }
+  .todo-text{ font-size:.86rem; color:var(--ink-45); margin:0; }
+  .evidence-img{ width:100%; max-width:100%; border:1px solid var(--line); border-radius:6px; margin-top:.6rem; display:block; }
+  .evidence-caption{ font-size:.78rem; color:var(--ink-45); margin-top:.4rem; text-align:center; }
+  .note{ font-size:.8rem; color:var(--ink-45); }
+  .disclaimer{ font-size:.78rem; color:var(--ink-45); font-style:italic; border-left:3px solid var(--line); padding-left:.8rem; margin-top:2rem; }
+  .anchor-nav{ position:sticky; top:0; z-index:100; display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:1.5rem; padding:.8rem 0 1rem; background:var(--parchment); border-bottom:1px solid var(--line); }
+  .anchor-nav a{ font-size:.78rem; color:var(--indigo); background:rgba(44,74,118,0.08); border-radius:99px; padding:.35rem .8rem; text-decoration:none; white-space:nowrap; transition:background .2s, color .2s; }
+  .anchor-nav a.active{ background:var(--indigo); color:#fff; font-weight:700; }
+  .anchor-nav a:hover{ background:rgba(44,74,118,0.18); }
+  .anchor-nav a.active:hover{ background:var(--indigo); color:#fff; }
+  html{ scroll-behavior:smooth; }
+  [id]{ scroll-margin-top:5.5rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back" href="../index.html">← 回總覽頁</a>
+
+  <div class="eyebrow">案例研究 Case Study</div>
+  <h1>泰山經營權之爭——控制股東資產處分與改選後假處分</h1>
+  <div class="meta-bar">
+    <span class="tag">第四節 董事及董事會（§23 忠實義務）</span>
+    <span class="tag">公司法§185（讓與主要部分財產）、§189（決議撤銷之訴）</span>
+    <span class="tag">證券交易法§171（非常規交易罪、特別背信罪）</span>
+  </div>
+  <div class="page-meta">
+    <span class="author-badge">教師範例</span>
+    <span class="ver-badge" id="pageVerBadge">v…</span>
+    <span class="meta-date" id="pageMetaDate">載入中…</span>
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=mjib007.company-law-cases.泰山經營權之爭" alt="Visitors" style="opacity:0.85;vertical-align:middle;">
+  </div>
+
+  <nav class="anchor-nav">
+    <a href="#source">案例來源</a>
+    <a href="#timeline">事件時間軸</a>
+    <a href="#discussion">引導討論</a>
+    <a href="#more-discussion">課堂討論方向</a>
+  </nav>
+
+  <section id="source">
+    <h2>案例來源</h2>
+    <p>泰山企業（<a class="src" href="https://tw.stock.yahoo.com/quote/1218.TW/profile" target="_blank" rel="noopener">1218</a>）由詹家於1950年創立，2007年因投資全家便利商店而握有約兩成股權，成為市場覬覦的通路資產。2016年起詹家內部發生多次權力更迭，經營權不穩定，外部資金龍邦集團（大股東朱國榮）趁隙以公開市場收購方式逐步增持，從股東走向共治、最終在2023年取得董事會多數席次，終結詹家73年的家族經營。</p>
+    <div class="todo-box">
+      <p class="todo-title">【待補充】</p>
+      <p class="todo-text">這段背景敘述還要再展開：詹家內鬥的具體經過（2016、2017年）、龍邦持股成長曲線（6%→20%→30%以上）的節點細節、與保力達集團退出的關係，都還沒寫。目前先列時間軸骨架，細節之後補。</p>
+    </div>
+  </section>
+
+  <section id="timeline">
+    <h2>事件時間軸</h2>
+    <ul class="timeline">
+      <li><span class="date">2016</span><p class="desc">詹家內部數人聯手，逼2007年上任的董事長詹岳霖辭任，改由詹逸宏接任董事長。<a class="src" href="https://zh.wikipedia.org/zh-tw/%E6%B3%B0%E5%B1%B1%E4%BC%81%E6%A5%AD%E7%B6%93%E7%87%9F%E6%AC%8A%E4%B9%8B%E7%88%AD" target="_blank" rel="noopener">（維基百科「泰山企業經營權之爭」）</a></p></li>
+      <li><span class="date">2017</span><p class="desc">詹家再度內訌，詹晉嘉被迫辭任副董事長。</p></li>
+      <li><span class="date">2019</span><p class="desc">龍邦集團持股超越先前入股的保力達集團，躍升為泰山第一大股東。<a class="src" href="https://www.ctee.com.tw/news/20230611700323-430503" target="_blank" rel="noopener">（工商時報）</a></p></li>
+      <li><span class="date">2021/12</span><p class="desc">持股32%的龍邦一口氣取得三分之一董事席次，詹景超續任董事長，泰山進入公司派與市場派「共治」時代。</p></li>
+      <li><span class="date">2022/12/2</span><p class="desc">泰山董事會決議處分所持有的全家（5903）股票。</p></li>
+      <li><span class="date">2022/12/5</span><p class="desc">以每股187元、總額約80.97億元，出售全家43,300張股票；開盤63秒內完成交易。龍邦登報質疑詹家「賤賣」股權。<a class="src" href="https://udn.com/news/story/7321/8756440" target="_blank" rel="noopener">（聯合新聞網）</a></p></li>
+      <li><span class="date">2023（確切日期待查）</span><p class="desc">臺灣證券交易所認定泰山於處分全家股票一案，取得或處分資產程序未依規定辦理，內控程序違失情節重大，處以違約金。<strong>金額有出入待確認</strong>：聯合新聞網報導寫250萬元，本repo中工案講義中曾提及同一事件寫200萬元，兩者需查證後統一。</p></li>
+      <li><span class="date">2023/5/31</span><p class="desc">持股過半的龍邦召開股東臨時會，取得董事會多數席次，詹家73年家族經營結束。<a class="src" href="https://www.ctee.com.tw/news/20230611700323-430503" target="_blank" rel="noopener">（工商時報）</a></p></li>
+      <li><span class="date">2023/6/2</span><p class="desc">泰山大股東景勛公司向智慧財產及商業法院聲請假處分，主張5/31當日改選無效。</p></li>
+      <li><span class="date">（待查）</span><p class="desc">龍邦推舉劉偉龍接任泰山新任董事長。</p></li>
+      <li><span class="date">2025（月份待查）</span><p class="desc">檢方就詹景超（前董座）涉嫌未經董事會同意，私下與江油國際簽訂顧問契約、砸7000萬元購買吳冠中名畫等事，以證交法特別背信罪相關罪嫌偵辦，詹景超800萬元交保；另有第三人涉案遭限制出境出海。<a class="src" href="https://udn.com/news/story/7321/8756440" target="_blank" rel="noopener">（聯合新聞網）</a></p></li>
+    </ul>
+    <div class="todo-box">
+      <p class="todo-title">【待補充】</p>
+      <p class="todo-text">時間軸目前只有骨架日期和一句話描述，還缺：（1）每個節點對應的公開資訊觀測站原始公告連結（目前多是新聞報導，需依規則優先查MOPS）；（2）假處分後續結果（法院裁定為何、是否維持改選結果）；（3）證交所罰款金額爭議的最終確認數字與來源；（4）龍邦入主後續發展是否要收錄。</p>
+    </div>
+  </section>
+
+  <section id="discussion">
+    <h2>引導討論</h2>
+    <div class="qa">
+      <div class="q">1. 控制股東在經營權動搖之際處分公司核心資產，是否違反董事忠實義務？</div>
+      <p class="a">【待補充：對應公司法§23忠實義務、§185讓與主要部分財產的股東會特別決議門檻，需查證「主要部分」認定標準（經濟部函釋）與本案是否踐行§185程序後才能寫入。】</p>
+    </div>
+    <div class="think-box">
+      <p class="think-title">🤔 延伸思考（待補充）</p>
+      <p class="think-text">【待補充】</p>
+    </div>
+
+    <div class="qa">
+      <div class="q">2. 改選結果出爐後，敗選方聲請假處分主張決議無效，法院審查的標準是什麼？</div>
+      <p class="a">【待補充：對應公司法§189股東會決議撤銷之訴、§189-1法院得駁回顯無影響之瑕疵主張，並與中工案「市場派用假處分對抗公司派刪除提名」的情境做正反對照。】</p>
+    </div>
+    <div class="think-box">
+      <p class="think-title">🤔 延伸思考（待補充）</p>
+      <p class="think-text">【待補充：同樣是假處分工具，中工案是市場派用來保全提名權，泰山案是原公司派用來挑戰已生效的改選結果，兩者聲請的正當性基礎有何不同？】</p>
+    </div>
+
+    <div class="qa">
+      <div class="q">3. 詹景超未經董事會同意私下簽約、購買名畫，涉及證交法哪些規定？</div>
+      <p class="a">【待補充：對應證交法§171第1項第2款非常規交易罪、第3款特別背信罪的構成要件，需查證檢方起訴或後續司法認定進度，目前僅到交保階段，尚未經判決確定，論述時須注意無罪推定原則。】</p>
+    </div>
+  </section>
+
+  <section class="discussion">
+    <h2 id="more-discussion">課堂討論方向</h2>
+    <ol>
+      <li>【待補充：比較泰山案與中工案在「家族治理失靈」與「單次股東會攻防」兩種經營權爭奪模式上的異同。】</li>
+      <li>【待補充：全家股權處分是否構成§185「讓與主要部分財產」，若成立，董事會逕行決議而未經股東會特別決議的法律效果為何？】</li>
+      <li>【待補充：同一項假處分工具，用在保全提名權與挑戰已生效決議兩種情境，法院審查密度是否應該不同？】</li>
+    </ol>
+  </section>
+
+  <p class="disclaimer">本教材為教學目的整理，內容依公開新聞報導彙整而成，不代表本課程對任一方之立場評價。案例分析僅供課堂討論使用，實際法律爭議應以正式裁判文書及專業法律諮詢為準。部分時間軸細節與法律爭點論述尚在補充中。</p>
+
+</div>
+
+<script>
+async function loadPageMeta(){
+  const verEl = document.getElementById('pageVerBadge');
+  const dateEl = document.getElementById('pageMetaDate');
+  const REPO = 'mjib007/company-law-cases';
+  const FILE_PATH = 'lectures/company-law-art23-185-taishan-case.html';
+
+  try {
+    const res = await fetch(`https://api.github.com/repos/${REPO}/commits?path=${encodeURIComponent(FILE_PATH)}&per_page=100`);
+    if (!res.ok) throw new Error('commits fetch failed');
+    const commits = await res.json();
+
+    verEl.textContent = `v${commits.length}`;
+
+    const lastDate = commits[0]?.commit?.committer?.date;
+    if (lastDate){
+      const d = new Date(lastDate);
+      const y = d.getFullYear();
+      const m = String(d.getMonth() + 1).padStart(2, '0');
+      const day = String(d.getDate()).padStart(2, '0');
+      dateEl.textContent = `最後更新 ${y}-${m}-${day}`;
+    }
+  } catch (err){
+    verEl.textContent = '';
+    dateEl.textContent = '';
+    console.warn('本篇版次資訊載入失敗：', err);
+  }
+}
+loadPageMeta();
+
+function setupActiveNavTracking(){
+  const navLinks = Array.from(document.querySelectorAll('.anchor-nav a'));
+  const targets = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+  function setActive(id){
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+    });
+  }
+
+  function updateActive(){
+    const nav = document.querySelector('.anchor-nav');
+    const offset = (nav ? nav.offsetHeight : 60) + 20;
+    let currentId = targets[0] ? targets[0].id : null;
+    targets.forEach(t => {
+      const rect = t.getBoundingClientRect();
+      if (rect.top - offset <= 0) {
+        currentId = t.id;
+      }
+    });
+    if (currentId) setActive(currentId);
+  }
+
+  let ticking = false;
+  function onScroll(){
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateActive();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  updateActive();
+}
+window.addEventListener('load', setupActiveNavTracking);
+</script>
+
+</body>
+</html>
