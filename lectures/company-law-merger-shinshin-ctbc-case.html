@@ -128,26 +128,24 @@
     <a href="#source">案例來源</a>
     <a href="#relation">案情關係圖</a>
     <a href="#chart">股價營收圖表</a>
-    <a href="#timeline">①時間軸</a>
-    <a href="#articles">②對應條文</a>
-    <a href="#keypoints">③關鍵點</a>
-    <a href="#strategy">④換你當事人</a>
+    <a href="#timeline">時間軸</a>
+    <a href="#articles">對應條文</a>
+    <a href="#keypoints">①關鍵點</a>
+    <a href="#strategy">②換你當事人</a>
     <a href="#teacher-strategy">老師戰略分析</a>
     <a href="#discussion">課堂討論</a>
   </nav>
 
   <div class="framework-banner" id="tour-banner">
-    🚧 本篇為教師建立之教材框架：「案例來源」「案情關係圖」「課堂討論方向」已完整撰寫；學生要動手的部分依序是「①事件時間軸」「②對應條文」「③關鍵點」「④換你當事人（提出你自己的策略）」，這個順序刻意設計成「先事實、再法規、再爭點、最後策略應用」的思考流程。「老師的雙方戰略思考」放在最後，建議完成④之後再看，避免先偷看答案。補完時請依循本 repo 自我驗證規則（條號、pcode、日期、連結逐一查證），並參考已完成的「中工經營權爭奪案」講義格式。
+    🚧 本篇為教師建立之教材框架：「案例來源」「案情關係圖」「事件時間軸」「對應條文」「課堂討論方向」已完整撰寫；學生要動手的部分依序是「①關鍵點」「②換你當事人（提出你自己的策略）」，這個順序刻意設計成「先掌握事實與法規、再找出爭點、最後應用策略」的思考流程。「老師的雙方戰略思考」放在最後，建議完成②之後再看，避免先偷看答案。補完時請依循本 repo 自我驗證規則（條號、pcode、日期、連結逐一查證），並參考已完成的「中工經營權爭奪案」講義格式。
   </div>
 
   <div class="steps-box" id="tour-steps">
     <p class="steps-title">📋 補完步驟建議</p>
     <ol class="steps-list">
-      <li>找新聞來源：針對該則骨架的日期或標題，搜尋當天／該事件的原始新聞報導</li>
-      <li>核對事件內容：確認新聞描述的日期、金額、比例等細節與骨架標記一致</li>
-      <li>查證條文：到<a class="src" href="https://law.moj.gov.tw/" target="_blank" rel="noopener">全國法規資料庫</a>核對條號與 pcode，不要沿用其他法規查過的印象</li>
+      <li>查證條文依據：到<a class="src" href="https://law.moj.gov.tw/" target="_blank" rel="noopener">全國法規資料庫</a>核對條號與 pcode，不要沿用其他法規查過的印象</li>
       <li>逐條連結：範圍條號「§X至§Y」要每一條個別配對連結，不可只連頭尾兩條</li>
-      <li>標註具名：完成的段落文字後面加上遮蔽版 <code>（姓名，學號）</code>，姓名只留頭尾兩字、中間用○，學號只留末三碼、其餘用*（本 repo 為公開頁面，請勿寫完整真實姓名學號），例如「中信金於2024年8月23日宣布公開收購新光金。（陳○明，******456）」</li>
+      <li>標註具名：完成的段落文字後面加上遮蔽版 <code>（姓名，學號）</code>，姓名只留頭尾兩字、中間用○，學號只留末三碼、其餘用*（本 repo 為公開頁面，請勿寫完整真實姓名學號），例如「合意併購須經股東會特別決議通過。（陳○明，******456）」</li>
       <li>發送 Pull Request，並在 PR 描述簡述你補完了哪一段</li>
     </ol>
   </div>
@@ -161,6 +159,7 @@
     .hint-tip{ font-size:.82rem; color:var(--indigo); margin:.4rem 0 0; font-style:italic; }
   .difficulty-badge{ display:inline-block; font-size:.68rem; font-weight:700; padding:.15rem .55rem; border-radius:99px; vertical-align:middle; margin-left:.5rem; }
   .step-badge{ display:inline-block; font-size:.68rem; font-weight:700; padding:.15rem .55rem; border-radius:99px; vertical-align:middle; margin-left:.5rem; background:rgba(44,74,118,0.12); color:var(--indigo); }
+  .done-badge{ display:inline-block; font-size:.68rem; font-weight:700; padding:.15rem .55rem; border-radius:99px; vertical-align:middle; margin-left:.5rem; background:rgba(34,139,34,0.12); color:#1e6b1e; }
 
   .strategy-note-box{ background:rgba(44,74,118,0.06); border:1px solid rgba(44,74,118,0.22); border-radius:8px; padding:.9rem 1.1rem; margin-bottom:1.3rem; }
   .strategy-note-title{ font-weight:700; color:var(--indigo); font-size:.86rem; margin:0 0 .4rem; }
@@ -208,22 +207,12 @@
   <div class="progress-box" id="tour-progress">
     <p class="progress-title">📊 目前補完進度（自動統計，重新整理頁面即可看到最新狀態）</p>
     <div class="progress-row">
-      <span style="width:5.5em;">①時間軸</span>
-      <span class="progress-bar-track"><span class="progress-bar-fill" id="progress-timeline"></span></span>
-      <span class="progress-count" id="progress-timeline-count">-</span>
-    </div>
-    <div class="progress-row">
-      <span style="width:5.5em;">②條文</span>
-      <span class="progress-bar-track"><span class="progress-bar-fill" id="progress-articles"></span></span>
-      <span class="progress-count" id="progress-articles-count">-</span>
-    </div>
-    <div class="progress-row">
-      <span style="width:5.5em;">③關鍵點</span>
+      <span style="width:5.5em;">①關鍵點</span>
       <span class="progress-bar-track"><span class="progress-bar-fill" id="progress-keypoints"></span></span>
       <span class="progress-count" id="progress-keypoints-count">-</span>
     </div>
     <div class="progress-row">
-      <span style="width:5.5em;">④你的策略</span>
+      <span style="width:5.5em;">②你的策略</span>
       <span class="progress-bar-track"><span class="progress-bar-fill" id="progress-strategy"></span></span>
       <span class="progress-count" id="progress-strategy-count">-</span>
     </div>
@@ -292,50 +281,49 @@
   </section>
 
   <section id="timeline">
-    <h2>事件時間軸 <span class="step-badge">步驟① 釐清事實</span></h2>
-    <p class="note">以下僅列出關鍵日期骨架，具體事件描述、查證來源與新聞連結請同學查證後以 PR 補上（可參考中工案時間軸的行文與引註方式）。補完格式範例：<br><em>「2024年8月22日晚間，台新金與新光金董事會分別通過換股合意合併案。（陳○明，******456）」</em>——句末務必加上遮蔽版姓名學號（本頁為公開頁面，請勿寫完整真實姓名學號）。</p>
+    <h2>事件時間軸 <span class="done-badge">教師已完成</span></h2>
+    <p class="note">以下時間軸已由教師查證新聞來源後完整撰寫，資料來源標示於各項之後，供同學掌握案情脈絡之用。</p>
     <ul class="timeline" id="timeline-list">
-      <li><span class="date">2024/08/22</span><p class="todo-desc" id="tour-example">【待補充：台新金與新光金董事會通過換股合意合併之經過與內容】</p></li>
-      <li><span class="date">2024/08/23</span><p class="todo-desc">【待補充：中信金宣布公開收購新光金之經過與收購條件】</p></li>
-      <li><span class="date">2024/08/26</span><p class="todo-desc">【待補充：中信金遞件金管會申請投資新光金之經過】</p></li>
-      <li><span class="date">2024/08/27–28</span><p class="todo-desc">【待補充：台新金、中信金雙方法說會的攻防表態】</p></li>
-      <li><span class="date">2024/09/11</span><p class="todo-desc">【待補充：台新金、新光金調整換股架構、納入特別股之經過】</p></li>
-      <li><span class="date">2024/09/16</span><p class="todo-desc">【待補充：金管會宣布緩議中信金收購申請之四大理由】</p></li>
-      <li><span class="date">2024/10/09</span><p class="todo-desc">【待補充：新光金、台新金股東臨時會決議換股合併之經過】</p></li>
-      <li><span class="date">2025/03/31</span><p class="todo-desc">【待補充：金管會核准台新金與新光金換股合併案】</p></li>
-      <li><span class="date">2025/06/23–07/24</span><p class="todo-desc">【待補充：合併基準日確定、新光金下市、台新新光金控正式成立之經過】</p></li>
+      <li><span class="date">2024/08/22</span><p class="desc">台新金控與新光金控分別召開董事會，決議通過以「換股方式」進行合意合併，新光金股東得依約定比例換發台新金股份。（<a class="src" href="https://tw.stock.yahoo.com/news/%E3%80%8C%E6%96%B0%E6%96%B0%E4%BD%B5%E3%80%8D%E6%88%90%E7%9C%9F%EF%BC%81%E5%8F%B0%E6%96%B0%E9%87%91%E5%AD%98%E7%BA%8C%E5%B0%87%E6%9B%B4%E5%90%8D%E3%80%8C%E5%8F%B0%E6%96%B0%E6%96%B0%E5%85%89%E9%87%91%E6%8E%A7%E3%80%8D-121434495.html" target="_blank" rel="noopener">Yahoo奇摩股市</a>）</p></li>
+      <li><span class="date">2024/08/23</span><p class="desc">中國信託金控無預警召開臨時董事會，宣布改以「公開收購」方式，以每股約14.55元（0.3132股中信金股份＋現金約4.09元）收購新光金10%至51%股權，總金額約新臺幣1,314億元，企圖阻斷台新金與新光金的合意併購。（<a class="src" href="https://www.cna.com.tw/news/afe/202408230340.aspx" target="_blank" rel="noopener">中央社</a>）</p></li>
+      <li><span class="date">2024/08/26</span><p class="desc">中國信託金控正式向金管會遞件，申請核准投資新光金股權，依金融控股公司法規定進入審查期間。（<a class="src" href="https://www.cna.com.tw/news/afe/202408260248.aspx" target="_blank" rel="noopener">中央社</a>）</p></li>
+      <li><span class="date">2024/08/27–28</span><p class="desc">台新金控（8/27）與中國信託金控（8/28）分別召開法人說明會，就此次收購案表態攻防：台新金主張合意併購應受優先尊重，質疑敵意併購若成功將使市場失去合意併購的空間；中信金則回應歡迎台新金調高換股比例，並表示若對方提高條件，將評估是否同步調整收購價格。（<a class="src" href="https://www.stockfeel.com.tw/%E6%B3%95%E8%AA%AA%E6%9C%83-%E5%8F%B0%E6%96%B0%E9%87%91-2024q2-0827/" target="_blank" rel="noopener">股感（台新金）</a>；<a class="src" href="https://www.stockfeel.com.tw/%E6%B3%95%E8%AA%AA%E6%9C%83-%E4%B8%AD%E4%BF%A1%E9%87%91-2024q2-0828/" target="_blank" rel="noopener">股感（中信金）</a>）</p></li>
+      <li><span class="date">2024/09/11</span><p class="desc">台新金控與新光金控召開臨時董事會，調高換股條件：新光金每1股換發0.672股台新金普通股，並加發0.175股、3年期、年利率1.665%之可累積特別股（辛種特別股），換算後新光金股東每股換股價格自原方案提高約25%，來到約14.18元，藉此鞏固新光金股東在股東臨時會上的支持。（<a class="src" href="https://www.cna.com.tw/news/afe/202409115006.aspx" target="_blank" rel="noopener">中央社</a>）</p></li>
+      <li><span class="date">2024/09/16</span><p class="desc">金管會以「投資計畫對各種整併狀況規劃不完備」「未完成整併之釋股處理欠缺具體內容」「對被投資壽險子公司財務狀況掌握不足」「以股票作為公開收購對價，對雙方股東權益保障不足」四大理由，對中國信託金控的公開收購申請案作成「緩議」決定；中信金隨後於9月20日召開董事會，決議終止本次公開收購。（<a class="src" href="https://www.ctee.com.tw/news/20240916701456-430301" target="_blank" rel="noopener">工商時報（緩議）</a>；<a class="src" href="https://www.ctee.com.tw/news/20240920701486-430503" target="_blank" rel="noopener">工商時報（終止收購）</a>）</p></li>
+      <li><span class="date">2024/10/09</span><p class="desc">台新金控、新光金控分別召開股東臨時會表決換股合併案，台新金以92%贊成票通過，新光金以72%贊成票通過，合意併購案正式定案。（<a class="src" href="https://www.ctee.com.tw/news/20241009700815-430503" target="_blank" rel="noopener">工商時報</a>）</p></li>
+      <li><span class="date">2025/03/31</span><p class="desc">金管會核准台新金控與新光金控以換股方式合併，為國內首宗金控公司間之合意合併案。（<a class="src" href="https://www.ctee.com.tw/news/20250401700092-430304" target="_blank" rel="noopener">工商時報</a>）</p></li>
+      <li><span class="date">2025/06/23–07/24</span><p class="desc">雙方確認合併基準日為2025年7月24日；新光金股票於7月14日起停止買賣，7月24日正式下市，存續公司更名為「台新新光金融控股股份有限公司」，成為國內第四大金控。（<a class="src" href="https://www.cna.com.tw/news/afe/202507140157.aspx" target="_blank" rel="noopener">中央社</a>）</p></li>
     </ul>
   </section>
 
   <section id="articles">
-    <h2>對應條文 <span class="step-badge">步驟② 確認法規依據</span></h2>
-    <p class="note">以下僅列出待查證的法規範圍，具體條號、逐條連結與 pcode 請同學查證後補上（務必留意本 repo 曾發生 pcode 用錯、條號範圍未逐條連結的錯誤，補完時請逐一核對）。</p>
-    <div class="think-box">
-      <p class="think-title">🔍 查證小提醒</p>
-      <p class="think-text">
-        <strong>什麼是 pcode？</strong>全國法規資料庫的每一部法規網址裡都有一段代碼（例如公司法是 J0080001），這段代碼就叫 pcode，用來標示「這個網址連到的是哪一部法規」。代碼跟法規之間沒有規律可循，猜錯就會連到完全不相干的法規，所以每次換一部新法規都要重新到網站上查證，不能沿用其他法規的代碼去套。<br><br>
-        1. 到<a class="src" href="https://law.moj.gov.tw/" target="_blank" rel="noopener">全國法規資料庫</a>搜尋法規全文，複製當次查到的正確 pcode，不要沿用之前查過其他法規的印象或格式去猜。<br>
-        2. 若引用「§X至§Y」這種範圍條號，請逐一列出範圍內每一條，並個別配對連結，不可只連結頭尾兩條。<br>
-        3. 若涉及法律論斷（例如某條文的適用範圍或修法目的），請查證立法院修法理由或主管機關函釋，不可只憑條文字面印象斷言。
-      </p>
-    </div>
-    <p class="hint-tip">補完格式參考（示範句型，非本案內容）：<br><em>「股東會之召集程序或決議方法，違反法令或章程者，股東得自決議之日起三十日內，訴請法院撤銷其決議（<a class="law" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=189" target="_blank" rel="noopener">公司法§189</a>）。」</em>——條號要連結到查證過的正確頁面，不要只寫條號數字。</p>
+    <h2>對應條文 <span class="done-badge">教師已完成</span></h2>
+    <p class="note">以下法規依據已由教師查證條號與 pcode 後完整撰寫，連結皆指向全國法規資料庫原文。</p>
     <ul class="todo-list" id="articles-list">
-      <li>公司法：股份有限公司合併及分割相關規定 <span class="todo-tag">【待補充條號與連結】</span></li>
-      <li>金融控股公司法：轉投資核准程序 <span class="todo-tag">【待補充條號與連結】</span></li>
-      <li>證券交易法：公開收購相關規定 <span class="todo-tag">【待補充條號與連結】</span></li>
+      <li>公司法：股份有限公司合併之決議與異議股東股份收買請求權
+        <span class="todo-tag"></span>
+        <p class="desc">公司合併，股東會應有代表已發行股份總數三分之二以上股東出席，以出席股東表決權過半數同意行之；公開發行股票公司出席股份不足前項定額者，得以有代表已發行股份總數過半數股東之出席，出席股東表決權三分之二以上之同意行之（<a class="law" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=316" target="_blank" rel="noopener">公司法§316</a>）。董事會應就合併有關事項作成合併契約，提出於股東會；異議股東得請求公司按當時公平價格收買其持有之股份（<a class="law" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=317" target="_blank" rel="noopener">§317</a>）。合併後存續公司之董事會，應於完成催告債權人程序後召集合併後之股東會，報告合併事項（<a class="law" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=318" target="_blank" rel="noopener">§318</a>），並準用第73條至第75條公告與通知債權人之規定（<a class="law" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=319" target="_blank" rel="noopener">§319</a>）。本案台新金、新光金即依此踐行股東會特別決議程序。</p>
+      </li>
+      <li>金融控股公司法：轉投資之核准程序
+        <span class="todo-tag"></span>
+        <p class="desc">金融控股公司投資屬於同法第36條第2項所列金融相關事業（如銀行、保險、證券等）時，主管機關自申請書件送達之次日起，於15或30個營業日內未表示反對者，視為已核准；未經核准逕行投資者，其取得之股份無表決權，且不算入已發行股份總數（<a class="law" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0380112&flno=36" target="_blank" rel="noopener">金融控股公司法§36</a>）。中信金申請投資新光金股權即依此程序送件，最終遭金管會於審查期間內以四大理由否准。</p>
+      </li>
+      <li>證券交易法：公開收購應行程序
+        <span class="todo-tag"></span>
+        <p class="desc">任何人單獨或與他人共同預定取得公開發行公司已發行股份總額一定比例以上股份者，應採公開收購方式為之（<a class="law" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=43-1" target="_blank" rel="noopener">證券交易法§43-1</a>）；公開收購應向主管機關申報並公告收購對價、期間等事項（<a class="law" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=43-2" target="_blank" rel="noopener">§43-2</a>）、交付公開收購說明書（<a class="law" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=43-3" target="_blank" rel="noopener">§43-3</a>）、應賣人得於應賣期間內撤銷應賣（<a class="law" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=43-4" target="_blank" rel="noopener">§43-4</a>），且公開收購一經公告，原則上不得停止進行（<a class="law" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=43-5" target="_blank" rel="noopener">§43-5</a>）。中信金即是依此架構對新光金發動公開收購。</p>
+      </li>
     </ul>
   </section>
 
   <section id="keypoints">
-    <h2>關鍵點 <span class="step-badge">步驟③ 找出爭點</span></h2>
+    <h2>關鍵點 <span class="step-badge">步驟① 找出爭點</span></h2>
     <p class="note">以下僅列出關鍵點標題，具體論述與法律依據（含查證過的條文或修法理由）請同學以 PR 補完。補完格式參考（示範句型，非本案內容）：<br><em>「◯◯制度指……，公司法§XXX明定其……範圍。」</em>——先講清楚這個概念是什麼、再帶出對應法條，而不是只丟結論。</p>
     <ul class="todo-list" id="keypoints-list">
       <li>合意併購與非合意（敵意）公開收購的法律定性與程序差異
         <span class="todo-tag"></span>
         <p class="desc">合意併購是由雙方公司董事會先協商合併條件，作成合併契約後提交股東會特別決議通過；非合意（敵意）公開收購則是收購方跳過對方董事會，直接向個別股東公開喊價收購股份，不需要對方公司內部同意。本案中，台新金與新光金走的是前者，中信金走的是後者，兩條路徑在核准機關、決策主體、時程安排上都不相同。（測○○學，******000）</p>
       </li>
-      <li>換股合併對價與公司法發行新股規定的關聯
+      <li id="tour-example">換股合併對價與公司法發行新股規定的關聯
         <span class="todo-tag">【待補充論述】</span>
         <p class="hint-tip">思考方向：換股合併中，存續公司要發行新股給消滅公司股東，這跟一般發行新股的股東權益保障規定有何異同？</p>
       </li>
@@ -352,7 +340,7 @@
   </section>
 
   <section id="strategy">
-    <h2>換你當事人 <span class="step-badge">步驟④ 提出你的致勝策略</span></h2>
+    <h2>換你當事人 <span class="step-badge">步驟② 提出你的致勝策略</span></h2>
     <p class="note">前面你已經釐清了事實、法規依據跟關鍵爭點。現在請選一方，假設自己是那一方的決策者，寫出你會怎麼規劃策略。這是你自己的推演，不需要跟實際發生的結果一樣，重點是你的判斷有沒有邏輯依據。完成後可以到下方「老師的分析」對照，看看有什麼異同。</p>
     <div class="strategy-note-box">
       <p class="strategy-note-title">💬 這一題歡迎多人各自作答，不用互相覆蓋</p>
@@ -385,7 +373,7 @@
   </section>
 
   <section id="teacher-strategy">
-    <h2>老師的分析：雙方戰略思考（對照用，建議完成步驟④後再看）</h2>
+    <h2>老師的分析：雙方戰略思考（對照用，建議完成步驟②後再看）</h2>
     <p class="note">這是老師整理的實際戰略分析，建議你先完成上面「換你當事人」的練習，再回來對照，看看你的判斷跟實際發生的策略有什麼異同。</p>
 
     <h3>中信金控的算盤</h3>
@@ -479,25 +467,7 @@ function updateProgress(listId, barId, countId){
   if (countEl) countEl.textContent = `${done} / ${total}`;
 }
 
-function updateTimelineProgress(){
-  const list = document.getElementById('timeline-list');
-  if (!list) return;
-  const items = list.querySelectorAll('li');
-  const total = items.length;
-  let done = 0;
-  items.forEach(li => {
-    if (li.querySelector('p.desc') && !li.querySelector('p.todo-desc')) done++;
-  });
-  const pct = total > 0 ? Math.round((done / total) * 100) : 0;
-  const bar = document.getElementById('progress-timeline');
-  const countEl = document.getElementById('progress-timeline-count');
-  if (bar) bar.style.width = pct + '%';
-  if (countEl) countEl.textContent = `${done} / ${total}`;
-}
-
-updateTimelineProgress();
 updateProgress('keypoints-list', 'progress-keypoints', 'progress-keypoints-count');
-updateProgress('articles-list', 'progress-articles', 'progress-articles-count');
 function updateStrategyProgress(){
   const ids = ['strategy-taishin', 'strategy-shinkong', 'strategy-ctbc'];
   let totalProposals = 0;
@@ -562,10 +532,10 @@ updateStrategyProgress();
 
 <script>
 const TOUR_STEPS = [
-  { id: 'tour-banner', text: '這篇是老師建立的教材框架。「案例來源」「雙方戰略思考」「課堂討論方向」已經寫好了，「事件時間軸」「關鍵點」「對應條文」還有部分留白，等你來補完。' },
-  { id: 'tour-progress', text: '這裡會即時統計目前補完進度，四個步驟各自完成幾格、還剩幾格，重新整理頁面就會更新。' },
-  { id: 'tour-steps', text: '照這六個步驟走：找來源 → 核對內容 → 查證條文 → 逐條連結 → 標註具名（記得用遮蔽版！）→ 發送 Pull Request。' },
-  { id: 'tour-example', text: '像這樣標示「【待補充：...】」的地方，就是等你動手的位置。點進去查證後，把這段文字換成你查到的內容。' },
+  { id: 'tour-banner', text: '這篇是老師建立的教材框架。「案例來源」「事件時間軸」「對應條文」「雙方戰略思考」「課堂討論方向」已經寫好了，「關鍵點」「換你當事人」還有部分留白，等你來補完。' },
+  { id: 'tour-progress', text: '這裡會即時統計目前補完進度，兩個步驟各自完成幾格、還剩幾格，重新整理頁面就會更新。' },
+  { id: 'tour-steps', text: '照這四個步驟走：查證條文 → 逐條連結 → 標註具名（記得用遮蔽版！）→ 發送 Pull Request。' },
+  { id: 'tour-example', text: '像這樣標示「【待補充論述】」的地方，就是等你動手的位置。點進去查證後，把這段文字換成你查到的內容。' },
 ];
 let tourIndex = 0;
 const TOUR_KEY = 'company_law_shinshin_tour_seen';
