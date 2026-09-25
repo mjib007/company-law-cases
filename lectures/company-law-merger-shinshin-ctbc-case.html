@@ -135,7 +135,7 @@
     <a href="#keypoints">①關鍵點</a>
     <a href="#strategy">②換你當事人</a>
     <a href="#teacher-strategy">老師戰略分析</a>
-    <a href="#discussion">課堂討論</a>
+    <a href="#discussion">③課堂討論</a>
   </nav>
 
   <div class="framework-banner" id="tour-banner">
@@ -170,9 +170,11 @@
   .strategy-card{ border:1px solid var(--line); border-radius:8px; padding:1rem 1.2rem; margin-bottom:1.2rem; background:var(--paper-panel); }
   .strategy-card h3{ font-family:"Noto Serif TC",serif; font-size:.92rem; font-weight:700; color:var(--ink); margin:0 0 .5rem; }
   .strategy-proposals{ list-style:none; margin:.8rem 0 0; padding:0; }
-  .strategy-proposals li{ font-size:.88rem; color:var(--ink-70); border-top:1px solid var(--line); padding:.7rem 0; line-height:1.8; }
+  .strategy-proposals li{ position:relative; font-size:.88rem; color:var(--ink-70); border-top:1px solid var(--line); padding:.7rem 0 .7rem 1.1rem; line-height:1.8; }
+  .strategy-proposals li::before{ content:"●"; position:absolute; left:0; top:.85rem; font-size:.5rem; color:var(--brass); }
   .strategy-proposals li:first-child{ border-top:none; }
-  .strategy-proposals li.todo-placeholder{ color:var(--todo); font-style:italic; border-top:none; padding:.4rem 0 0; }
+  .strategy-proposals li.todo-placeholder{ color:var(--todo); font-style:italic; border-top:none; padding:.4rem 0 0 1.1rem; }
+  .strategy-proposals li.todo-placeholder::before{ content:none; }
   .difficulty-easy{ background:rgba(34,139,34,0.12); color:#1e6b1e; }
   .difficulty-medium{ background:rgba(169,131,47,0.15); color:var(--brass); }
   .difficulty-hard{ background:rgba(156,43,58,0.12); color:var(--seal); }
