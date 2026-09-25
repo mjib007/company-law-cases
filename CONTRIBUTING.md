@@ -23,7 +23,7 @@
 
 同學沒有本專案的直接寫入權限，**第一步一定要先 Fork**（複製一份到自己帳號），不能跳過。全程都在網頁上操作，不需要安裝任何軟體或使用指令。
 
-1. 打開本專案首頁：https://github.com/mjib007/company-law-cases，點畫面右上角的 **Fork** 按鈕，將本專案複製一份到你自己的 GitHub 帳號下
+1. 打開本專案首頁：`https://github.com/mjib007/company-law-cases`，點畫面右上角的 **Fork** 按鈕，將本專案複製一份到你自己的 GitHub 帳號下
 2. 進入**你自己帳號下**的那份 Fork（網址會變成 `github.com/你的帳號/company-law-cases`），找到要新增或補完的講義檔案（例如 `lectures/company-law-merger-shinshin-ctbc-case.html`），點檔名進去
 3. 點檔案內容右上角的鉛筆圖示（Edit this file）
 4. 在網頁編輯器裡找到要補完的段落，直接打字修改或新增內容（記得依 [具名規則](#ai-協助與具名規則) 加上遮蔽版姓名學號）
