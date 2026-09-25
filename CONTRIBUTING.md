@@ -27,6 +27,23 @@
 2. 進入**你自己帳號下**的那份 Fork（網址會變成 `github.com/你的帳號/company-law-cases`），找到要新增或補完的講義檔案（例如 `lectures/company-law-merger-shinshin-ctbc-case.html`），點檔名進去
 3. 點檔案內容右上角的鉛筆圖示（Edit this file）
 4. 在網頁編輯器裡找到要補完的段落，直接打字修改或新增內容（記得依 [具名規則](#ai-協助與具名規則) 加上遮蔽版姓名學號）
+
+   **範例**：假設你要在「課堂討論」某一題底下新增自己的看法，找到類似這樣的地方：
+
+   ```html
+   <ul class="strategy-proposals" id="discussion-q1">
+     <li class="todo-placeholder">（尚無同學投稿）</li>
+   </ul>
+   ```
+
+   在 `</ul>` 前面新增一行你自己的 `<li>`：
+
+   ```html
+   <li>你的看法內容。（陳○明，******456）</li>
+   ```
+
+   如果你是第一個投稿，記得把原本 `<li class="todo-placeholder">（尚無同學投稿）</li>` 那一行刪掉。
+
 5. 編輯完畢後，捲動到頁面最下方的「Commit changes」區塊，填寫這次修改的簡短說明（例如：補完課堂討論Q1）
 6. 選擇 **Create a new branch for this commit and start a pull request**（不要選「Commit directly to the main branch」），接著點綠色的 **Propose changes** 按鈕
 7. 系統會自動跳到「Open a pull request」頁面，確認左上角的方向是「base: mjib007/company-law-cases」← 「compare: 你的帳號/你的分支」，在下方描述欄簡述你補完了哪一段，再點 **Create pull request**
