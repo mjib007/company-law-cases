@@ -19,6 +19,24 @@
    - 透過 Pull Request 提交，等待審核合併，或
    - 依教師指示的其他管道繳交
 
+## 不熟悉 GitHub 的同學看這裡（Pull Request 完整步驟）
+
+同學沒有本專案的直接寫入權限，**第一步一定要先 Fork**（複製一份到自己帳號），不能跳過。全程都在網頁上操作，不需要安裝任何軟體或使用指令。
+
+1. 打開本專案首頁：https://github.com/mjib007/company-law-cases，點畫面右上角的 **Fork** 按鈕，將本專案複製一份到你自己的 GitHub 帳號下
+2. 進入**你自己帳號下**的那份 Fork（網址會變成 `github.com/你的帳號/company-law-cases`），找到要新增或補完的講義檔案（例如 `lectures/company-law-merger-shinshin-ctbc-case.html`），點檔名進去
+3. 點檔案內容右上角的鉛筆圖示（Edit this file）
+4. 在網頁編輯器裡找到要補完的段落，直接打字修改或新增內容（記得依 [具名規則](#ai-協助與具名規則) 加上遮蔽版姓名學號）
+5. 編輯完畢後，捲動到頁面最下方的「Commit changes」區塊，填寫這次修改的簡短說明（例如：補完課堂討論Q1）
+6. 選擇 **Create a new branch for this commit and start a pull request**（不要選「Commit directly to the main branch」），接著點綠色的 **Propose changes** 按鈕
+7. 系統會自動跳到「Open a pull request」頁面，確認左上角的方向是「base: mjib007/company-law-cases」← 「compare: 你的帳號/你的分支」，在下方描述欄簡述你補完了哪一段，再點 **Create pull request**
+8. 送出後不用做任何事，等老師審核（審核流程與時程請見下方「AI 審查流程說明」）
+
+**常見狀況：**
+- 如果同一份講義後來又有更新，你可以直接回到步驟2重新編輯，或是回到你Fork的repo首頁，點 **Sync fork** 同步最新版本後再開始編輯，避免漏看老師後續補充的內容
+- 忘記加遮蔽版姓名學號、或打錯字：可以在同一個 PR 裡直接對著檔案再編輯一次、重新 commit，不需要關掉重開一個新的 PR
+- 找不到 Fork 按鈕，或畫面跟這裡描述的不一樣：GitHub介面偶爾會調整，直接截圖問老師即可
+
 ## 內容格式，建議固定包含以下區塊
 
 - 案例來源（新聞出處連結）
