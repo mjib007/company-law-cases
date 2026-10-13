@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>巨虹（8084）與天瀚（6225）現金增資：抽中不等於賺到 | company-law-cases</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #16233b;
+    --indigo: #2c4a76;
+    --parchment: #f3ede0;
+    --paper-panel: #fffdf8;
+    --seal: #9c2b3a;
+    --brass: #a9832f;
+    --pos: #2f7d5c;
+    --pop: #e8623c;
+    --line: #ddd3bf;
+    --ink-70: rgba(22,35,59,0.7);
+    --ink-45: rgba(22,35,59,0.45);
+  }
+  [data-theme="dark"]{
+    --ink: #e8e3d6;
+    --indigo: #7ba3d9;
+    --parchment: #14181f;
+    --paper-panel: #1c2129;
+    --seal: #e0616e;
+    --brass: #d4ac5c;
+    --pos: #5cbf94;
+    --pop: #ff8a75;
+    --line: #333b47;
+    --ink-70: rgba(232,227,214,0.75);
+    --ink-45: rgba(232,227,214,0.5);
+  }
+  .stat{ font-weight:700; color:var(--pop); }
+  body{ transition: background .25s, color .25s; }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:"Noto Sans TC",sans-serif;
+    background:var(--parchment);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.8;
+  }
+  strong { font-weight: 700; color: var(--ink); }
+  .wrap{ max-width:760px; margin:0 auto; padding:2.5rem 1.5rem 4rem; }
+  .back{ display:inline-block; font-size:.85rem; color:var(--indigo); text-decoration:none; margin-bottom:1.5rem; }
+  .back:hover{ color:var(--seal); }
+  .eyebrow{ font-size:.74rem; letter-spacing:.2em; color:var(--brass); font-weight:700; margin-bottom:.8rem; }
+  h1{ font-family:"Noto Serif TC",serif; font-weight:900; font-size:1.7rem; line-height:1.4; margin:0 0 .6rem; }
+  .meta-bar{ display:flex; flex-wrap:wrap; gap:.6rem; margin-bottom:2rem; font-size:.8rem; }
+  .tag{ background:var(--paper-panel); border:1px solid var(--line); color:var(--brass); padding:.2rem .7rem; border-radius:999px; }
+  .author-badge{ background:rgba(44,74,118,0.12); color:var(--indigo); padding:.2rem .7rem; border-radius:999px; font-weight:700; }
+  .page-meta{ display:flex; align-items:center; gap:10px; margin-bottom:1.8rem; font-size:.78rem; }
+  .page-meta .ver-badge{ font-family:"Noto Serif TC",serif; font-weight:700; color:var(--seal); border:1px solid var(--seal); border-radius:20px; padding:2px 10px; }
+  .page-meta .meta-date{ color:var(--ink-45); }
+  section{ background:var(--paper-panel); border:1px solid var(--line); border-radius:10px; padding:1.4rem 1.6rem; margin-bottom:1.3rem; }
+  .step-badge{ display:inline-block; background:var(--indigo); color:#fff; font-weight:700; font-size:.68rem; border-radius:99px; padding:.15rem .6rem; margin-left:.5rem; vertical-align:middle; }
+  h2{ font-family:"Noto Serif TC",serif; font-size:1.05rem; font-weight:700; color:var(--ink); margin:0 0 .8rem; padding-bottom:.5rem; border-bottom:1px solid var(--line); }
+  p{ font-size:.95rem; color:var(--ink-70); margin:0 0 1rem; }
+  p:last-child{ margin-bottom:0; }
+  a.src{ color:var(--indigo); text-decoration:underline; text-decoration-color:var(--line); text-underline-offset:3px; font-weight:500; }
+  a.src:hover{ color:var(--seal); text-decoration-color:var(--seal); }
+  a.law{ color:var(--brass); font-weight:700; text-decoration:none; border-bottom:1px dashed var(--brass); }
+  a.law:hover{ color:var(--seal); border-bottom-color:var(--seal); }
+  .timeline{ list-style:none; margin:0; padding:0; }
+  .timeline li{ display:flex; gap:1rem; margin-bottom:1rem; align-items:baseline; }
+  .timeline .date{ flex:0 0 auto; font-weight:700; color:var(--seal); font-size:.85rem; white-space:nowrap; }
+  .timeline .desc{ font-size:.92rem; color:var(--ink-70); margin:0; }
+  .qa{ margin-bottom:1.1rem; }
+  .qa .q{ font-weight:700; margin-bottom:.3rem; font-size:.95rem; }
+  .qa .a{ font-size:.92rem; color:var(--ink-70); margin:0; }
+  .discussion ol{ padding-left:1.3rem; font-size:.92rem; color:var(--ink-70); margin:0; }
+  .discussion li{ margin-bottom:.7rem; }
+  .think-box{ background:rgba(44,74,118,0.06); border:1px solid rgba(44,74,118,0.22); border-radius:8px; padding:1rem 1.2rem; margin:1rem 0; }
+  .think-title{ font-weight:700; color:var(--indigo); font-size:.92rem; margin:0 0 .6rem; }
+  .think-text{ font-size:.9rem; color:var(--ink-70); margin:0; line-height:1.8; }
+  .strategy-list{ list-style:none; margin:0; padding:0; }
+  .strategy-list li{ margin-bottom:1rem; padding:.9rem 1.1rem; background:rgba(169,131,47,0.06); border:1px solid rgba(169,131,47,0.22); border-radius:8px; font-size:.9rem; color:var(--ink-70); line-height:1.8; }
+  .strategy-list li strong{ color:var(--brass); }
+  details.teacher-answer{ background:rgba(156,43,58,0.05); border:1px solid rgba(156,43,58,0.25); border-radius:8px; padding:1rem 1.2rem; margin-top:1rem; }
+  details.teacher-answer summary{ cursor:pointer; font-weight:700; color:var(--seal); font-size:.92rem; }
+  details.teacher-answer .answer-body{ margin-top:.9rem; }
+  .data-table{ width:100%; border-collapse:collapse; font-size:.88rem; margin:.8rem 0 1rem; }
+  .data-table th, .data-table td{ border:1px solid var(--line); padding:.5rem .7rem; text-align:left; color:var(--ink-70); }
+  .data-table th{ background:rgba(44,74,118,0.06); color:var(--ink); font-weight:700; }
+  .data-source{ font-size:.82rem; color:var(--ink-45); margin-top:-.4rem; margin-bottom:1rem; }
+  .note{ font-size:.8rem; color:var(--ink-45); }
+  .anchor-nav{ position:sticky; top:0; z-index:100; display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:1.5rem; padding:.8rem 0 1rem; background:var(--parchment); border-bottom:1px solid var(--line); }
+  .anchor-nav a{ font-size:.78rem; color:var(--indigo); background:rgba(44,74,118,0.08); border-radius:99px; padding:.35rem .8rem; text-decoration:none; white-space:nowrap; transition:background .2s, color .2s; }
+  .anchor-nav a.active{ background:var(--indigo); color:#fff; font-weight:700; }
+  .anchor-nav a:hover{ background:rgba(44,74,118,0.18); }
+  .anchor-nav a.active:hover{ background:var(--indigo); color:#fff; }
+
+  .theme-toggle-btn{ position:fixed; top:16px; right:18px; z-index:200; width:38px; height:38px;
+    border-radius:50%; border:1px solid var(--line); background:var(--paper-panel); color:var(--ink);
+    cursor:pointer; font-size:16px; display:flex; align-items:center; justify-content:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.12); transition:transform .2s, border-color .2s; }
+  .theme-toggle-btn:hover{ border-color:var(--seal); transform:rotate(15deg); }
+
+  .back-to-top{ position:fixed; bottom:22px; right:20px; width:42px; height:42px; border-radius:50%;
+    background:var(--indigo); color:#fff; border:none; box-shadow:0 4px 14px rgba(0,0,0,.25);
+    cursor:pointer; font-size:18px; display:flex; align-items:center; justify-content:center;
+    opacity:0; visibility:hidden; transition:opacity .25s, visibility .25s, transform .2s; z-index:199; }
+  .back-to-top.show{ opacity:1; visibility:visible; }
+  .back-to-top:hover{ transform:translateY(-3px); background:var(--seal); }
+
+  .think-box.good{ background:rgba(47,125,92,0.08); border-color:rgba(47,125,92,0.28); }
+  .think-box.good .think-title{ color:var(--pos); }
+
+  .formula-display{ background:var(--ink); color:#E2E8F0; border-radius:6px; padding:14px 18px;
+    margin:1rem 0; font-family:"Courier New",monospace; font-size:.85rem; line-height:1.9; overflow-x:auto; }
+  [data-theme="dark"] .formula-display{ background:#0B0E12; border:1px solid var(--line); }
+  .formula-display .ft{ color:#7DD3FC; }
+  .formula-display .fv{ color:#FDE68A; }
+  .formula-display .fr{ color:#86EFAC; font-weight:700; }
+
+  .calc-container{ background:var(--paper-panel); border:2px dashed var(--indigo); border-radius:8px;
+    padding:1.1rem 1.2rem; margin:1.2rem 0; }
+  .calc-title{ font-family:"Noto Serif TC",serif; font-weight:700; font-size:.95rem; color:var(--indigo); margin-bottom:.6rem; }
+  .calc-inputs{ display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:.8rem; margin-bottom:1rem; }
+  .calc-inputs label{ display:block; font-size:.75rem; color:var(--ink-45); margin-bottom:.3rem; }
+  .calc-inputs input{ width:100%; padding:.45rem .6rem; border-radius:5px; border:1px solid var(--line);
+    background:var(--parchment); color:var(--ink); font-size:.9rem; }
+  .calc-result-box{ display:flex; gap:1.5rem; flex-wrap:wrap; background:var(--parchment); border-radius:6px;
+    padding:.9rem 1.1rem; border:1px solid var(--line); }
+  .calc-stat-label{ font-size:.7rem; color:var(--ink-45); text-transform:uppercase; letter-spacing:.06em; }
+  .calc-stat-val{ font-family:"Courier New",monospace; font-size:1.4rem; font-weight:700; color:var(--indigo); }
+  .scatter-box{ background:var(--paper-panel); border:1px solid var(--line); border-radius:8px; padding:1rem; margin:1rem 0; }
+  .scatter-box canvas{ width:100%; height:auto; display:block; }
+  .scatter-caption{ font-size:.78rem; color:var(--ink-45); text-align:center; margin-top:.5rem; }
+
+  @media (max-width: 600px){
+    .wrap{ padding:1.6rem 1rem 3rem; }
+    h1{ font-size:1.4rem; }
+    .anchor-nav{ flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch;
+      padding:.7rem 0 .8rem; scrollbar-width:thin; }
+    .anchor-nav a{ flex:0 0 auto; font-size:.74rem; padding:.3rem .65rem; }
+    .theme-toggle-btn{ top:10px; right:10px; width:34px; height:34px; font-size:14px; }
+    .back-to-top{ bottom:16px; right:14px; width:38px; height:38px; font-size:16px; }
+    section{ padding:1.1rem 1.1rem; }
+    .calc-inputs{ grid-template-columns:1fr; }
+    .calc-result-box{ gap:1rem; }
+    table.data-table{ font-size:.8rem; }
+    .data-table th, .data-table td{ padding:.4rem .5rem; }
+  }
+  .disclaimer{ font-size:.78rem; color:var(--ink-45); font-style:italic; border-left:3px solid var(--line); padding-left:.8rem; margin-top:2rem; }
+  .plain-box{ background:rgba(169,131,47,0.07); border:1px solid rgba(169,131,47,0.25); border-radius:8px; padding:1rem 1.2rem; margin-top:1rem; }
+  .plain-title{ font-weight:700; color:var(--brass); font-size:.92rem; margin:0 0 .6rem; }
+  .plain-text{ font-size:.9rem; color:var(--ink-70); margin:0 0 .7rem; line-height:1.8; }
+  .plain-text:last-child{ margin-bottom:0; }
+  .evidence-img{ width:100%; max-width:100%; border:1px solid var(--line); border-radius:6px; margin-top:.6rem; display:block; }
+  .evidence-caption{ display:block; font-size:.78rem; color:var(--ink-45); margin-top:.4rem; text-align:center; }
+  #news-check ol{ padding-left:1.3rem; font-size:.92rem; color:var(--ink-70); }
+  #news-check li{ margin-bottom:.7rem; }
+</style>
+</head>
+<body>
+<button class="theme-toggle-btn" id="themeBtn" onclick="toggleTheme()" title="切換深色/淺色模式">🌓</button>
+<div class="wrap">
+
+  <a class="back" href="../index.html">← 回總覽頁</a>
+
+  <div class="eyebrow">案例研究 Case Study</div>
+  <h1>巨虹（8084）與天瀚（6225）現金增資：抽中不等於賺到</h1>
+  <div class="meta-bar">
+    <span class="tag">第五章第八節 發行新股（§266、§267）</span>
+    <span class="tag">證券交易法（§28-1）</span>
+  </div>
+  <div class="page-meta">
+    <span class="author-badge">教師範例</span>
+    <span class="ver-badge" id="pageVerBadge">v…</span>
+    <span class="meta-date" id="pageMetaDate">載入中…</span>
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=mjib007.company-law-cases.巨虹天瀚現增案" alt="Visitors" style="opacity:0.85;vertical-align:middle;">
+  </div>
+
+  <nav class="anchor-nav">
+    <a href="#source">案例來源</a>
+    <a href="#timeline-juhong">①巨虹</a>
+    <a href="#timeline-tianhan">②天瀚</a>
+    <a href="#articles">③對應條文</a>
+    <a href="#keypoints">④關鍵點</a>
+    <a href="#news-check">⑤新聞查證</a>
+    <a href="#discussion">課堂討論</a>
+  </nav>
+
+  <section id="source">
+    <h2>案例來源</h2>
+    <p>2026年9月，兩家公司同時辦理現金增資，開放一般投資人公開申購抽籤，結果完全相反。<a class="src" href="https://tw.stock.yahoo.com/quote/8084.TWO/profile" target="_blank" rel="noopener">巨虹電子（股票代號8084，下稱「巨虹」）</a>認購價每股45.6元，申購期間股價已經低於認購價，之後董事會撤銷現增，股款加計利息退還。<a class="src" href="https://tw.stock.yahoo.com/quote/6225.TW/profile" target="_blank" rel="noopener">天瀚科技（股票代號6225，下稱「天瀚」）</a>認購價每股17.65元，新股上市後連續跌停，但即使在最低點，股價仍是認購價的2.6倍。</p>
+    <p>這兩個案例適合用來討論公司法「發行新股」的分配機制：員工、原股東、一般民眾各分到多少，價格怎麼定，以及中籤人在「抽籤到拿到股票」這段期間，承擔了哪些風險。本篇的起點是<a class="src" href="https://finance.ettoday.net/news/3242651" target="_blank" rel="noopener">ETtoday 2026年9月23日的報導</a>，查證過程中發現報導有需要補充的地方，整理在「⑤新聞查證」。</p>
+    <div class="think-box good">
+      <p class="think-title">📰 老師的親身經歷</p>
+      <p class="think-text">巨虹公開申購期間，老師誤按了申購，而且中籤了。後來巨虹撤銷現增，老師在2026年10月8日收到退款支票，股款另外加計了利息。如果巨虹沒有撤銷，以9月23日的跌停價36.75元計算，這張中籤的股票帳面上就要賠8,850元。</p>
+    </div>
+  </section>
+
+  <section id="timeline-juhong">
+    <h2>巨虹：申購期間股價已低於認購價<span class="step-badge">步驟① 釐清事實</span></h2>
+    <ul class="timeline">
+      <li><span class="date">2026/08/11</span><p class="desc">巨虹<a class="src" href="https://tw.stock.yahoo.com/news/%E5%85%AC%E5%91%8A-%E5%B7%A8%E8%99%B9%E7%8F%BE%E9%87%91%E5%A2%9E%E8%B3%87%E8%AA%8D%E8%82%A1%E5%9F%BA%E6%BA%96%E6%97%A5%E5%8F%8A%E7%9B%B8%E9%97%9C%E4%BA%8B%E5%AE%9C-105323052.html" target="_blank" rel="noopener">公告現金增資認股基準日</a>：發行1億524萬股，其中員工10%、原股東80%、公開承銷10%；認股基準日9月1日，原股東及員工繳款期間9月4日至9月8日。增資資金用於子公司宏康取得Midas Health公司股權，也就是市場所稱的收購百略醫學。</p></li>
+      <li><span class="date">2026/09/04</span><p class="desc">巨虹收盤45.55元，第一次跌破認購價45.6元，之後每天都收在認購價以下。</p></li>
+      <li><span class="date">2026/09/08－09/10</span><p class="desc">公開申購期間。依<a class="src" href="https://www.emega.com.tw/emega/upload/bulletin/6be5153e140000062387.pdf" target="_blank" rel="noopener">兆豐證券等承銷商的銷售辦法公告</a>，公開承銷10,524張中，1,474張（14.01%）由承銷商先行保留自行認購，其餘9,050張開放公開申購；扣款日9月11日，抽籤日9月14日，預定9月22日上櫃。申購第一天9月8日，巨虹收盤45.3元，已經低於認購價。</p></li>
+    </ul>
+    <div class="think-box">
+      <p class="think-title">🤔 延伸思考：明知股價低於認購價，為什麼還有人申購？</p>
+      <p class="think-text">申購期間股價已經低於認購價，理性的投資人應該直接在市場上買股票，而不是用更高的價格抽籤。請思考：一般投資人是在什麼時間點、看什麼資訊決定要不要申購的？券商App的抽籤清單通常顯示的是「公告當時的價差」還是「即時價差」？這個資訊落差，跟公開申購制度的設計有沒有關係？</p>
+    </div>
+    <ul class="timeline">
+      <li><span class="date">2026/09/17</span><p class="desc">巨虹<a class="src" href="https://tw.stock.yahoo.com/news/%E5%85%AC%E5%91%8A-%E5%B7%A8%E8%99%B9%E7%8F%BE%E9%87%91%E5%A2%9E%E8%B3%87%E8%AA%8D%E8%82%A1%E5%9F%BA%E6%BA%96%E6%97%A5%E5%8F%8A%E7%9B%B8%E9%97%9C%E4%BA%8B%E5%AE%9C-%E8%A3%9C%E5%85%85%E5%85%AC%E5%91%8A%E5%BB%B6%E9%95%B7%E7%89%B9%E5%AE%9A%E4%BA%BA%E8%82%A1%E6%AC%BE%E7%B9%B3%E7%B4%8D%E6%9C%9F%E9%96%93-102425741.html" target="_blank" rel="noopener">公告延長特定人股款繳納期間</a>，由9月16日延到9月23日，理由是資本市場股價波動與特定人繳款作業時間。</p></li>
+      <li><span class="date">2026/09/23</span><p class="desc">巨虹跌停，收36.75元。當晚董事會<a class="src" href="https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=f6cfee14-3166-4fa1-bac4-fd18de9a28c1" target="_blank" rel="noopener">決議向金管會申請撤銷本次現金增資</a>，改辦私募；公告於9月24日凌晨0點14分發出。</p></li>
+      <li><span class="date">2026/09/24</span><p class="desc">巨虹<a class="src" href="https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=04b3686e-cb4e-4eaa-984d-a55b9b4336b3" target="_blank" rel="noopener">接獲金管會核准撤銷</a>。已繳款的原股東、員工、公開申購中籤人及特定人，股款以年利率1.725%加計利息退還，預計10月4日退款。</p></li>
+      <li><span class="date">2026/10/02</span><p class="desc">私募也未能在期限內完成，收購百略的3,000萬美元訂金可能被沒收。<a class="src" href="https://www.setn.com/news/1915552" target="_blank" rel="noopener">櫃買中心將巨虹改列全額交割股</a>。</p></li>
+      <li><span class="date">2026/10/08</span><p class="desc">巨虹從9月23日起連續10根跌停，收14.4元，比9月22日的40.8元下跌64.7%。</p></li>
+    </ul>
+    <img class="evidence-img" src="../images/juhong-8084-cash-capital-increase-price-volume-aug-oct-2026.png" alt="巨虹2026年8月至10月股價與成交量走勢圖">
+    <span class="evidence-caption">巨虹2026年8月至10月每日收盤價與成交量，紅色虛線為認購價45.6元，黃色區塊為公開申購期間；資料來源：Goodinfo!台灣股市資訊網，日期依公開資訊觀測站公告與承銷公告</span>
+    <div class="plain-box">
+      <p class="plain-title">💡 白話補充：什麼是「全額交割股」？</p>
+      <p class="plain-text">一般買股票是「先買後付」：今天買，兩個營業日後才扣款。被列為全額交割股之後，就像去一家已經不太讓人放心的店消費，店家要求你「先付清才能拿貨」：買方要先把錢全部存進券商，賣方要先把股票交出來，才能下單，撮合的次數也會減少。這是交易所在公司財務出狀況時，用來降低交割風險的措施。</p>
+    </div>
+  </section>
+
+  <section id="timeline-tianhan">
+    <h2>天瀚：連續跌停，仍遠高於認購價<span class="step-badge">步驟① 釐清事實</span></h2>
+    <ul class="timeline">
+      <li><span class="date">2026/08/11</span><p class="desc">天瀚<a class="src" href="https://tw.stock.yahoo.com/news/%E5%A4%A9%E7%80%9A%E7%8F%BE%E5%A2%9E3220%E8%90%AC%E8%82%A1%E6%A1%88-%E8%A3%9C%E5%85%85%E6%AF%8F%E8%82%A1%E7%99%BC%E8%A1%8C%E5%83%B9%E7%82%BA17-65%E5%85%83%E7%AD%89%E4%BA%8B%E5%AE%9C-065400743.html" target="_blank" rel="noopener">補充公告每股發行價格17.65元</a>：發行3,220萬股，原股東認購75%，員工15%，公開承銷10%（3,220張）；認股基準日8月24日，原股東及員工繳款期間9月3日至9月9日。公告當天天瀚收盤30.45元。</p></li>
+      <li><span class="date">2026/08/11－08/24</span><p class="desc">天瀚連續10根漲停，從8月10日的27.7元漲到認股基準日8月24日的71.1元。這段期間每天成交量大多只有一兩百張。</p></li>
+      <li><span class="date">2026/09/08－09/10</span><p class="desc">公開申購期間，實際開放抽籤2,737張。9月9日、10日又連拉兩根漲停，申購截止日收74.3元，每張價差約5.7萬元。</p></li>
+      <li><span class="date">2026/09/14</span><p class="desc">抽籤日，天瀚跌停，收67.5元。</p></li>
+      <li><span class="date">2026/09/17</span><p class="desc">天瀚<a class="src" href="https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=8a4c4dba-3247-4611-9be2-0db76ed43630" target="_blank" rel="noopener">公告股款5億6,833萬元全數收足</a>，以9月17日為增資基準日；<a class="src" href="https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=f8764c2b-0f61-4043-ba5c-498f4fb6d343" target="_blank" rel="noopener">預定股款繳納憑證9月22日上市</a>。</p></li>
+      <li><span class="date">2026/09/22－09/23</span><p class="desc">股款繳納憑證上市，天瀚連續兩天跌停，收51.3元、46.2元。兩天的開盤、最高、最低、收盤都是同一個價格，只成交263張和175張。</p></li>
+      <li><span class="date">2026/09/24</span><p class="desc">天瀚開盤跌停41.6元，盤中拉到漲停50.8元，收50.4元，成交2,847張，是7月以來平均每日108張的26倍。之後股價回升，10月12日收78.7元。</p></li>
+    </ul>
+    <img class="evidence-img" src="../images/tianhan-6225-cash-capital-increase-price-volume-aug-oct-2026.png" alt="天瀚2026年8月至10月股價與成交量走勢圖">
+    <span class="evidence-caption">天瀚2026年8月至10月每日收盤價與成交量，紅色虛線為認購價17.65元，黃色區塊為公開申購期間；資料來源：Goodinfo!台灣股市資訊網，日期依公開資訊觀測站公告</span>
+    <div class="plain-box">
+      <p class="plain-title">💡 白話補充：「一價到底」的跌停是什麼意思？</p>
+      <p class="plain-text">一天之中開盤、最高、最低、收盤都是同一個價格，代表這一整天股價都卡在跌停價，賣的人排了長長一列，買的人只有零星幾個。就像一家店門口排了很多人要退貨，櫃檯一天只收得完幾個人。天瀚9月22日、23日只成交兩三百張，不是因為沒人想賣，而是幾乎沒人願意在這個價格接手。</p>
+    </div>
+    <div class="think-box">
+      <p class="think-title">🤔 延伸思考：天瀚的漲跌時間點，你怎麼看？</p>
+      <p class="think-text">天瀚的股價走勢和增資時程有幾處吻合：公告認購價後連續10根漲停，最後一根落在認股基準日；申購期間又連拉兩根漲停，申購一結束就回落；新股撥券前，股價已從74.9元跌到56.9元；撥券後連續兩天鎖死跌停，第三天才在跌停價出現大量買盤。另外，這段期間天瀚的融資融券餘額每天都是0，中籤人在拿到新股之前無法先賣。</p>
+      <p class="think-text">請思考：(1) 這些時間點吻合，可能的解釋有哪些？請至少提出兩種不同的解釋。(2) 撥券前能夠賣出的，只有手上本來就有舊股的人，原股東有沒有可能「先在高價賣舊股，再用17.65元的新股補回持股」？(3) 每日股價資料能證明哪些事、不能證明哪些事？如果要驗證你的解釋，還需要哪些資料，例如券商分點進出資料？(4) 在沒有主管機關調查或法院認定之前，評論一家具名公司時，用詞要注意什麼？</p>
+    </div>
+  </section>
+
+  <section id="articles">
+    <h2>對應條文<span class="step-badge">步驟② 確認法規依據</span></h2>
+    <div class="qa">
+      <div class="q">公司法§266第2項（發行新股由董事會決議）</div>
+      <p class="a">公司發行新股時，應由<a class="law" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=266" target="_blank" rel="noopener">董事會以董事三分之二以上之出席，及出席董事過半數同意之決議</a>行之。巨虹、天瀚的現金增資，都是由董事會決議發行；巨虹撤銷現增，也是由董事會決議後向金管會申請。</p>
+    </div>
+    <div class="qa">
+      <div class="q">公司法§267第1項、第3項（員工承購與原股東儘先分認）</div>
+      <p class="a">公司發行新股時，<a class="law" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=267" target="_blank" rel="noopener">應保留發行新股總數10%至15%由員工承購</a>；其餘部分應通知原股東，按原有股份比例儘先分認，原股東未認購的部分，得公開發行或洽由特定人認購。天瀚保留15%給員工，巨虹保留10%，都在法定範圍內。</p>
+    </div>
+    <div class="qa">
+      <div class="q">證券交易法§28-1（公開銷售與同一價格）</div>
+      <p class="a">上市櫃公司現金增資，依<a class="law" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=28-1" target="_blank" rel="noopener">證券交易法§28-1</a>及主管機關規定，應提撥發行新股的10%對外公開銷售，不受公司法§267第3項原股東儘先分認規定的限制；同條並規定，員工及原股東認購的價格，應與公開銷售的價格相同。所以一般民眾抽到的，和原股東、員工認購的是同一個價格。兩家公司的增資公告，都明文引用這一條提撥10%公開承銷。</p>
+    </div>
+    <div class="qa">
+      <div class="q">承銷商的銷售辦法（承銷實務，非法律條文）</div>
+      <p class="a">公開承銷的10%裡，承銷商可以先行保留一部分自行認購，其餘才開放公開申購。巨虹的銷售辦法也寫明「中籤後不能放棄認購及要求退還價款」，以及中籤人認購的股票，依中籤通知書所訂撥入日期撥入集保帳戶。天瀚實際開放抽籤的2,737張約為公開承銷的85%，比例和巨虹相近，但本教材未取得天瀚的銷售辦法，承銷商保留的比例無法確認。</p>
+    </div>
+  </section>
+
+  <section id="keypoints">
+    <h2>關鍵點<span class="step-badge">步驟③ 找出爭點</span></h2>
+    <div class="think-box">
+      <p class="think-title">關鍵點一：認購價是固定的，市價每天在變</p>
+      <p class="think-text">證交法§28-1要求公開銷售和原股東、員工用同一個價格，這個價格在公告時就定了。天瀚8月11日公告17.65元時，股價30.45元；巨虹在8月中股價還有50多元，到了申購期間已經跌到認購價以下。價差不是公告那天決定的，而是撥券後能賣的那天決定的。</p>
+    </div>
+    <div class="think-box">
+      <p class="think-title">關鍵點二：從抽籤到撥券，風險全部由中籤人承擔</p>
+      <p class="think-text">兩家公司抽籤都在9月14日，新股預定9月22日上市或上櫃，中間隔了8天。銷售辦法規定中籤後不能放棄認購；兩檔這段期間都沒有融資融券交易，中籤人也無法先融券鎖住價格。這8天的股價變動，中籤人只能承受。</p>
+    </div>
+    <div class="think-box">
+      <p class="think-title">關鍵點三：撤銷現增時，已繳的股款怎麼處理</p>
+      <p class="think-text">巨虹董事會決議撤銷後，向金管會申請並獲核准，已繳款的原股東、員工、中籤人及特定人，都依公告領回股款並加計利息。對中籤人來說，原本帳面上每張要賠的8,850元因此消失，只損失了資金被凍結將近一個月的機會成本。但在市場上買進巨虹股票的投資人，沒有這層保護。</p>
+    </div>
+  </section>
+
+  <section id="news-check">
+    <h2>新聞查證：報導沒講完的事<span class="step-badge">步驟④ 回到原始文件</span></h2>
+    <p>本篇的起點是<a class="src" href="https://finance.ettoday.net/news/3242651" target="_blank" rel="noopener">ETtoday 2026年9月23日中午的報導</a>。對照公司公告與承銷公告後，有兩處需要補充：</p>
+    <ol>
+      <li><strong>天瀚發行的是3,220萬股，報導寫成3.22億股。</strong>公告的實收股款5億6,833萬元，正好等於3,220萬股乘以17.65元。</li>
+      <li><strong>巨虹「中籤每張賠8,850元」，在發稿當下是對的，當天晚上就改變了。</strong>巨虹董事會同一天決議撤銷現增，中籤人改成領回股款加利息。ETtoday隔天也發了<a class="src" href="https://finance.ettoday.net/news/3243319" target="_blank" rel="noopener">後續報導</a>。只看第一篇，會以為中籤人真的賠了錢。</li>
+    </ol>
+    <div class="think-box">
+      <p class="think-title">🤔 延伸思考：為什麼要回到原始公告查證？</p>
+      <p class="think-text">新聞稿的數字錯一位（3,220萬股寫成3.22億股），讀者通常不會發現；新聞的時效也有限，發稿幾個小時後事實就可能改變。請練習：找出一則股票相關新聞，到公開資訊觀測站找出對應的重大訊息，比對新聞裡的日期、股數、金額是否一致。</p>
+    </div>
+  </section>
+
+  <section class="discussion" id="discussion">
+    <h2>課堂討論方向</h2>
+    <ol>
+      <li>巨虹和天瀚都依證交法§28-1提撥10%公開銷售，也都適用「同一價格」的規定，結果卻一個賠、一個賺。請說明「同一價格」這個規定保護的是什麼，又沒有保護到什麼？（這題在問：法律保障的是認購價格的公平，讓一般民眾不會買得比原股東貴；容易誤解成法律保障中籤一定賺錢。法律重點在於§28-1處理的是「分配」的公平，市價風險仍由認購人自己承擔。）</li>
+      <li>巨虹撤銷現增後，中籤人領回股款加利息；同一時間在市場上買進巨虹的投資人，從40.8元跌到14.4元，沒有任何退款。請比較兩者的法律地位為什麼不同。（這題在問：中籤人和公司之間是認購新股的關係，撤銷發行後公司要返還股款；在市場上買股票的人，買的是別人手上的舊股，交易對象不是公司。容易誤解成「股價下跌公司都要負責」。）</li>
+      <li>如果你是原股東，手上有天瀚的舊股，又按持股比例認購了17.65元的新股。在新股撥券之前，你會怎麼處理手上的舊股？這樣做合法嗎？可能對其他投資人造成什麼影響？（這題在問：原股東賣出自己持有的舊股，本身是正常交易；但要思考大量賣出對股價的影響，以及什麼情況下會進入證交法操縱市場規範的討論範圍。容易誤解成「價格大幅波動就一定是操縱」。）</li>
+      <li>請比較本篇和<a class="src" href="company-law-art266-267-hantest-ipo-case.html">漢測（7856）IPO案</a>：漢測是上櫃前的現金增資，巨虹、天瀚是已上市櫃公司的現金增資。兩者在定價方式、價差來源、中籤人承擔的風險上，有什麼相同與不同？</li>
+    </ol>
+  </section>
+
+  <p class="disclaimer">本教材為教學目的整理，內容依公司公告、承銷公告、公開新聞報導與法規查證彙整而成，僅供課堂討論公司法「發行新股」相關法律機制之用，不構成任何投資建議。延伸思考中對股價走勢的各種解釋，均為課堂討論用的假設，未經主管機關或法院認定，不代表對任何公司的評價。股價與成交量取自Goodinfo!台灣股市資訊網，正式數字以公開資訊觀測站及證券交易所資料為準。</p>
+
+</div>
+
+<script>
+async function loadPageMeta(){
+  const verEl = document.getElementById('pageVerBadge');
+  const dateEl = document.getElementById('pageMetaDate');
+  const REPO = 'mjib007/company-law-cases';
+  const FILE_PATH = 'lectures/company-law-art266-267-juhong-tianhan-capital-increase-case.html';
+
+  try {
+    const res = await fetch(`https://api.github.com/repos/${REPO}/commits?path=${encodeURIComponent(FILE_PATH)}&per_page=100`);
+    if (!res.ok) throw new Error('commits fetch failed');
+    const commits = await res.json();
+
+    verEl.textContent = `v${commits.length}`;
+
+    const lastDate = commits[0]?.commit?.committer?.date;
+    if (lastDate){
+      const d = new Date(lastDate);
+      const y = d.getFullYear();
+      const m = String(d.getMonth() + 1).padStart(2, '0');
+      const day = String(d.getDate()).padStart(2, '0');
+      dateEl.textContent = `最後更新 ${y}-${m}-${day}`;
+    }
+  } catch (err){
+    verEl.textContent = '';
+    dateEl.textContent = '';
+    console.warn('本篇版次資訊載入失敗：', err);
+  }
+}
+loadPageMeta();
+
+function adjustScrollMargin(){
+  const nav = document.querySelector('.anchor-nav');
+  if (!nav) return;
+  const h = nav.offsetHeight + 16;
+  document.querySelectorAll('section').forEach(s => {
+    s.style.scrollMarginTop = h + 'px';
+  });
+}
+window.addEventListener('load', adjustScrollMargin);
+window.addEventListener('resize', adjustScrollMargin);
+
+function setupActiveNavTracking(){
+  const navLinks = Array.from(document.querySelectorAll('.anchor-nav a'));
+  const sections = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+  function setActive(id){
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+    });
+  }
+
+  function updateActive(){
+    const nav = document.querySelector('.anchor-nav');
+    const offset = (nav ? nav.offsetHeight : 60) + 20;
+    let currentId = sections[0] ? sections[0].id : null;
+    sections.forEach(s => {
+      const rect = s.getBoundingClientRect();
+      if (rect.top - offset <= 0) {
+        currentId = s.id;
+      }
+    });
+    if (currentId) setActive(currentId);
+  }
+
+  let ticking = false;
+  function onScroll(){
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateActive();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  updateActive();
+}
+
+window.addEventListener('load', setupActiveNavTracking);
+
+(function(){
+  function updateBtn(t){ var b=document.getElementById('themeBtn'); if(b) b.textContent = t==='dark' ? '☀️' : '🌓'; }
+  var saved = localStorage.getItem('lecture-theme');
+  if (saved) { document.documentElement.setAttribute('data-theme', saved); updateBtn(saved); }
+  else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.setAttribute('data-theme', 'dark'); updateBtn('dark');
+  }
+  window.toggleTheme = function(){
+    var cur = document.documentElement.getAttribute('data-theme');
+    var next = cur === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('lecture-theme', next);
+    updateBtn(next);
+  };
+})();
+
+(function(){
+  var btn = document.getElementById('backToTop');
+  if (!btn) return;
+  window.addEventListener('scroll', function(){
+    if (window.scrollY > 400) btn.classList.add('show');
+    else btn.classList.remove('show');
+  }, { passive: true });
+})();
+</script>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到頂部">↑</button>
+
+</body>
+</html>
