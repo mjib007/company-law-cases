@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>特力屋（7867）上市前競價拍賣：一次發行新股，三種價格 | company-law-cases</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #16233b;
+    --indigo: #2c4a76;
+    --parchment: #f3ede0;
+    --paper-panel: #fffdf8;
+    --seal: #9c2b3a;
+    --brass: #a9832f;
+    --pos: #2f7d5c;
+    --pop: #e8623c;
+    --line: #ddd3bf;
+    --ink-70: rgba(22,35,59,0.7);
+    --ink-45: rgba(22,35,59,0.45);
+  }
+  [data-theme="dark"]{
+    --ink: #e8e3d6;
+    --indigo: #7ba3d9;
+    --parchment: #14181f;
+    --paper-panel: #1c2129;
+    --seal: #e0616e;
+    --brass: #d4ac5c;
+    --pos: #5cbf94;
+    --pop: #ff8a75;
+    --line: #333b47;
+    --ink-70: rgba(232,227,214,0.75);
+    --ink-45: rgba(232,227,214,0.5);
+  }
+  .stat{ font-weight:700; color:var(--pop); }
+  body{ transition: background .25s, color .25s; }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:"Noto Sans TC",sans-serif;
+    background:var(--parchment);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.8;
+  }
+  strong { font-weight: 700; color: var(--ink); }
+  .wrap{ max-width:760px; margin:0 auto; padding:2.5rem 1.5rem 4rem; }
+  .back{ display:inline-block; font-size:.85rem; color:var(--indigo); text-decoration:none; margin-bottom:1.5rem; }
+  .back:hover{ color:var(--seal); }
+  .eyebrow{ font-size:.74rem; letter-spacing:.2em; color:var(--brass); font-weight:700; margin-bottom:.8rem; }
+  h1{ font-family:"Noto Serif TC",serif; font-weight:900; font-size:1.7rem; line-height:1.4; margin:0 0 .6rem; }
+  .meta-bar{ display:flex; flex-wrap:wrap; gap:.6rem; margin-bottom:2rem; font-size:.8rem; }
+  .tag{ background:var(--paper-panel); border:1px solid var(--line); color:var(--brass); padding:.2rem .7rem; border-radius:999px; }
+  .author-badge{ background:rgba(44,74,118,0.12); color:var(--indigo); padding:.2rem .7rem; border-radius:999px; font-weight:700; }
+  .page-meta{ display:flex; align-items:center; gap:10px; margin-bottom:1.8rem; font-size:.78rem; }
+  .page-meta .ver-badge{ font-family:"Noto Serif TC",serif; font-weight:700; color:var(--seal); border:1px solid var(--seal); border-radius:20px; padding:2px 10px; }
+  .page-meta .meta-date{ color:var(--ink-45); }
+  section{ background:var(--paper-panel); border:1px solid var(--line); border-radius:10px; padding:1.4rem 1.6rem; margin-bottom:1.3rem; }
+  .step-badge{ display:inline-block; background:var(--indigo); color:#fff; font-weight:700; font-size:.68rem; border-radius:99px; padding:.15rem .6rem; margin-left:.5rem; vertical-align:middle; }
+  h2{ font-family:"Noto Serif TC",serif; font-size:1.05rem; font-weight:700; color:var(--ink); margin:0 0 .8rem; padding-bottom:.5rem; border-bottom:1px solid var(--line); }
+  p{ font-size:.95rem; color:var(--ink-70); margin:0 0 1rem; }
+  p:last-child{ margin-bottom:0; }
+  a.src{ color:var(--indigo); text-decoration:underline; text-decoration-color:var(--line); text-underline-offset:3px; font-weight:500; }
+  a.src:hover{ color:var(--seal); text-decoration-color:var(--seal); }
+  a.law{ color:var(--brass); font-weight:700; text-decoration:none; border-bottom:1px dashed var(--brass); }
+  a.law:hover{ color:var(--seal); border-bottom-color:var(--seal); }
+  .timeline{ list-style:none; margin:0; padding:0; }
+  .timeline li{ display:flex; gap:1rem; margin-bottom:1rem; align-items:baseline; }
+  .timeline .date{ flex:0 0 auto; font-weight:700; color:var(--seal); font-size:.85rem; white-space:nowrap; }
+  .timeline .desc{ font-size:.92rem; color:var(--ink-70); margin:0; }
+  .qa{ margin-bottom:1.1rem; }
+  .qa .q{ font-weight:700; margin-bottom:.3rem; font-size:.95rem; }
+  .qa .a{ font-size:.92rem; color:var(--ink-70); margin:0; }
+  .discussion ol{ padding-left:1.3rem; font-size:.92rem; color:var(--ink-70); margin:0; }
+  .discussion li{ margin-bottom:.7rem; }
+  .think-box{ background:rgba(44,74,118,0.06); border:1px solid rgba(44,74,118,0.22); border-radius:8px; padding:1rem 1.2rem; margin:1rem 0; }
+  .think-title{ font-weight:700; color:var(--indigo); font-size:.92rem; margin:0 0 .6rem; }
+  .think-text{ font-size:.9rem; color:var(--ink-70); margin:0; line-height:1.8; }
+  .strategy-list{ list-style:none; margin:0; padding:0; }
+  .strategy-list li{ margin-bottom:1rem; padding:.9rem 1.1rem; background:rgba(169,131,47,0.06); border:1px solid rgba(169,131,47,0.22); border-radius:8px; font-size:.9rem; color:var(--ink-70); line-height:1.8; }
+  .strategy-list li strong{ color:var(--brass); }
+  details.teacher-answer{ background:rgba(156,43,58,0.05); border:1px solid rgba(156,43,58,0.25); border-radius:8px; padding:1rem 1.2rem; margin-top:1rem; }
+  details.teacher-answer summary{ cursor:pointer; font-weight:700; color:var(--seal); font-size:.92rem; }
+  details.teacher-answer .answer-body{ margin-top:.9rem; }
+  .data-table{ width:100%; border-collapse:collapse; font-size:.88rem; margin:.8rem 0 1rem; }
+  .data-table th, .data-table td{ border:1px solid var(--line); padding:.5rem .7rem; text-align:left; color:var(--ink-70); }
+  .data-table th{ background:rgba(44,74,118,0.06); color:var(--ink); font-weight:700; }
+  .data-source{ font-size:.82rem; color:var(--ink-45); margin-top:-.4rem; margin-bottom:1rem; }
+  .note{ font-size:.8rem; color:var(--ink-45); }
+  .anchor-nav{ position:sticky; top:0; z-index:100; display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:1.5rem; padding:.8rem 0 1rem; background:var(--parchment); border-bottom:1px solid var(--line); }
+  .anchor-nav a{ font-size:.78rem; color:var(--indigo); background:rgba(44,74,118,0.08); border-radius:99px; padding:.35rem .8rem; text-decoration:none; white-space:nowrap; transition:background .2s, color .2s; }
+  .anchor-nav a.active{ background:var(--indigo); color:#fff; font-weight:700; }
+  .anchor-nav a:hover{ background:rgba(44,74,118,0.18); }
+  .anchor-nav a.active:hover{ background:var(--indigo); color:#fff; }
+
+  .theme-toggle-btn{ position:fixed; top:16px; right:18px; z-index:200; width:38px; height:38px;
+    border-radius:50%; border:1px solid var(--line); background:var(--paper-panel); color:var(--ink);
+    cursor:pointer; font-size:16px; display:flex; align-items:center; justify-content:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.12); transition:transform .2s, border-color .2s; }
+  .theme-toggle-btn:hover{ border-color:var(--seal); transform:rotate(15deg); }
+
+  .back-to-top{ position:fixed; bottom:22px; right:20px; width:42px; height:42px; border-radius:50%;
+    background:var(--indigo); color:#fff; border:none; box-shadow:0 4px 14px rgba(0,0,0,.25);
+    cursor:pointer; font-size:18px; display:flex; align-items:center; justify-content:center;
+    opacity:0; visibility:hidden; transition:opacity .25s, visibility .25s, transform .2s; z-index:199; }
+  .back-to-top.show{ opacity:1; visibility:visible; }
+  .back-to-top:hover{ transform:translateY(-3px); background:var(--seal); }
+
+  .think-box.good{ background:rgba(47,125,92,0.08); border-color:rgba(47,125,92,0.28); }
+  .think-box.good .think-title{ color:var(--pos); }
+
+  .formula-display{ background:var(--ink); color:#E2E8F0; border-radius:6px; padding:14px 18px;
+    margin:1rem 0; font-family:"Courier New",monospace; font-size:.85rem; line-height:1.9; overflow-x:auto; }
+  [data-theme="dark"] .formula-display{ background:#0B0E12; border:1px solid var(--line); }
+  .formula-display .ft{ color:#7DD3FC; }
+  .formula-display .fv{ color:#FDE68A; }
+  .formula-display .fr{ color:#86EFAC; font-weight:700; }
+
+  .calc-container{ background:var(--paper-panel); border:2px dashed var(--indigo); border-radius:8px;
+    padding:1.1rem 1.2rem; margin:1.2rem 0; }
+  .calc-title{ font-family:"Noto Serif TC",serif; font-weight:700; font-size:.95rem; color:var(--indigo); margin-bottom:.6rem; }
+  .calc-inputs{ display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:.8rem; margin-bottom:1rem; }
+  .calc-inputs label{ display:block; font-size:.75rem; color:var(--ink-45); margin-bottom:.3rem; }
+  .calc-inputs input{ width:100%; padding:.45rem .6rem; border-radius:5px; border:1px solid var(--line);
+    background:var(--parchment); color:var(--ink); font-size:.9rem; }
+  .calc-result-box{ display:flex; gap:1.5rem; flex-wrap:wrap; background:var(--parchment); border-radius:6px;
+    padding:.9rem 1.1rem; border:1px solid var(--line); }
+  .calc-stat-label{ font-size:.7rem; color:var(--ink-45); text-transform:uppercase; letter-spacing:.06em; }
+  .calc-stat-val{ font-family:"Courier New",monospace; font-size:1.4rem; font-weight:700; color:var(--indigo); }
+  .scatter-box{ background:var(--paper-panel); border:1px solid var(--line); border-radius:8px; padding:1rem; margin:1rem 0; }
+  .scatter-box canvas{ width:100%; height:auto; display:block; }
+  .scatter-caption{ font-size:.78rem; color:var(--ink-45); text-align:center; margin-top:.5rem; }
+
+  @media (max-width: 600px){
+    .wrap{ padding:1.6rem 1rem 3rem; }
+    h1{ font-size:1.4rem; }
+    .anchor-nav{ flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch;
+      padding:.7rem 0 .8rem; scrollbar-width:thin; }
+    .anchor-nav a{ flex:0 0 auto; font-size:.74rem; padding:.3rem .65rem; }
+    .theme-toggle-btn{ top:10px; right:10px; width:34px; height:34px; font-size:14px; }
+    .back-to-top{ bottom:16px; right:14px; width:38px; height:38px; font-size:16px; }
+    section{ padding:1.1rem 1.1rem; }
+    .calc-inputs{ grid-template-columns:1fr; }
+    .calc-result-box{ gap:1rem; }
+    table.data-table{ font-size:.8rem; }
+    .data-table th, .data-table td{ padding:.4rem .5rem; }
+  }
+  .disclaimer{ font-size:.78rem; color:var(--ink-45); font-style:italic; border-left:3px solid var(--line); padding-left:.8rem; margin-top:2rem; }
+  .plain-box{ background:rgba(169,131,47,0.08); border:1px solid rgba(169,131,47,0.3); border-radius:8px; padding:1rem 1.2rem; margin:1rem 0; }
+  .plain-title{ font-weight:700; color:var(--brass); font-size:.92rem; margin:0 0 .6rem; }
+  .plain-text{ font-size:.9rem; color:var(--ink-70); margin:0; line-height:1.8; }
+  .timeline + .plain-box, .timeline + .think-box{ margin-top:0; }
+  .sim-presets, .sim-actions{ display:flex; flex-wrap:wrap; gap:.5rem; align-items:center; margin:.4rem 0; }
+  .sim-label{ font-size:.8rem; color:var(--ink-45); }
+  .sim-btn{ font-family:inherit; font-size:.8rem; border:1px solid var(--indigo); color:var(--indigo); background:transparent; border-radius:99px; padding:.35rem .9rem; cursor:pointer; }
+  .sim-btn:hover{ background:rgba(44,74,118,0.1); }
+  .sim-btn.active{ background:var(--indigo); color:#fff; }
+  .sim-btn.primary{ background:var(--seal); border-color:var(--seal); color:#fff; font-weight:700; padding:.45rem 1.4rem; font-size:.9rem; }
+  .sim-btn.primary:hover{ filter:brightness(1.1); }
+  .sim-table-wrap{ overflow-x:auto; }
+  .sim-table{ margin:.4rem 0; }
+  .sim-table input{ width:100%; min-width:70px; padding:.3rem .45rem; border-radius:4px; border:1px solid var(--line); background:var(--parchment); color:var(--ink); font-size:.88rem; font-family:inherit; }
+  .sim-table td, .sim-table th{ white-space:nowrap; }
+  .sim-table tr.win td{ background:rgba(47,125,92,0.10); }
+  .sim-table tr.partial td{ background:rgba(169,131,47,0.12); }
+  .sim-table tr.bad td{ color:var(--ink-45); text-decoration:line-through; }
+  .sim-table tr.me td:first-child{ font-weight:700; color:var(--seal); }
+  .sim-result{ margin-top:1rem; }
+  .sim-result .calc-result-box{ margin-bottom:.8rem; }
+  .sim-banner{ border-radius:6px; padding:.7rem 1rem; font-weight:700; font-size:.92rem; margin-bottom:.8rem; }
+  .sim-banner.ok{ background:rgba(47,125,92,0.12); color:var(--pos); border:1px solid rgba(47,125,92,0.3); }
+  .sim-banner.fail{ background:rgba(156,43,58,0.10); color:var(--seal); border:1px solid rgba(156,43,58,0.3); }
+  .sim-banner.capped{ background:rgba(232,98,60,0.10); color:var(--pop); border:1px solid rgba(232,98,60,0.3); }
+  .calc-result-box > div{ min-width:120px; }
+</style>
+</head>
+<body>
+<button class="theme-toggle-btn" id="themeBtn" onclick="toggleTheme()" title="切換深色/淺色模式">🌓</button>
+<div class="wrap">
+
+  <a class="back" href="../index.html">← 回總覽頁</a>
+
+  <div class="eyebrow">案例研究 Case Study</div>
+  <h1>特力屋（7867）上市前競價拍賣：一次發行新股，三種價格</h1>
+  <div class="meta-bar">
+    <span class="tag">第五章第八節 發行新股（§266至§268）</span>
+    <span class="tag">證券交易法（§10、§22、§28-1、§71）</span>
+  </div>
+  <div class="page-meta">
+    <span class="author-badge">教師範例</span>
+    <span class="ver-badge" id="pageVerBadge">v…</span>
+    <span class="meta-date" id="pageMetaDate">載入中…</span>
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=mjib007.company-law-cases.特力屋競價拍賣案" alt="Visitors" style="opacity:0.85;vertical-align:middle;">
+  </div>
+
+  <nav class="anchor-nav">
+    <a href="#source">案例來源</a>
+    <a href="#timeline">①時間軸</a>
+    <a href="#articles">②對應條文</a>
+    <a href="#keypoints">③關鍵點</a>
+    <a href="#strategy">④換你當事人</a>
+    <a href="#simulator">競標模擬器</a>
+    <a href="#data-analysis">延伸分析</a>
+    <a href="#guess-game">猜價格遊戲</a>
+    <a href="#discussion">課堂討論</a>
+  </nav>
+
+  <section id="source">
+    <h2>案例來源</h2>
+    <p><a class="src" href="https://tw.stock.yahoo.com/quote/7867.TW/profile" target="_blank" rel="noopener">特力屋股份有限公司（股票代號7867，下稱「特力屋」）</a>是國內居家裝修通路，2026年配合初次上市，辦理現金增資發行新股<span class="stat">10,200張</span>。這批新股的一大部分，是用<strong>競價拍賣</strong>（俗稱「競拍」）的方式賣出去的：投資人自己出價，價高者得，得標的人各自照自己喊的價格付錢。</p>
+    <p>2026年10月19日開標結果出爐，得標價格從<span class="stat">38.6元</span>到<span class="stat">60元</span>都有，得標加權平均價<span class="stat">44.06元</span>，比事前公告的暫定承銷價48.04元還低，於是同時進行中的公開申購（散戶抽籤），價格也跟著降到44.06元。同一次發行新股，同一種普通股，有人付60元、有人付38.6元、抽籤的人付44.06元。這篇講義用特力屋當主軸，搭配<a class="src" href="https://tw.stock.yahoo.com/quote/7814.TWO/profile" target="_blank" rel="noopener">海昌生技（7814）</a>2026年6月的流標案作對照，說明競價拍賣在法律上從哪裡來、價格怎麼決定，以及標不滿時會發生什麼事。</p>
+    <p>本篇是<a class="src" href="company-law-art266-267-hantest-ipo-case.html">漢測（7856）講義</a>的姊妹篇：漢測那篇談的是公開申購（抽籤）這一半，這篇談的是競價拍賣這一半。</p>
+  </section>
+
+  <section id="timeline">
+    <h2>事件時間軸<span class="step-badge">步驟① 釐清事實</span></h2>
+    <ul class="timeline">
+      <li><span class="date">2025/10/16</span><p class="desc">特力屋<a class="src" href="https://ec.ltn.com.tw/article/breakingnews/5210972" target="_blank" rel="noopener">登錄興櫃</a>，推薦證券商認購價格每股58元。</p></li>
+      <li><span class="date">2025/12/16</span><p class="desc">特力屋召開股東臨時會，決議這次上市前現金增資除員工保留部分外，<strong>原股東放棄優先認購</strong>，全部提撥給承銷商對外公開承銷（依特力屋<a class="src" href="https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=12ff3471-6143-41e2-b4a0-a01e9691edbb" target="_blank" rel="noopener">2026/10/07重大訊息</a>所載）。</p></li>
+      <li><span class="date">2026/04/29</span><p class="desc">特力屋<a class="src" href="https://www.cna.com.tw/news/afe/202604290241.aspx" target="_blank" rel="noopener">向證交所送件申請股票上市</a>，實收資本額9.6億元，2025年每股稅後盈餘2.39元。</p></li>
+      <li><span class="date">2026/06/09</span><p class="desc">證交所<a class="src" href="https://www.cna.com.tw/news/afe/202606090329.aspx" target="_blank" rel="noopener">上市審議委員會審議通過</a>，尚須提報證交所董事會。</p></li>
+      <li><span class="date">2026/07/21</span><p class="desc">證交所<a class="src" href="https://money.udn.com/money/story/5607/9642312" target="_blank" rel="noopener">董事會通過特力屋上市案</a>，後續陳報主管機關核備。</p></li>
+      <li><span class="date">2026/09/15</span><p class="desc">這次現金增資發行新股，經證交所函知<strong>申報生效</strong>（依前述重大訊息所載）。</p></li>
+      <li><span class="date">2026/10/07</span><p class="desc">特力屋發布<a class="src" href="https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=12ff3471-6143-41e2-b4a0-a01e9691edbb" target="_blank" rel="noopener">重大訊息</a>：發行新股10,200張，員工保留10%（1,020張），其餘90%（9,180張）供上市前公開承銷；競價拍賣底價<span class="stat">38.43元</span>，公開申購價格為得標加權平均價，但以底價的<span class="stat">1.25倍</span>為上限，暫定承銷價<span class="stat">48.04元</span>。</p></li>
+    </ul>
+
+    <div class="plain-box">
+      <p class="plain-title">💡 白話補充：9,180張怎麼分？</p>
+      <p class="plain-text">對照<a class="src" href="https://www.twse.com.tw/zh/announcement/auction.html" target="_blank" rel="noopener">證交所競價拍賣公告</a>與<a class="src" href="https://www.twse.com.tw/zh/announcement/public.html" target="_blank" rel="noopener">公開申購公告</a>：競價拍賣7,344張，公開申購3,213張。7,344＋1,836＝9,180，剛好是對外承銷的新股；公開申購多出來的1,377張（9,180的15%），按照IPO承銷慣例，應是原股東提供既有股份讓承銷商「過額配售」的部分，不是新股。可以想成一場拍賣會：八成的貨拿去喊價，兩成的貨放在旁邊用抽籤賣，抽籤區另外再向老股東借了一些貨來湊數。</p>
+    </div>
+
+    <ul class="timeline">
+      <li><span class="date">2026/10/13－10/15</span><p class="desc">競價拍賣投標期間。每人最高得標1,055張，投標要先繳<strong>投標金額50%的保證金</strong>，每張投標單另收處理費400元（<a class="src" href="https://www.twse.com.tw/zh/announcement/auction.html" target="_blank" rel="noopener">證交所競價拍賣公告</a>）。</p></li>
+      <li><span class="date">2026/10/16－10/20</span><p class="desc">公開申購期間。注意<strong>申購比開標早一天開始</strong>，申購人下單時還不知道最後價格，只知道暫定承銷價48.04元。這是2024年修正承銷處理辦法後的新時程，見下方延伸思考。</p></li>
+      <li><span class="date">2026/10/19</span><p class="desc">開標。合格投標421件、<span class="stat">17,824張</span>，是拍賣數量的2.43倍；得標價格38.6元至60元，得標加權平均價<span class="stat">44.06元</span>，低於暫定承銷價48.04元，所以實際承銷價定為<span class="stat">44.06元</span>（<a class="src" href="https://www.twse.com.tw/zh/announcement/auction.html" target="_blank" rel="noopener">證交所競價拍賣公告</a>）。</p></li>
+    </ul>
+
+    <div class="think-box">
+      <p class="think-title">🤔 延伸思考：申購人按48.04元下單，最後卻只付44.06元，這樣合理嗎？</p>
+      <p class="think-text">2024年6月28日，證券商公會<a class="src" href="https://www.twsa.org.tw/doc/1130628.html" target="_blank" rel="noopener">公告修正承銷處理辦法</a>（自2025年3月31日起申報的案件適用），把「部分競拍、部分申購」的案件改成公開申購提前到開標前一天開始，申購公告只寫暫定承銷價，<strong>實際扣款金額以開標後的實際承銷價格為準</strong>。對申購人來說，價格只會等於或低於暫定承銷價（因為暫定價本身就是上限），所以這個安排對申購人並沒有不利。請想一想：如果反過來，開標結果高於暫定價，制度要怎麼設計才不會讓申購人「買到自己沒同意的價格」？上限機制在這裡扮演什麼角色？</p>
+    </div>
+
+    <ul class="timeline">
+      <li><span class="date">2026/10/22</span><p class="desc">公開申購抽籤日（<a class="src" href="https://www.twse.com.tw/zh/announcement/public.html" target="_blank" rel="noopener">證交所公開申購公告</a>）。</p></li>
+      <li><span class="date">2026/10/29（預計）</span><p class="desc">特力屋預計掛牌上市。</p></li>
+    </ul>
+  </section>
+
+  <section id="articles">
+    <h2>對應條文<span class="step-badge">步驟② 確認法規依據</span></h2>
+    <div class="qa">
+      <p class="q"><a class="law" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=266" target="_blank" rel="noopener">公司法§266</a>（發行新股由董事會決議）</p>
+      <p class="a">公司發行新股，由董事會以董事三分之二以上出席、出席董事過半數同意決議。要不要發、發多少，是董事會的權限。</p>
+    </div>
+    <div class="qa">
+      <p class="q"><a class="law" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=267" target="_blank" rel="noopener">公司法§267</a>（員工承購與原股東優先認購）</p>
+      <p class="a">發行新股應保留10%至15%給員工承購，其餘原則上要先讓原股東按持股比例認購，原股東不認購的部分才能對外公開發行。特力屋保留10%給員工，跟這條的下限一致。</p>
+    </div>
+    <div class="qa">
+      <p class="q"><a class="law" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=28-1" target="_blank" rel="noopener">證券交易法§28-1</a>（股權分散不足時應提撥對外公開發行）</p>
+      <p class="a">股票還沒上市上櫃、股權分散又未達標準的公開發行公司，現金發行新股時應提撥一定比率對外公開發行，<strong>不受公司法§267第3項原股東儘先分認的限制</strong>。特力屋當時是興櫃公司，重大訊息就是援引這條，再加上股東臨時會決議，把90%新股全部拿去公開承銷。</p>
+    </div>
+    <div class="qa">
+      <p class="q"><a class="law" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=268" target="_blank" rel="noopener">公司法§268</a>、<a class="law" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=22" target="_blank" rel="noopener">證券交易法§22</a>（公開發行新股須經主管機關核准／申報生效）</p>
+      <p class="a">新股要對外公開發行，須向證券主管機關申請，公司法§268第1項第3款要求申報「發行新股總數、每股金額及其他發行條件」；證交法§22要求申報生效後才能募集發行。時間軸上「2026/09/15申報生效」就是這一步。</p>
+    </div>
+    <div class="qa">
+      <p class="q"><a class="law" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=10" target="_blank" rel="noopener">證券交易法§10</a>、<a class="law" href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0400001&flno=71" target="_blank" rel="noopener">§71</a>（承銷與包銷）</p>
+      <p class="a">§10定義「承銷」是依約定包銷或代銷發行人發行有價證券的行為；§71規定包銷的承銷商在承銷期間屆滿後，賣不完的部分要自己認購。這是福邦證券等承銷商在本案裡的角色。</p>
+    </div>
+    <div class="qa">
+      <p class="q">證券商公會「證券商承銷或再行銷售有價證券處理辦法」（自律規則，不是法律）</p>
+      <p class="a">競價拍賣的具體玩法都在這裡：價高者得、得標人依自己的得標價格認購、保證金50%、公開申購承銷價以得標加權平均價為準但設上限倍數、合格標單不足時不開標（流標）等。這是證券商公會訂定的自律規則，條文細節可對照<a class="src" href="https://www.twsa.org.tw/doc/1130628.html" target="_blank" rel="noopener">2024年修正公告</a>，個案條件以承銷商的競價拍賣公告為準，例如<a class="src" href="https://www.sinotrade.com.tw/UploadFiles/2026/202610/2a467b89-a244-45e8-84ce-b3c6924b9603.pdf" target="_blank" rel="noopener">泰合（6467）2026年10月的競拍公告</a>就把這些規則逐條寫出來。</p>
+    </div>
+  </section>
+
+  <section id="keypoints">
+    <h2>關鍵點<span class="step-badge">步驟③ 找出爭點</span></h2>
+    <div class="think-box">
+      <p class="think-title">關鍵點一：美國標，得標的人各付各的價</p>
+      <p class="think-text">證交所公告寫的競拍方式是「美國標」：所有合格標單依價格由高到低排，從最高價開始分配，直到7,344張分完為止，<strong>每個得標人照自己喊的價格付錢</strong>（同一價格時由電腦隨機決定）。所以喊60元的人付60元，喊38.6元剛好擠進最後一名的人付38.6元。另一種做法是「單一價格標」，所有得標人都付同一個價格（通常是最低得標價）。下方的<a class="src" href="#simulator">競標模擬器</a>可以直接比較兩種做法下每個人付多少錢。</p>
+    </div>
+
+    <div class="plain-box">
+      <p class="plain-title">💡 白話補充：為什麼法人不乾脆都喊很高？</p>
+      <p class="plain-text">喊得高，保證標得到，但要照自己喊的價付錢。在美國標底下，出價就是在「標得到」跟「付太多」之間取捨。這跟夜市喊價很像：你很想要那個娃娃，可以直接喊500元確保買到，但如果其實喊200元就夠了，多出來的300元就白花了。特力屋得標價從38.6元到60元，代表有人比別人多付了超過五成的價錢，買到的卻是同一種股票。</p>
+    </div>
+
+    <div class="think-box">
+      <p class="think-title">關鍵點二：公開申購的價格，由競拍結果決定，但有上限</p>
+      <p class="think-text">特力屋重大訊息寫明：公開申購價格是得標單的加權平均價，但不得超過底價38.43元的1.25倍（48.04元）。這個上限是為了保護抽籤的散戶，避免競拍被炒高之後，散戶也跟著用天價認購。特力屋這次競拍不算熱，加權平均價44.06元沒碰到上限，所以申購價就是44.06元。熱門案件則完全相反：<a class="src" href="company-law-art266-267-hantest-ipo-case.html">漢測</a>得標加權平均價4,272.7元，承銷價卻被上限壓在2,250元（底價1,800元的1.25倍）。下方延伸分析會看到，2020年以來大約九成的案件都是被上限壓住的那一種，特力屋反而是少數。</p>
+    </div>
+
+    <div class="think-box">
+      <p class="think-title">關鍵點三：標不滿就流標，整個公開承銷停下來</p>
+      <p class="think-text">海昌生技2026年6月轉上櫃前辦理競拍，拍賣3,600張，底價26.67元。<a class="src" href="https://money.udn.com/money/story/5607/9567969" target="_blank" rel="noopener">6月15日檢核後，合格投標只有3,560張</a>，差40張，證交所不辦理開標，後續的公開申購也一起取消，投標保證金無息退回。海昌<a class="src" href="https://money.udn.com/money/story/5607/9588408" target="_blank" rel="noopener">6月25日公告重新競拍</a>，底價從26.67元降到25元，7月6日重新開標成功，得標加權平均價28.47元，公開申購承銷價也是28.47元（證交所公告）。這說明流標不是承銷商把賣剩的股票自己吃下（那是§71包銷的情形），而是根本不開標，整個定價程序重來。</p>
+    </div>
+
+    <div class="think-box">
+      <p class="think-title">🤔 延伸思考：同一次發行新股，價格可以不一樣嗎？</p>
+      <p class="think-text">公司法§268第1項第3款要求公開發行新股時申報「每股金額及其他發行條件」，一般印象是同一次發行應該是同一個價格。可是在競價拍賣裡，同一次增資發行的新股，競拍得標人各付各的價，申購人付承銷價，員工承購又是另一條管道。請思考：這種「一次發行、多種價格」的安排，在法律上可以怎麼說明？（提示：可以從「發行條件」申報的是價格本身，還是決定價格的規則；以及股東平等原則保護的是「已經是股東的人」，還是「正在買股票的人」這兩個方向切入。）</p>
+    </div>
+
+    <div class="think-box good">
+      <p class="think-title">📰 補充：得標後反悔，保證金沒收</p>
+      <p class="think-text">投標單送出後不得撤回或更改；得標人不依期限繳款的，喪失得標資格，投標保證金由主辦承銷商沒入，承銷商並依得標價款自行認購（見<a class="src" href="https://www.sinotrade.com.tw/UploadFiles/2026/202610/2a467b89-a244-45e8-84ce-b3c6924b9603.pdf" target="_blank" rel="noopener">泰合競拍公告</a>第五點、第十二點）。漢測講義裡晟田可轉債「標錯棚」的例子，就是這條規則的真實代價。</p>
+    </div>
+  </section>
+
+  <section id="strategy">
+    <h2>換你當事人<span class="step-badge">步驟④ 你要怎麼出價？</span></h2>
+    <p>假設你是投信基金經理人，看好特力屋，打算在競價拍賣投標，上限是每人1,055張。投標前你手上有這些資訊：底價38.43元；底價是以申報前興櫃30個營業日均價的七成為上限訂出來的，換算興櫃均價至少約54.9元；2025年每股稅後盈餘2.39元，2026年第1季1.39元；拍賣7,344張。請決定你的出價與張數，並說明理由。</p>
+    <ul class="strategy-list">
+      <li><strong>估值面：</strong>你認為特力屋掛牌後合理股價大約多少？興櫃成交價可以直接拿來用嗎？興櫃的流動性跟上市後一樣嗎？</li>
+      <li><strong>競爭面：</strong>你預期會有多少人來投標？如果投標量只有拍賣數量的2到3倍，邊際得標價大概會落在哪裡？</li>
+      <li><strong>付款規則面：</strong>美國標底下，你喊多少就付多少。你會不會把一筆大單拆成幾張不同價格的標單？</li>
+      <li><strong>資金面：</strong>每張投標單要先圈存投標金額50%的保證金，沒得標的部分要到開標後才退回，這段期間的資金成本你怎麼算？</li>
+    </ul>
+
+    <details class="teacher-answer">
+      <summary>老師的分析（建議先寫下自己的判斷，再點開對照）</summary>
+      <div class="answer-body">
+        <p>這題沒有標準答案，重點是你的出價有沒有對應到你的估值，以及你有沒有意識到美國標「多喊就多付」的特性。</p>
+        <p><strong>常見的做法是分價位投標：</strong>一部分喊高一點，確保至少標到基本部位；一部分貼近底價，賭冷門時可以用便宜價格撿到。特力屋實際結果是最低得標價38.6元，只比底價高0.17元，代表貼近底價的標單有不少得標了；喊到60元的人則多付了很多。</p>
+        <p><strong>要注意的陷阱：</strong>興櫃均價54.9元不等於法人願意付的價格。特力屋得標加權平均價44.06元，比興櫃均價低了約兩成，海昌生技更是在興櫃股價明顯高於底價的情況下仍然流標一次。興櫃股價是少量成交的結果，競拍則是大額資金真的要掏錢，兩者反映的是不同的需求。</p>
+        <p>課堂上可以請幾位同學公開自己的出價，再用下方模擬器跑一次，看看誰標到、誰付最多、誰最划算。</p>
+      </div>
+    </details>
+  </section>
+
+  <section id="simulator">
+    <h2>互動競標模擬器：美國標怎麼開標？</h2>
+    <p>把特力屋的規則縮小成一場20張的迷你拍賣：底價38.43元、承銷價上限1.25倍（48.04元）、每人最多得標3張。旁邊已經有幾位虛擬投標人，你可以加入自己的標單，按「開標」看結果。也可以切換情境，看看熱門案件跟流標案件長什麼樣子。</p>
+
+    <div class="calc-container">
+      <div class="calc-title">⚙️ 拍賣條件</div>
+      <div class="calc-inputs">
+        <div><label for="simQty">拍賣數量（張）</label><input type="number" id="simQty" value="20" min="1" step="1"></div>
+        <div><label for="simFloor">底價（元）</label><input type="number" id="simFloor" value="38.43" min="0.01" step="0.01"></div>
+        <div><label for="simMult">承銷價上限倍數</label><input type="number" id="simMult" value="1.25" min="1" step="0.01"></div>
+        <div><label for="simMax">每人最高得標（張）</label><input type="number" id="simMax" value="3" min="1" step="1"></div>
+      </div>
+      <div class="sim-presets">
+        <span class="sim-label">情境：</span>
+        <button type="button" class="sim-btn" data-preset="normal">像特力屋（不冷不熱）</button>
+        <button type="button" class="sim-btn" data-preset="hot">像漢測（超熱門）</button>
+        <button type="button" class="sim-btn" data-preset="cold">像海昌（差一點流標）</button>
+      </div>
+
+      <div class="calc-title" style="margin-top:1rem;">👥 其他投標人（可直接修改）</div>
+      <div class="sim-table-wrap">
+        <table class="data-table sim-table" id="simOthers">
+          <thead><tr><th>投標人</th><th>出價（元）</th><th>張數</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="calc-title" style="margin-top:1rem;">🙋 你的標單（最多三張，價格留空代表不投）</div>
+      <div class="sim-table-wrap">
+        <table class="data-table sim-table" id="simMine">
+          <thead><tr><th>標單</th><th>出價（元）</th><th>張數</th></tr></thead>
+          <tbody>
+            <tr><td>你①</td><td><input type="number" step="0.01" min="0" value="45"></td><td><input type="number" step="1" min="0" value="2"></td></tr>
+            <tr><td>你②</td><td><input type="number" step="0.01" min="0" value="39"></td><td><input type="number" step="1" min="0" value="1"></td></tr>
+            <tr><td>你③</td><td><input type="number" step="0.01" min="0" value=""></td><td><input type="number" step="1" min="0" value=""></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">你要先圈存的保證金（投標金額50%）：<span id="simDeposit" class="stat">--</span></p>
+
+      <div class="sim-actions">
+        <button type="button" class="sim-btn primary" id="simRun">開標</button>
+        <span class="note">同一價格搶最後幾張時，由電腦隨機決定；再按一次開標可能會換人得標。</span>
+      </div>
+
+      <div id="simResult" class="sim-result" aria-live="polite"></div>
+    </div>
+    <p class="note">模擬器簡化了部分規則：投標處理費、得標手續費未計入；每人得標超過上限時，依公告規則從該人得標的最高價與最低價部分各剔除一半，剔除的張數再往下分配。</p>
+  </section>
+
+  <section id="data-analysis">
+    <h2>延伸分析：2020年到2026年的341件股票競拍</h2>
+    <p>資料來源：<a class="src" href="https://www.twse.com.tw/zh/announcement/auction.html" target="_blank" rel="noopener">臺灣證券交易所競價拍賣公告</a>，2020年1月至2026年10月19日開標的案件，排除轉換公司債後，共341件股票競拍（含上市、上櫃、創新板）。</p>
+
+    <div class="formula-display">
+      <span class="ft">超額倍數</span>   = 合格投標張數 ÷ 拍賣張數<br>
+      <span class="ft">得標溢價</span>   = 得標加權平均價 ÷ 底價<br>
+      <span class="ft">公開申購承銷價</span> = min( 得標加權平均價 , 底價 × <span class="fv">上限倍數</span> )
+    </div>
+
+    <p><strong>發現一：流標很少見。</strong>341件裡只有<span class="stat">6件</span>流標，都是合格投標量不足拍賣數量：三商家購（2021）、森崴能源（2021）、台灣精銳（2022）、KKT-KY（2024）、立誠（2025）、海昌生技（2026）。其中海昌生技只差40張，是六件裡最接近成功的一件。</p>
+    <p><strong>發現二：多數案件的承銷價被上限壓住。</strong>開標成功的335件中，有<span class="stat">306件（約91%）</span>得標加權平均價高於上限，公開申購承銷價因此低於競拍均價。特力屋屬於另外那9%：均價沒碰到上限，申購價就等於均價。</p>
+    <p><strong>發現三：上限倍數是個案議定的。</strong>被上限壓住的306件，承銷價與底價的比例在1.01倍到1.30倍之間，其中280件落在1.1倍到1.3倍。特力屋與漢測都是1.25倍，泰合是<a class="src" href="https://www.sinotrade.com.tw/UploadFiles/2026/202610/2a467b89-a244-45e8-84ce-b3c6924b9603.pdf" target="_blank" rel="noopener">1.20倍</a>，倍數寫在每一案的承銷公告裡。</p>
+
+    <div class="scatter-box">
+      <canvas id="auctionChart" width="1000" height="640" role="img" aria-label="341件股票競拍的超額倍數與得標溢價散佈圖，特力屋、漢測、海昌生技另外標示"></canvas>
+      <p class="scatter-caption">橫軸：合格投標張數 ÷ 拍賣張數（超額倍數）；縱軸：得標加權平均價 ÷ 底價。紅色叉號是流標案件；虛線是1.25倍，特力屋與漢測的上限倍數。資料來源：臺灣證券交易所競價拍賣公告。</p>
+    </div>
+
+    <div class="think-box">
+      <p class="think-title">🤔 從圖上看特力屋：冷，但不到流標</p>
+      <p class="think-text">特力屋超額倍數2.43倍、得標溢價1.15倍，落在圖的左下角，是2026年比較冷的一群。全部341件的得標溢價中位數是1.41倍，特力屋明顯偏低。超額倍數越高的案件，得標溢價通常也越高，但並不是一條直線：漢測超額倍數4.35倍，得標溢價卻有2.37倍，代表少數投標人願意出非常高的價格。看到這張圖，你會怎麼解讀「競拍冷熱」跟「掛牌後表現」之間的關係？光看競拍數據夠嗎？</p>
+    </div>
+  </section>
+
+  <section id="guess-game">
+    <h2>小遊戲：猜猜特力屋掛牌第一天收盤價</h2>
+    <p>純好玩，沒有標準答案，也不影響成績。寫下一個確切價格（不能是範圍）和你的判斷理由，在2026年10月29日開盤前透過Pull Request提交，掛牌當天收盤後看誰最接近。可以參考的數字：得標加權平均價44.06元、最高得標價60元、公開申購承銷價44.06元、興櫃30日均價至少約54.9元。</p>
+    <table class="data-table">
+      <tr><th>猜測者</th><th>猜測收盤價</th><th>理由</th></tr>
+      <tr>
+        <td>Claude</td>
+        <td>49.5元</td>
+        <td>法人用真金白銀標出來的均價是44.06元，興櫃均價約55元，兩者之間差了兩成多。掛牌第一天會有中籤散戶與部分得標人獲利了結的賣壓，所以猜在兩者中間偏下，約比承銷價高一成多。</td>
+      </tr>
+    </table>
+    <p class="note">想參加的同學，透過Pull Request直接編輯這個表格新增一列，具名規則依<a class="src" href="https://github.com/mjib007/company-law-cases/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">CONTRIBUTING.md</a>使用遮蔽版姓名學號（例如：陳○明，******456）。掛牌後老師會補上實際收盤價與檢討。</p>
+  </section>
+
+  <section class="discussion" id="discussion">
+    <h2>課堂討論方向</h2>
+    <ol>
+      <li>特力屋這次增資，公司法§267要求原股東儘先分認，但特力屋援引證交法§28-1並經股東臨時會決議，把90%新股全部拿去公開承銷。請說明§28-1為什麼可以排除§267第3項？如果是一家沒有公開發行、也不打算上市的公司，可以用同樣方式讓原股東「被放棄」優先認購權嗎？</li>
+      <li>競價拍賣讓得標人各付各的價（美國標），公開申購則是所有中籤人付同一個承銷價。請比較這兩種定價方式對發行公司、法人投資人、散戶的利弊，並說明為什麼制度要替公開申購設上限倍數，卻不替競拍得標人設上限？</li>
+      <li>海昌生技流標後降低底價重新競拍。從公司與原股東的角度看，底價降低代表什麼？如果你是海昌生技的原股東，你會希望公司降價重拍，還是暫緩上櫃？這個決定應該由董事會（§266）決定就好，還是應該問股東？</li>
+      <li>比較特力屋（均價44.06元，沒碰到上限）與漢測（均價4,272.7元，被壓在2,250元）。在漢測的情況下，公開申購中籤人以2,250元取得的股票，跟競拍得標人平均以4,272.7元取得的股票完全相同，這種價差由誰承擔？發行公司是否因此「少收」了增資款？</li>
+    </ol>
+  </section>
+
+  <p class="disclaimer">本教材為教學目的整理，內容依公開新聞報導、證交所公告與法規查證彙整而成，僅供課堂討論公司法「發行新股」與證券承銷相關法律機制之用，不構成任何投資建議；文中承銷價格、時程與財務數據以特力屋、海昌生技正式公告及公開資訊觀測站資料為準。競標模擬器為簡化示意，不代表實際開標結果。</p>
+
+</div>
+
+<script>
+async function loadPageMeta(){
+  const verEl = document.getElementById('pageVerBadge');
+  const dateEl = document.getElementById('pageMetaDate');
+  const REPO = 'mjib007/company-law-cases';
+  const FILE_PATH = 'lectures/company-law-art266-268-testrite-auction-case.html';
+
+  try {
+    const res = await fetch(`https://api.github.com/repos/${REPO}/commits?path=${encodeURIComponent(FILE_PATH)}&per_page=100`);
+    if (!res.ok) throw new Error('commits fetch failed');
+    const commits = await res.json();
+
+    verEl.textContent = `v${commits.length}`;
+
+    const lastDate = commits[0]?.commit?.committer?.date;
+    if (lastDate){
+      const d = new Date(lastDate);
+      const y = d.getFullYear();
+      const m = String(d.getMonth() + 1).padStart(2, '0');
+      const day = String(d.getDate()).padStart(2, '0');
+      dateEl.textContent = `最後更新 ${y}-${m}-${day}`;
+    }
+  } catch (err){
+    verEl.textContent = '';
+    dateEl.textContent = '';
+    console.warn('本篇版次資訊載入失敗：', err);
+  }
+}
+loadPageMeta();
+
+function adjustScrollMargin(){
+  const nav = document.querySelector('.anchor-nav');
+  if (!nav) return;
+  const h = nav.offsetHeight + 16;
+  document.querySelectorAll('section').forEach(s => {
+    s.style.scrollMarginTop = h + 'px';
+  });
+}
+window.addEventListener('load', adjustScrollMargin);
+window.addEventListener('resize', adjustScrollMargin);
+
+function setupActiveNavTracking(){
+  const navLinks = Array.from(document.querySelectorAll('.anchor-nav a'));
+  const sections = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+  function setActive(id){
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+    });
+  }
+
+  function updateActive(){
+    const nav = document.querySelector('.anchor-nav');
+    const offset = (nav ? nav.offsetHeight : 60) + 20;
+    let currentId = sections[0] ? sections[0].id : null;
+    sections.forEach(s => {
+      const rect = s.getBoundingClientRect();
+      if (rect.top - offset <= 0) {
+        currentId = s.id;
+      }
+    });
+    if (currentId) setActive(currentId);
+  }
+
+  let ticking = false;
+  function onScroll(){
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateActive();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  updateActive();
+}
+
+window.addEventListener('load', setupActiveNavTracking);
+
+(function(){
+  function updateBtn(t){ var b=document.getElementById('themeBtn'); if(b) b.textContent = t==='dark' ? '☀️' : '🌓'; }
+  var saved = localStorage.getItem('lecture-theme');
+  if (saved) { document.documentElement.setAttribute('data-theme', saved); updateBtn(saved); }
+  else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.setAttribute('data-theme', 'dark'); updateBtn('dark');
+  }
+  window.toggleTheme = function(){
+    var cur = document.documentElement.getAttribute('data-theme');
+    var next = cur === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('lecture-theme', next);
+    updateBtn(next);
+  };
+})();
+
+(function(){
+  var btn = document.getElementById('backToTop');
+  if (!btn) return;
+  window.addEventListener('scroll', function(){
+    if (window.scrollY > 400) btn.classList.add('show');
+    else btn.classList.remove('show');
+  }, { passive: true });
+})();
+
+
+/* ---------- 競標模擬器 ---------- */
+var SIM_PRESETS = {
+  normal: [
+    ['法人A', 60, 1], ['法人B', 52, 2], ['法人C', 48, 3], ['法人D', 46, 3], ['法人E', 44, 3],
+    ['法人F', 42, 3], ['法人G', 41, 3], ['法人H', 40, 3], ['法人I', 39.5, 3], ['法人J', 39, 3],
+    ['法人K', 38.6, 3], ['法人L', 38.5, 3], ['法人M', 38.43, 3]
+  ],
+  hot: [
+    ['法人A', 120, 3], ['法人B', 100, 3], ['法人C', 90, 3], ['法人D', 85, 3], ['法人E', 80, 3],
+    ['法人F', 75, 3], ['法人G', 70, 3], ['法人H', 65, 3], ['法人I', 60, 3], ['法人J', 55, 3]
+  ],
+  cold: [
+    ['法人A', 40, 3], ['法人B', 39, 3], ['法人C', 39, 3], ['法人D', 38.8, 3], ['法人E', 38.6, 3],
+    ['法人F', 38.5, 2], ['法人G', 38.43, 2]
+  ]
+};
+
+function fmtMoney(n){ return Math.round(n).toLocaleString('zh-TW') + ' 元'; }
+function fmtPrice(n){ return (Math.round(n * 100) / 100).toLocaleString('zh-TW', {minimumFractionDigits:2, maximumFractionDigits:2}); }
+function round2(n){ return Math.round(n * 100) / 100; }
+
+function loadPreset(key){
+  var tbody = document.querySelector('#simOthers tbody');
+  tbody.innerHTML = '';
+  SIM_PRESETS[key].forEach(function(b){
+    var tr = document.createElement('tr');
+    tr.innerHTML = '<td>' + b[0] + '</td>' +
+      '<td><input type="number" step="0.01" min="0" value="' + b[1] + '"></td>' +
+      '<td><input type="number" step="1" min="0" value="' + b[2] + '"></td>';
+    tbody.appendChild(tr);
+  });
+  document.querySelectorAll('.sim-btn[data-preset]').forEach(function(btn){
+    btn.classList.toggle('active', btn.getAttribute('data-preset') === key);
+  });
+  document.getElementById('simResult').innerHTML = '';
+  updateDeposit();
+}
+
+function readBids(){
+  var bids = [];
+  document.querySelectorAll('#simOthers tbody tr').forEach(function(tr){
+    var ins = tr.querySelectorAll('input');
+    var name = tr.cells[0].textContent;
+    bids.push({ who: name, label: name, price: parseFloat(ins[0].value), qty: parseInt(ins[1].value, 10), me: false });
+  });
+  document.querySelectorAll('#simMine tbody tr').forEach(function(tr){
+    var ins = tr.querySelectorAll('input');
+    if (ins[0].value === '' || ins[1].value === '') return;
+    bids.push({ who: '你', label: tr.cells[0].textContent, price: parseFloat(ins[0].value), qty: parseInt(ins[1].value, 10), me: true });
+  });
+  return bids;
+}
+
+function updateDeposit(){
+  var total = 0;
+  readBids().forEach(function(b){ if (b.me && b.price > 0 && b.qty > 0) total += b.price * b.qty * 1000 * 0.5; });
+  document.getElementById('simDeposit').textContent = total > 0 ? fmtMoney(total) : '--';
+}
+
+function shuffle(arr){
+  for (var i = arr.length - 1; i > 0; i--){
+    var j = Math.floor(Math.random() * (i + 1));
+    var t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+  }
+  return arr;
+}
+
+function runAuction(){
+  var Q = parseInt(document.getElementById('simQty').value, 10) || 0;
+  var floor = parseFloat(document.getElementById('simFloor').value) || 0;
+  var mult = parseFloat(document.getElementById('simMult').value) || 1;
+  var maxPer = parseInt(document.getElementById('simMax').value, 10) || 1;
+  var bids = readBids();
+
+  // 不合格件：低於底價、張數不是正整數、單張標單超過每人上限
+  bids.forEach(function(b){
+    b.valid = isFinite(b.price) && isFinite(b.qty) && b.qty >= 1 && b.price >= floor && b.qty <= maxPer;
+    b.reason = !b.valid ? (b.price < floor ? '低於底價' : (b.qty > maxPer ? '超過每人上限' : '資料不完整')) : '';
+    b.win = 0;
+  });
+  var valid = bids.filter(function(b){ return b.valid; });
+  var totalValid = valid.reduce(function(s, b){ return s + b.qty; }, 0);
+
+  var out = document.getElementById('simResult');
+  if (Q < 1 || floor <= 0){
+    out.innerHTML = '<div class="sim-banner fail">請先填入大於0的拍賣數量與底價。</div>';
+    return;
+  }
+
+  if (totalValid < Q){
+    out.innerHTML = '<div class="sim-banner fail">流標：合格投標合計 ' + totalValid + ' 張，未達拍賣數量 ' + Q +
+      ' 張，證交所不辦理開標，後續公開申購一併取消，保證金無息退回。</div>' + resultTable(bids, null);
+    return;
+  }
+
+  // 價格高者優先；同價隨機
+  var groups = {};
+  valid.forEach(function(b){ (groups[b.price] = groups[b.price] || []).push(b); });
+  var order = [];
+  Object.keys(groups).map(Number).sort(function(a, b){ return b - a; }).forEach(function(p){
+    order = order.concat(shuffle(groups[p]));
+  });
+
+  // 逐張分配，每人超過上限時依公告剔除高低價各半，剔除數量再往下分配
+  var blocked = {};
+  function allocate(){
+    var left = Q;
+    order.forEach(function(b){
+      var cap = b.qty - (blocked[b.label] || 0);
+      var take = Math.max(0, Math.min(cap, left));
+      b.win = take; left -= take;
+    });
+  }
+  for (var guard = 0; guard < 50; guard++){
+    allocate();
+    var changed = false;
+    var byWho = {};
+    order.forEach(function(b){ if (b.win > 0) (byWho[b.who] = byWho[b.who] || []).push(b); });
+    Object.keys(byWho).forEach(function(who){
+      var list = byWho[who];
+      var sum = list.reduce(function(s, b){ return s + b.win; }, 0);
+      var excess = sum - maxPer;
+      if (excess <= 0) return;
+      var cutHigh = Math.ceil(excess / 2), cutLow = Math.floor(excess / 2);
+      var hi = list.slice().sort(function(a, b){ return b.price - a.price; });
+      var lo = list.slice().sort(function(a, b){ return a.price - b.price; });
+      hi.forEach(function(b){ var c = Math.min(cutHigh, b.win - (b._cut || 0)); if (c > 0){ b._cut = (b._cut || 0) + c; cutHigh -= c; } });
+      lo.forEach(function(b){ var c = Math.min(cutLow, b.win - (b._cut || 0)); if (c > 0){ b._cut = (b._cut || 0) + c; cutLow -= c; } });
+      list.forEach(function(b){ if (b._cut){ blocked[b.label] = (blocked[b.label] || 0) + b._cut; b.trimmed = (b.trimmed || 0) + b._cut; b._cut = 0; changed = true; } });
+    });
+    if (!changed) break;
+  }
+
+  var winners = order.filter(function(b){ return b.win > 0; });
+  var sold = winners.reduce(function(s, b){ return s + b.win; }, 0);
+  var amount = winners.reduce(function(s, b){ return s + b.win * b.price; }, 0);
+  var avg = sold > 0 ? round2(amount / sold) : 0;
+  var minWin = Math.min.apply(null, winners.map(function(b){ return b.price; }));
+  var maxWin = Math.max.apply(null, winners.map(function(b){ return b.price; }));
+  var capPrice = round2(floor * mult);
+  var offer = sold < Q ? floor : Math.min(avg, capPrice);
+  var capped = sold >= Q && avg > capPrice;
+
+  var mine = winners.filter(function(b){ return b.me; });
+  var myQty = mine.reduce(function(s, b){ return s + b.win; }, 0);
+  var myPay = mine.reduce(function(s, b){ return s + b.win * b.price * 1000; }, 0);
+
+  var banner = capped
+    ? '<div class="sim-banner capped">開標成功，而且很熱門：得標加權平均價 ' + fmtPrice(avg) + ' 元超過上限 ' + fmtPrice(capPrice) +
+      ' 元，公開申購承銷價被壓在 ' + fmtPrice(capPrice) + ' 元。</div>'
+    : (sold < Q
+      ? '<div class="sim-banner fail">合格標單夠多，但因每人上限剔除後只分出 ' + sold + ' 張，剩餘部分與公開申購以底價 ' + fmtPrice(floor) + ' 元承銷。</div>'
+      : '<div class="sim-banner ok">開標成功：得標加權平均價 ' + fmtPrice(avg) + ' 元沒有超過上限 ' + fmtPrice(capPrice) +
+        ' 元，公開申購承銷價就是 ' + fmtPrice(avg) + ' 元。</div>');
+
+  var stats = '<div class="calc-result-box">' +
+    stat('超額倍數', (totalValid / Q).toFixed(2) + ' 倍') +
+    stat('得標價格區間', fmtPrice(minWin) + '～' + fmtPrice(maxWin)) +
+    stat('得標加權平均價', fmtPrice(avg)) +
+    stat('公開申購承銷價', fmtPrice(offer)) +
+    '</div>';
+
+  var myLine = myQty > 0
+    ? '<p class="note">你標到 <span class="stat">' + myQty + ' 張</span>，美國標要付 <span class="stat">' + fmtMoney(myPay) +
+      '</span>；如果改用單一價格標（全部付最低得標價 ' + fmtPrice(minWin) + ' 元），你只要付 ' + fmtMoney(myQty * minWin * 1000) +
+      '；如果你去抽籤中籤，每張付 ' + fmtMoney(offer * 1000) + '。</p>'
+    : (bids.some(function(b){ return b.me; }) ? '<p class="note">你這次沒有標到。最後一張的得標價是 ' + fmtPrice(minWin) + ' 元，出價要高於這個價格才有機會。</p>'
+      : '<p class="note">你這次沒有投標。可以在上面填一張標單再開標一次。</p>');
+
+  out.innerHTML = banner + stats + myLine + resultTable(order.concat(bids.filter(function(b){ return !b.valid; })), minWin);
+}
+
+function stat(label, val){
+  return '<div><div class="calc-stat-label">' + label + '</div><div class="calc-stat-val">' + val + '</div></div>';
+}
+
+function resultTable(list, minWin){
+  var rows = list.map(function(b){
+    var cls = !b.valid ? 'bad' : (b.win === b.qty ? 'win' : (b.win > 0 ? 'partial' : ''));
+    if (b.me) cls += ' me';
+    var status = !b.valid ? '不合格（' + b.reason + '）' : (minWin === null ? '未開標' : b.win === 0 ? '未得標' : (b.win < b.qty ? '部分得標' : '得標'));
+    if (b.trimmed) status += '（超過每人上限，剔除 ' + b.trimmed + ' 張）';
+    var pay = b.win > 0 ? fmtMoney(b.win * b.price * 1000) : '－';
+    var uni = (b.win > 0 && minWin) ? fmtMoney(b.win * minWin * 1000) : '－';
+    return '<tr class="' + cls + '"><td>' + b.label + '</td><td>' + (isFinite(b.price) ? fmtPrice(b.price) : '－') + '</td><td>' +
+      (isFinite(b.qty) ? b.qty : '－') + '</td><td>' + b.win + '</td><td>' + status + '</td><td>' + pay + '</td><td>' + uni + '</td></tr>';
+  }).join('');
+  return '<div class="sim-table-wrap"><table class="data-table sim-table"><thead><tr><th>投標人</th><th>出價</th><th>投標張數</th><th>得標張數</th><th>結果</th><th>美國標應付</th><th>若採單一價格標</th></tr></thead><tbody>' +
+    rows + '</tbody></table></div>';
+}
+
+document.querySelectorAll('.sim-btn[data-preset]').forEach(function(btn){
+  btn.addEventListener('click', function(){ loadPreset(btn.getAttribute('data-preset')); });
+});
+document.getElementById('simRun').addEventListener('click', runAuction);
+document.getElementById('simulator').addEventListener('input', updateDeposit);
+loadPreset('normal');
+
+/* ---------- 散佈圖 ---------- */
+var auctionPts = [[1.97,1.292,"長聖","2020/12/24",0],[6.13,1.822,"智聯服務","2020/12/11",0],[2.52,1.449,"上洋","2020/12/11",0],[1.36,1.601,"威鋒電子","2020/12/10",0],[2.22,1.173,"達亞","2020/12/04",0],[4.37,1.538,"揚秦","2020/12/02",0],[2.68,1.43,"安普新","2020/11/30",0],[4.52,1.68,"耀登科技","2020/11/27",0],[4.39,1.333,"叡揚資訊","2020/11/26",0],[5.92,1.325,"亞泰金屬","2020/11/17",0],[3.76,1.314,"八貫","2020/11/10",0],[4.86,1.483,"陞達科技","2020/11/06",0],[8.09,1.579,"意德士","2020/10/16",0],[10.37,1.565,"軒郁","2020/10/05",0],[8.03,1.7,"汎德永業","2020/09/23",0],[6.99,1.41,"康全電訊","2020/09/09",0],[2.91,1.727,"亞洲藏壽司","2020/09/03",0],[3.64,1.322,"艾姆勒","2020/08/13",0],[5.77,1.635,"匯僑設計","2020/08/11",0],[13.87,1.82,"東典光電","2020/06/15",0],[4.5,2.255,"ABC-KY","2020/05/26",0],[6.25,1.538,"昇佳電子","2020/05/25",0],[3.82,1.321,"永固-KY","2020/05/06",0],[12.64,1.602,"三竹","2020/05/04",0],[3.35,1.272,"州巧","2020/03/30",0],[9.07,1.474,"應廣","2020/03/13",0],[10.38,1.48,"山富","2020/02/21",0],[6.15,1.391,"光隆精密-KY","2020/02/21",0],[6.35,1.327,"映興電子","2020/02/21",0],[10.08,1.741,"聯發國際","2021/12/30",0],[5.48,1.583,"力智","2021/12/29",0],[6.44,1.838,"瑞鼎","2021/12/23",0],[3.98,1.524,"洋基工程","2021/12/17",0],[4.62,1.702,"上品","2021/12/08",0],[14.15,1.834,"詠業","2021/11/24",0],[4.13,1.477,"力積電","2021/11/22",0],[4.74,1.278,"三商家購","2021/11/16",0],[3.34,1.16,"森崴能源","2021/11/01",0],[9.38,1.796,"穩得","2021/10/25",0],[0.87,0,"森崴能源","2021/10/14",1],[0.67,0,"三商家購","2021/10/14",1],[2.54,1.512,"全訊","2021/10/08",0],[1.66,1.302,"宜新實業","2021/10/08",0],[8.1,1.611,"振宇五金","2021/09/22",0],[1.64,1.257,"永豐實","2021/09/13",0],[6.9,1.619,"華景電","2021/09/13",0],[3.91,1.271,"八方雲集","2021/08/26",0],[9.28,2.089,"安格","2021/07/28",0],[6.07,1.574,"凌陽創新","2021/07/15",0],[5.06,1.59,"第一化成-KY","2021/05/17",0],[6.38,1.812,"91APP*-KY","2021/05/11",0],[4.44,1.804,"臺慶科","2021/04/13",0],[5.92,1.72,"志強-KY","2021/04/08",0],[6.09,1.542,"長榮鋼","2021/03/25",0],[7.79,1.53,"展碁國際","2021/03/17",0],[4.46,1.637,"AES-KY","2021/03/08",0],[6.96,1.412,"全宇昕","2021/01/18",0],[2.83,1.279,"博晟生醫","2021/01/14",0],[4.95,1.444,"威健生技","2021/01/13",0],[7.25,1.343,"台微醫","2021/01/11",0],[5.35,1.281,"穎崴","2021/01/06",0],[4.76,1.34,"亨泰光","2021/01/05",0],[12.37,1.672,"偉康","2022/12/27",0],[8.65,2.334,"天擎","2022/12/15",0],[11.82,2.143,"巨有科技","2022/12/06",0],[13.36,1.443,"保勝光學","2022/12/01",0],[7.09,1.483,"展達","2022/12/01",0],[2.36,1.122,"倍力","2022/11/30",0],[2.82,1.216,"伯特光","2022/11/14",0],[3.34,1.319,"視陽","2022/11/14",0],[3.35,1.21,"進典","2022/11/07",0],[3.53,1.301,"虎門科技","2022/10/31",0],[2.59,1.18,"圓裕","2022/10/27",0],[2.08,1.081,"芯鼎","2022/10/21",0],[1.96,1.093,"精拓科","2022/10/20",0],[9.02,1.301,"數泓科","2022/09/22",0],[9.04,1.363,"君帆","2022/09/21",0],[2.98,1.269,"伊雲谷","2022/08/29",0],[6.5,1.404,"奇鈦科","2022/08/25",0],[3.7,1.136,"天二科技","2022/08/18",0],[3.88,1.268,"汎銓","2022/08/17",0],[2.2,1.364,"宏碁資訊","2022/07/26",0],[4.93,1.226,"濾能","2022/06/16",0],[2.09,1.311,"采鈺","2022/06/16",0],[3.39,1.177,"達航","2022/05/30",0],[1.22,1.155,"北極星藥業-KY","2022/05/20",0],[2.97,1.208,"晉弘","2022/05/18",0],[5.3,1.215,"正基","2022/05/10",0],[2.09,1.236,"鈺鎧","2022/05/06",0],[1.36,1.103,"鼎基","2022/05/06",0],[4.89,1.231,"來頡","2022/04/27",0],[4.38,1.205,"台灣精銳","2022/04/22",0],[3.44,1.205,"信實","2022/04/15",0],[2.7,1.217,"美達科技","2022/04/15",0],[1.54,1.113,"峰源-KY","2022/04/11",0],[1.9,1.266,"晶呈科技","2022/03/28",0],[0.64,0,"台灣精銳","2022/03/18",1],[3.08,1.603,"明係","2022/03/17",0],[3.19,1.226,"寶德","2022/03/09",0],[2.26,1.413,"寶緯","2022/03/03",0],[2.79,1.263,"綠界科技","2022/03/01",0],[6.41,1.433,"力士","2022/02/25",0],[1.73,1.409,"昶昕","2022/02/24",0],[4.37,1.397,"千附精密","2022/02/24",0],[2.32,1.424,"廣閎科","2022/02/14",0],[8.62,1.488,"弘凱","2022/01/05",0],[10.48,1.473,"現觀科","2023/12/29",0],[2.08,1.439,"正瀚-創","2023/12/12",0],[3.79,1.364,"金萬林","2023/12/07",0],[7.37,1.577,"欣新網","2023/12/01",0],[4.95,1.685,"天虹","2023/11/28",0],[4.26,1.316,"寶陞國際","2023/11/28",0],[7.92,1.567,"伯鑫","2023/11/21",0],[2.31,1.325,"澤米","2023/11/21",0],[3.85,1.342,"華凌","2023/11/21",0],[4.92,1.372,"竣邦-KY","2023/11/15",0],[5.56,1.378,"衛司特","2023/11/15",0],[3.43,1.372,"華懋","2023/11/07",0],[5.03,1.344,"宸曜","2023/10/26",0],[3.25,1.363,"富世達","2023/10/26",0],[5.55,1.914,"AMAX-KY","2023/10/25",0],[8.55,1.533,"聯策","2023/10/19",0],[3.54,1.231,"鑫傳","2023/10/13",0],[2.85,1.308,"巨鎧精密","2023/10/11",0],[1.23,1.078,"達發","2023/10/03",0],[1.72,1.25,"鑽石生技","2023/09/06",0],[5.49,1.512,"騰雲","2023/08/31",0],[3.85,1.561,"宏碩系統","2023/08/08",0],[7.05,1.861,"六方科-KY","2023/07/17",0],[9.72,1.674,"雄順","2023/06/07",0],[10.44,1.93,"鏵友益","2023/06/02",0],[4.64,1.484,"華安","2023/05/29",0],[6.81,1.764,"聯寶","2023/05/08",0],[5.95,2.163,"南俊國際","2023/05/04",0],[7.64,1.633,"綠茵生技","2023/04/28",0],[7.76,2.064,"睿生光電","2023/03/13",0],[10.79,1.51,"東研信超","2023/03/10",0],[4.62,1.613,"建德工業","2023/03/10",0],[19.33,1.721,"永道-KY","2023/03/07",0],[6.02,1.439,"長榮航太","2023/02/24",0],[7.35,2.703,"龍德造船","2023/02/22",0],[6.47,1.536,"長佳智能","2023/02/13",0],[4.16,1.35,"裕山","2024/12/31",0],[2.39,1.261,"富威電力","2024/12/31",0],[2.34,1.41,"青松健康","2024/12/31",0],[1.91,1.187,"創泓科技","2024/12/31",0],[4.03,1.321,"金興精密","2024/12/30",0],[3.19,1.229,"博盛半導體","2024/12/12",0],[5.58,1.315,"大井泵浦","2024/12/04",0],[5.45,1.384,"明遠精密","2024/12/02",0],[1.97,1.071,"全福生技","2024/12/02",0],[8.97,1.428,"博弘","2024/12/02",0],[3.01,1.262,"邦睿生技","2024/11/27",0],[3.03,1.212,"達運光電","2024/11/27",0],[5.42,1.322,"力領科技","2024/11/26",0],[2.46,1.287,"LINEPAY","2024/11/21",0],[3.71,1.338,"久昌","2024/11/20",0],[28.29,1.575,"台灣虎航","2024/11/15",0],[4.9,1.705,"ITH-KY","2024/11/12",0],[7.9,1.458,"三商餐飲","2024/11/12",0],[24.86,1.558,"全家餐飲","2024/11/01",0],[12.14,1.446,"銳澤","2024/10/29",0],[4.5,1.413,"威力晹","2024/10/14",0],[2.15,1.339,"星宇航空","2024/10/11",0],[11.34,1.792,"三集瑞-KY","2024/10/08",0],[7.5,1.691,"全景軟體","2024/10/08",0],[2.46,1.301,"康霈*","2024/09/18",0],[3.29,1.247,"鴻呈","2024/09/16",0],[2.87,1.198,"漢田生技","2024/09/11",0],[3.81,1.237,"泓德能源-創","2024/09/11",0],[5.38,1.359,"汎瑋材料","2024/09/10",0],[3.74,1.288,"中台","2024/09/10",0],[4.71,1.568,"台特化","2024/09/05",0],[2.44,1.193,"王座","2024/08/27",0],[5.71,1.241,"成信實業*","2024/08/26",0],[4.85,1.751,"竹陞科技","2024/08/19",0],[2.13,1.224,"日盛台駿","2024/08/06",0],[5.1,1.446,"萬達寵物","2024/07/31",0],[2.92,1.275,"台新藥","2024/07/30",0],[9.74,1.777,"樂意","2024/07/11",0],[4.01,1.339,"鈺寶","2024/06/18",0],[2.33,1.539,"裕慶-KY","2024/06/11",0],[1.4,1.233,"青新","2024/06/06",0],[2.15,1.157,"雲豹能源-創","2024/06/04",0],[1.25,1.123,"共信-KY","2024/06/03",0],[3.55,1.406,"醫影","2024/06/03",0],[1.57,1.143,"大武山","2024/05/29",0],[2.68,1.622,"來億-KY","2024/05/28",0],[2.42,1.313,"巨漢","2024/05/28",0],[2.45,1.394,"向榮生技","2024/05/10",0],[4.84,1.436,"平和環保","2024/05/08",0],[3.57,1.502,"潤德","2024/05/07",0],[1.91,1.525,"億而得","2024/05/06",0],[2.27,1.552,"攸泰科技","2024/05/02",0],[3.14,1.193,"巧新","2024/04/26",0],[9.09,1.459,"家碩","2024/04/26",0],[2.94,1.431,"有成精密","2024/04/25",0],[3.1,1.565,"阜爾運通","2024/04/18",0],[6.86,1.549,"創為精密","2024/03/21",0],[0.4,0,"KKT-KY","2024/03/21",1],[6.05,1.638,"愛爾達","2024/03/15",0],[4.66,1.563,"佑全","2024/03/14",0],[3.11,1.655,"國邑*","2024/03/12",0],[2.89,1.47,"眾福科","2024/03/12",0],[5.84,1.444,"米斯特","2024/03/06",0],[5.54,1.784,"安倉","2024/03/04",0],[6.65,1.679,"望隼","2024/03/04",0],[3.18,1.257,"微矽電子","2024/02/26",0],[6.17,1.437,"諾貝兒","2024/02/22",0],[5.09,1.309,"進能服","2024/01/19",0],[6.97,1.526,"玖鼎電力","2024/01/15",0],[1.33,1.171,"世界健身-KY","2024/01/10",0],[2.67,1.437,"昱展新藥","2024/01/10",0],[5.34,1.345,"矽科宏晟","2025/12/18",0],[1.82,1.166,"漢達","2025/12/12",0],[6.87,2.028,"捷創科技","2025/12/12",0],[3.11,1.467,"能率亞洲","2025/12/11",0],[3.68,1.367,"驊陞","2025/12/11",0],[4.17,1.425,"威聯通","2025/12/11",0],[5.95,1.331,"傑霖科技","2025/12/11",0],[7.94,1.463,"海柏特","2025/12/08",0],[4.97,1.345,"德鴻","2025/12/02",0],[3.96,1.291,"常廣","2025/12/01",0],[2.36,1.215,"君曜","2025/12/01",0],[5.26,1.454,"仁大資訊","2025/12/01",0],[2.45,1.205,"崴寶","2025/11/18",0],[3.08,1.698,"鴻勁","2025/11/18",0],[3.96,1.302,"華豫寧","2025/11/14",0],[2.33,1.374,"邁科","2025/11/14",0],[4.02,1.19,"資拓宏宇","2025/11/14",0],[1.95,1.325,"永擎","2025/11/10",0],[1.11,1.124,"東方風能","2025/11/07",0],[4.78,1.456,"嘉實","2025/11/06",0],[6.84,1.891,"萊德光電-KY","2025/11/06",0],[5.47,1.5,"暉盛","2025/10/23",0],[3.81,1.306,"皇家可口","2025/10/16",0],[7.44,1.366,"昱臺國際","2025/10/16",0],[5.57,1.374,"光速火箭","2025/10/16",0],[9.57,1.456,"金色三麥","2025/10/08",0],[8.63,1.466,"東聯互動","2025/10/03",0],[4.32,1.502,"松川精密","2025/10/03",0],[6.83,1.606,"向榮生技","2025/10/03",0],[9.57,1.405,"惠民實業","2025/09/22",0],[2.49,2.17,"達明","2025/09/17",0],[3.0,1.539,"新代","2025/09/08",0],[1.53,1.238,"禾榮科","2025/09/04",0],[4.66,2.371,"聯友金屬","2025/08/29",0],[4.19,1.302,"振大環球","2025/08/29",0],[1.83,1.517,"大研生醫","2025/08/29",0],[6.81,1.475,"中華資安","2025/08/28",0],[6.84,1.449,"竑騰","2025/08/15",0],[2.04,1.278,"友霖","2025/08/12",0],[6.58,1.403,"星亞","2025/07/31",0],[4.84,1.346,"凌航","2025/07/28",0],[5.73,1.589,"微程式","2025/07/18",0],[7.35,1.91,"碩網","2025/07/18",0],[8.57,1.658,"昕奇雲端","2025/07/02",0],[2.49,1.367,"熙特爾","2025/06/05",0],[6.4,1.466,"意騰-KY","2025/06/04",0],[5.2,1.364,"愛派司","2025/05/29",0],[8.07,1.335,"意藍","2025/05/19",0],[4.47,1.411,"兆聯實業","2025/05/19",0],[5.74,1.281,"生合","2025/05/16",0],[5.33,1.259,"昶瑞機電","2025/05/13",0],[3.05,1.488,"創控","2025/05/12",0],[4.66,1.301,"金利食安","2025/05/09",0],[3.78,1.262,"久禾光","2025/05/09",0],[4.17,1.448,"GOGOLOOK-創","2025/05/07",0],[2.64,1.127,"立誠","2025/04/28",0],[3.63,1.156,"築間","2025/04/21",0],[4.64,1.401,"永鴻生技","2025/04/17",0],[0.67,0,"立誠","2025/04/15",1],[9.15,2.127,"台灣精材","2025/03/11",0],[5.71,1.526,"友鋮","2025/03/04",0],[5.66,1.484,"聚賢研發","2025/03/04",0],[5.56,1.639,"虎山","2025/03/04",0],[4.55,1.312,"華勝-KY ","2025/02/26",0],[5.81,1.748,"寶綠特-KY","2025/02/21",0],[3.93,1.551,"浩宇生醫","2025/02/20",0],[6.09,1.978,"中傑-KY","2025/02/20",0],[7.36,1.619,"光焱科技","2025/02/19",0],[3.17,1.356,"印能科技","2025/02/12",0],[5.98,1.32,"榮田","2025/02/11",0],[3.95,1.29,"威力德生醫","2025/02/10",0],[2.69,1.431,"新應材","2025/01/03",0],[2.43,1.147,"特力屋","2026/10/19",0],[3.51,1.14,"和暢科技","2026/10/19",0],[1.81,1.142,"東擎科技","2026/10/15",0],[2.68,1.261,"藍新資訊","2026/10/14",0],[3.71,1.421,"程曦資訊","2026/10/14",0],[4.76,1.235,"湧盛","2026/10/13",0],[3.35,2.021,"泰合","2026/10/08",0],[3.76,1.39,"精華生醫","2026/10/05",0],[4.67,1.204,"儒億","2026/09/23",0],[4.35,2.374,"漢測","2026/09/11",0],[4.31,1.219,"床的世界","2026/09/07",0],[7.96,1.946,"和亞智慧","2026/09/01",0],[1.88,1.324,"和運租車","2026/07/31",0],[2.61,1.212,"華德動能","2026/07/30",0],[1.85,1.133,"大鵬科","2026/07/17",0],[2.06,1.056,"永悅健康","2026/07/15",0],[2.98,1.243,"台鎔科技","2026/07/14",0],[3.86,1.139,"海昌生技","2026/07/06",0],[0.99,0,"海昌生技","2026/06/16",1],[1.22,1.091,"和迅","2026/06/16",0],[4.36,1.593,"立弘","2026/06/08",0],[9.41,1.75,"達人網","2026/06/04",0],[1.5,1.054,"圓祥生技","2026/05/27",0],[4.13,1.193,"精誠金融","2026/05/18",0],[5.26,3.68,"華洋精機","2026/05/14",0],[1.5,1.217,"聚恆","2026/05/13",0],[2.5,1.156,"雲象科技","2026/05/11",0],[2.67,1.271,"溢泰實業","2026/05/07",0],[2.69,1.323,"天能綠電","2026/04/29",0],[1.88,1.212,"基米","2026/04/29",0],[6.19,3.629,"耀穎","2026/04/28",0],[3.15,1.748,"頌勝科技","2026/04/27",0],[5.14,2.731,"敘豐","2026/04/24",0],[1.86,1.126,"永笙-KY","2026/04/21",0],[5.4,1.31,"享溫馨","2026/04/17",0],[4.57,1.41,"立盈","2026/04/16",0],[3.28,2.24,"創新服務","2026/04/13",0],[6.35,1.281,"宏碁智新","2026/04/09",0],[3.29,1.492,"神數","2026/04/09",0],[3.53,1.672,"泰宗","2026/03/26",0],[6.59,2.059,"倍利科","2026/03/19",0],[6.15,1.389,"公勝保經","2026/03/19",0],[1.28,1.212,"世紀風電","2026/03/17",0],[1.89,1.159,"民盛","2026/03/16",0],[3.23,1.489,"宏碁遊戲","2026/03/16",0],[6.16,2.066,"奧義賽博-KY創","2026/01/27",0],[3.08,1.321,"久舜","2026/01/23",0],[9.06,3.185,"心誠鎂","2026/01/22",0],[3.06,1.606,"雅特力-KY","2026/01/20",0],[3.06,1.445,"富田","2026/01/20",0],[10.83,1.856,"安葆","2026/01/19",0],[2.7,1.308,"旅天下","2026/01/13",0],[3.74,1.529,"大東電","2026/01/13",0],[6.26,1.388,"億而得","2026/01/13",0],[2.12,1.336,"輝創","2026/01/07",0],[4.43,1.78,"長廣","2026/01/07",0]];
+
+function drawAuctionChart(){
+  var canvas = document.getElementById('auctionChart');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var W = canvas.width, H = canvas.height;
+  var padL = 112, padR = 30, padT = 30, padB = 80;
+  var plotW = W - padL - padR, plotH = H - padT - padB;
+  var xMax = 12, yMin = 0.8, yMax = 3.8;
+
+  var cs = getComputedStyle(document.documentElement);
+  var lineColor = cs.getPropertyValue('--line').trim() || '#ddd3bf';
+  var inkColor = cs.getPropertyValue('--ink-45').trim() || '#999';
+  var inkStrong = cs.getPropertyValue('--ink').trim() || '#16233b';
+  var dotColor = cs.getPropertyValue('--indigo').trim() || '#2c4a76';
+  var sealColor = cs.getPropertyValue('--seal').trim() || '#9c2b3a';
+  var popColor = cs.getPropertyValue('--pop').trim() || '#e8623c';
+  var brassColor = cs.getPropertyValue('--brass').trim() || '#a9832f';
+
+  ctx.clearRect(0, 0, W, H);
+  function xPix(v){ return padL + (Math.min(v, xMax) / xMax) * plotW; }
+  function yPix(v){ return padT + plotH - ((Math.min(Math.max(v, yMin), yMax) - yMin) / (yMax - yMin)) * plotH; }
+
+  ctx.lineWidth = 1;
+  ctx.font = '20px "Noto Sans TC", sans-serif';
+  for (var y = 1; y <= yMax + 1e-9; y += 0.5){
+    var py = yPix(y);
+    ctx.strokeStyle = lineColor;
+    ctx.beginPath(); ctx.moveTo(padL, py); ctx.lineTo(W - padR, py); ctx.stroke();
+    ctx.fillStyle = inkColor; ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
+    ctx.fillText(y.toFixed(1) + '倍', padL - 10, py);
+  }
+  for (var x = 0; x <= xMax; x += 2){
+    var px = xPix(x);
+    ctx.strokeStyle = lineColor;
+    ctx.beginPath(); ctx.moveTo(px, padT); ctx.lineTo(px, H - padB); ctx.stroke();
+    ctx.fillStyle = inkColor; ctx.textAlign = 'center'; ctx.textBaseline = 'top';
+    ctx.fillText(x === xMax ? x + '+' : x, px, H - padB + 10);
+  }
+
+  // 1倍超額倍數線（低於此即流標）
+  ctx.strokeStyle = sealColor; ctx.setLineDash([4, 6]); ctx.lineWidth = 1.5;
+  ctx.beginPath(); ctx.moveTo(xPix(1), padT); ctx.lineTo(xPix(1), H - padB); ctx.stroke();
+  // 1.25倍上限線
+  ctx.strokeStyle = brassColor; ctx.setLineDash([10, 6]); ctx.lineWidth = 2;
+  ctx.beginPath(); ctx.moveTo(padL, yPix(1.25)); ctx.lineTo(W - padR, yPix(1.25)); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle = brassColor; ctx.font = 'bold 18px "Noto Sans TC", sans-serif';
+  ctx.textAlign = 'right'; ctx.textBaseline = 'bottom';
+  ctx.fillText('1.25倍（特力屋、漢測的上限）', W - padR - 6, yPix(1.25) - 4);
+
+  ctx.fillStyle = dotColor; ctx.globalAlpha = 0.45;
+  auctionPts.forEach(function(p){
+    if (p[4]) return;
+    ctx.beginPath(); ctx.arc(xPix(p[0]), yPix(p[1]), 5, 0, Math.PI * 2); ctx.fill();
+  });
+  ctx.globalAlpha = 1;
+
+  // 流標：畫在底部
+  ctx.strokeStyle = sealColor; ctx.lineWidth = 3;
+  auctionPts.forEach(function(p){
+    if (!p[4]) return;
+    var cx = xPix(p[0]), cy = yPix(yMin) - 10;
+    ctx.beginPath(); ctx.moveTo(cx - 7, cy - 7); ctx.lineTo(cx + 7, cy + 7); ctx.moveTo(cx + 7, cy - 7); ctx.lineTo(cx - 7, cy + 7); ctx.stroke();
+  });
+  ctx.fillStyle = sealColor; ctx.font = '17px "Noto Sans TC", sans-serif'; ctx.textAlign = 'left'; ctx.textBaseline = 'bottom';
+  ctx.fillText('← 流標（6件）', xPix(1) + 8, yPix(yMin) - 4);
+
+  function highlight(name, date, label, dx, dy){
+    var p = auctionPts.filter(function(q){ return q[2] === name && q[3] === date; })[0];
+    if (!p) return;
+    var cx = xPix(p[0]), cy = yPix(p[1]);
+    ctx.fillStyle = popColor; ctx.strokeStyle = inkStrong; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.arc(cx, cy, 9, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+    ctx.fillStyle = inkStrong; ctx.font = 'bold 19px "Noto Sans TC", sans-serif';
+    ctx.textAlign = dx < 0 ? 'right' : 'left'; ctx.textBaseline = 'middle';
+    ctx.fillText(label, cx + dx, cy + dy);
+  }
+  highlight('特力屋', '2026/10/19', '特力屋', -14, -18);
+  highlight('漢測', '2026/09/11', '漢測', 14, 0);
+  highlight('海昌生技', '2026/07/06', '海昌生技（重拍）', 14, 16);
+
+  ctx.fillStyle = inkColor; ctx.font = '21px "Noto Sans TC", sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic';
+  ctx.fillText('超額倍數（合格投標張數 ÷ 拍賣張數）', padL + plotW / 2, H - 22);
+  ctx.save(); ctx.translate(26, padT + plotH / 2); ctx.rotate(-Math.PI / 2);
+  ctx.fillText('得標均價 ÷ 底價', 0, 0); ctx.restore();
+}
+window.addEventListener('load', drawAuctionChart);
+window.addEventListener('load', function(){ setTimeout(drawAuctionChart, 300); });
+document.getElementById('themeBtn').addEventListener('click', function(){ setTimeout(drawAuctionChart, 50); });
+
+</script>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到頂部">↑</button>
+</body>
+</html>
