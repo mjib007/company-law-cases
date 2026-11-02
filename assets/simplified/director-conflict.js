@@ -3,7 +3,7 @@ window.LESSON={
   "code": "CONFLICT02",
   "version": "1.0",
   "title": "董事長想買公司土地，董事會上可以自己投票嗎？",
-  "videoId": null,
+  "videoId": "uwHQjxWX23U",
   "preIds": [
     "q1",
     "q2",
