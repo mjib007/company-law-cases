@@ -3,7 +3,7 @@ window.LESSON={
   "code": "CONTRACT03",
   "version": "1.0",
   "title": "董事長想買公司土地，誰代表公司簽約？",
-  "videoId": null,
+  "videoId": "0FH1j9lwea4",
   "preIds": [
     "q1",
     "q2",
