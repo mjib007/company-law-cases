@@ -1,5 +1,5 @@
 window.LESSON={
- id:'company-land-sale',code:'LAND01',version:'1.0',title:'董事長可以自己決定賣掉公司土地嗎？',videoId:null,
+ id:'company-land-sale',code:'LAND01',version:'1.0',title:'董事長可以自己決定賣掉公司土地嗎？',videoId:'OhnBMwOPF-w',
  preIds:['q1','q2','q4'],
  units:[
   {id:'authority',label:'代表與決策',href:'#authority',questions:['q1','q6']},
