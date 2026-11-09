@@ -3,7 +3,7 @@ window.LESSON={
   "code": "DERIV06",
   "version": "1.0",
   "title": "董事讓公司虧錢，小股東能自己告他嗎？",
-  "videoId": null,
+  "videoId": "PVkb-F3omdE",
   "preIds": [
     "q1",
     "q2",

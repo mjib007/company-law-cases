@@ -3,7 +3,7 @@ window.LESSON={
   "code": "COMPETE05",
   "version": "1.0",
   "title": "董事自己開公司做同樣的生意，可以嗎？",
-  "videoId": null,
+  "videoId": "o0_lTH4tGEo",
   "preIds": [
     "q1",
     "q2",
