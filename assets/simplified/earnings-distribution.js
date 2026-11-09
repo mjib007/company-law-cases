@@ -3,7 +3,7 @@ window.LESSON={
   "code": "EARNINGS04",
   "version": "1.0",
   "title": "公司賣地賺了一筆，可以全部分給股東嗎？",
-  "videoId": null,
+  "videoId": "qXTX8Z4t42g",
   "preIds": [
     "q1",
     "q2",
