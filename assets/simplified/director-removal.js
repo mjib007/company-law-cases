@@ -3,7 +3,7 @@ window.LESSON={
   "code": "REMOVE07",
   "version": "1.0",
   "title": "董事讓公司虧錢，股東可以把他換掉嗎？",
-  "videoId": null,
+  "videoId": "JAQWNL4qMyI",
   "preIds": [
     "q1",
     "q2",
